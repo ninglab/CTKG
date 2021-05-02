@@ -1,6 +1,6 @@
 # Schema
 
-![](/home/bo/Documents/AACT/Github/Schema.png)
+![](./Schema.png)
 
 # Nodes
 
@@ -114,9 +114,9 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >
     > 7,325 (89.2%) Completed
     >
-    >    560 (6.8%) Terminated
+    > 560 (6.8%) Terminated
     >
-    >    311 (3.8%) Active, not recruiting
+    > 311 (3.8%) Active, not recruiting
     >
     > ​     12 Unknown status
     >
@@ -135,12 +135,12 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     > 3,507 (42.7%) Phase 3
     > 1,984 (24.2%) Phase 2
     > 1,409 (17.2%) Phase 4
-    >    424   (5.2%) N/A
-    >    345   (4.2%) Phase 1
-    >    218   (2.7%) Phase 1/Phase 2
-    >    175   (2.1%) Phase 2/Phase 3
-    >    132   (1.6%) ""
-    >      16   (0.2%) Early Phase 1
+    > 424   (5.2%) N/A
+    > 345   (4.2%) Phase 1
+    > 218   (2.7%) Phase 1/Phase 2
+    > 175   (2.1%) Phase 2/Phase 3
+    > 132   (1.6%) ""
+    >   16   (0.2%) Early Phase 1
 
 19. **enrollment**
 
@@ -193,9 +193,9 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >  Statistics: 
     >
     >  7,019 (85.5%) Randomized
-    >       602   (7.3%) N/A
-    >       406   (4.9%) Non-Randomized (i.e., Participants may choose which group they want to be in, or they may be assigned to the groups by the    researchers.)
-    >       183   (2.2%) ""
+    >     602   (7.3%) N/A
+    >     406   (4.9%) Non-Randomized (i.e., Participants may choose which group they want to be in, or they may be assigned to the groups by the    researchers.)
+    >     183   (2.2%) ""
 
 26. **intervention_model** 
 
@@ -206,11 +206,11 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     > Statistics: 
     >
     > 6,308 (76.8%) Parallel Assignment (i.e., participants are assigned to one of two or more groups in parallel for the duration of the study)
-    >       879 (10.7%) Single Group Assignment (i.e., clinical trials with a single arm)
-    >       742   (9.0%) Crossover Assignment (i.e., groups of participants receive two or more interventions in a specific order.)
-    >       167   (2.0%) ""
-    >         93   (1.1%) Factorial Assignment (i.e., groups of participants receive one of several combinations of interventions)
-    >         21   (0.2%) Sequential Assignment
+    >    879 (10.7%) Single Group Assignment (i.e., clinical trials with a single arm)
+    >    742   (9.0%) Crossover Assignment (i.e., groups of participants receive two or more interventions in a specific order.)
+    >    167   (2.0%) ""
+    >      93   (1.1%) Factorial Assignment (i.e., groups of participants receive one of several combinations of interventions)
+    >      21   (0.2%) Sequential Assignment
 
 27. **primary_purpose**
 
@@ -221,14 +221,14 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     > Statistics:  
     >
     > 7,069 (86.1%) Treatment
-    >       453   (5.5%) Prevention
-    >       221   (2.7%) ""
-    >       145   (1.8%) Basic Science
-    >       138   (1.7%) Supportive Care
-    >         93   (1.1%) Other
-    >         71   (0.9%) Diagnostic
-    >         16   (0.2%) Health Services Research
-    >           4   (0.0%) Screening
+    >    453   (5.5%) Prevention
+    >    221   (2.7%) ""
+    >    145   (1.8%) Basic Science
+    >    138   (1.7%) Supportive Care
+    >      93   (1.1%) Other
+    >      71   (0.9%) Diagnostic
+    >      16   (0.2%) Health Services Research
+    >        4   (0.0%) Screening
 
 28. **time_perspective**: Prospective/Retrospective/Cross-Sectional 
 
@@ -242,12 +242,12 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
 
     > Statistics:   
     >
-    >    2,771 (33.8%) None (Open Label)
-    >    1,986 (24.2%) Double
-    >    1,982 (24.2%) Quadruple
-    >       990 (12.1%) Triple
-    >       310   (3.8%) Single
-    >       171   (2.1%) ""
+    > 2,771 (33.8%) None (Open Label)
+    > 1,986 (24.2%) Double
+    > 1,982 (24.2%) Quadruple
+    >    990 (12.1%) Triple
+    >    310   (3.8%) Single
+    >    171   (2.1%) ""
 
 30. **masking_description**  
 
@@ -295,9 +295,9 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >
     > 7,256 (88.4%) All
     >
-    >       654   (8.0%) Female
+    >    654   (8.0%) Female
     >
-    >       300   (3.7%) Male
+    >    300   (3.7%) Male
 
 38. **minimum_age**
 
@@ -313,7 +313,7 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >
     > 7,462 (90.9%) No
     >
-    >       732  (8.9%) "Accepts Healthy Volunteers"
+    >    732  (8.9%) "Accepts Healthy Volunteers"
     >
     > ​     16 ""
 
@@ -351,7 +351,7 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >
     > 4,078 (49.7%) studies have secondary_id
     >
-    >       202   (2.5%) studies have nct_alias 
+    >    202   (2.5%) studies have nct_alias 
 
 47. **id_value** 
 
@@ -418,8 +418,6 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
 1. **name** 
 
    Example: "Fever"
-
-
 
 
 
@@ -661,11 +659,11 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
    >
    > 16,127        (15.0%)          Superiority
    >
-   >   8,969           (8.4%)         Other
+   >   8,969           (8.4%)           Other
    >
-   >   4,686           (4.4%)         Superiority or Other (legacy)
+   >   4,686           (4.4%)           Superiority or Other (legacy)
    >
-   >   2,534           (2.4%)         Non-Inferiority or Equivalence
+   >   2,534           (2.4%)           Non-Inferiority or Equivalence
    >
    > ​     780           (0.7%)         Non-Inferiority
    >
@@ -711,7 +709,7 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
    >
    > 20,547          (19.1%)       Standard Error of the Mean
    >
-   >   1,276             (1.2%)      Standard Deviation
+   >   1,276               (1.2%)      Standard Deviation
 
 6. **dispersion_value**
 
@@ -867,6 +865,8 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
    Example: "participants", "years", "units on a scale"
 
+   > Statistics:
+   >
    > 256,681          (81.3%)          participants
    >
    >   26,116            (8.3%)           years
@@ -875,10 +875,12 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
    >
    > ​    2,075            (0.7%)           mg/dl
    >
-   >   25,198     other
+   > 25,198     other
 
 4. **param_type**
 
+   > Statistics:
+   >
    > 163,729          (51.9%)           count of participants
    >
    >   96,329          (30.5%)           number
@@ -933,7 +935,7 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
 20,599 event groups with 3 attributes
 
-**id**: The format is "EventGroupID:xxx". 
+**id**: The format is "EventGroupID:XXX" in which "XXX" is the ID from AACT database.
 
 **label**: EventGroup
 
@@ -949,6 +951,8 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
 3. **time_frame**
 
+   Definition: The specific period of time over which adverse event data were collected.
+
    Example: "[Approximately at day 1, 7]"
 
 4. **description** 
@@ -961,13 +965,19 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
 6. **num_serious**
 
+   Definition: Number of participants with serious adverse events.
+
    Example: 0
 
 7. **num_other**
 
+   Definition: Number of participants with other adverse events.
+
    Example: 14
 
 8. **num_mortality**
+
+   Definition: Number of all anticipated and unanticipated deaths due to any cause.
 
    Example: 0
 
@@ -977,27 +987,71 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
 12,640 adverse events with 5 attributes.
 
+Note that instead of directly using the terms in the dataset, we tried to normalize them so that these terms can match with the **Medical Dictionary for Regulatory Activities (MedDRA) Terminology**. Please see https://www.meddra.org/ for details. 
+
+> The structure of MedDRA is very logical. There are five levels to the MedDRA hierarchy, arranged from very specific to very general. At the most specific level, called “Lowest Level Terms” (LLTs), there are more than 70,000 terms which parallel **how information is communicated.** These LLTs reflect how an observation might be reported in practice. This level directly supports assigning MedDRA terms within a user database.
+>
+> Each member of the next level, “Preferred Terms” (PTs), is a distinct descriptor **(single medical concept)** for a symptom, sign, disease diagnosis, therapeutic indication, investigation, surgical or medical procedure, and medical social or family history characteristic. Each LLT is linked to only one PT. Each PT has at least one LLT (itself) as well as synonyms and lexical variants (e.g., abbreviations, different word order).
+>
+> from https://www.meddra.org/how-to-use/basics/hierarchy
+
+
+
+Before normalization, the original database contains 42,435 unique adverse event terms.  In addition, for those terms with level "LLT", we mapped them to their corresponding preferred terms. 
+
+
+
 **id**: the format is "AdverseEventID:XXX"
 
 **label**: AdverseEvent
 
 **Attributes:**
 
-1. medDRA_term
+1. **term_name**
 
-2. medDRA_code
+   Example: "nodule, pulmonary"; "diarrhea-no colostom"
 
-3. term_type
+2. **medDRA_code**
 
-4. high_level_term
+   Definition: The corresponding MedDRA code of the term.
 
-5. high_group_level_term
+   Example: "10003205", "0"
+
+   > Statistics:
+   >
+   > 10,176          (80.5%)           0 (terms cannot be normalized to match with the MedDRA terms)
+   >
+   >   2,464          (19.5%)           MedDRA code
+
+3. **term_type**
+
+   Definition: The corresponding MedDRA level of the term.
+
+   > Statistics:
+   >
+   > 10,176         (80.5%)         None
+   >
+   >   2,309         (18.3%)         PT
+   >
+   > ​     134            (1.1%)        HLT
+   >
+   > ​       21            (0.1%)        HLGT
+
+4. **high_level_term**
+
+   Definition: The corresponding high level term of the adverse event term (from MedDRA dictionary)
+
+5. **high_group_level_term**
+
+   Definition: The corresponding high group level term of the adverse event term (from MedDRA dictionary)
 
    
 
 ### Organ
 
 27 outcomes with 1 attribute.
+
+Definition: High-level categories used to group adverse event terms by body or organ system.
 
 **id**: The format is "OrganID:XXX"
 
@@ -1017,7 +1071,7 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
 22,272 drop groups with 3 attributes
 
-**id**: The format is "DropGroupID:xxx". 
+**id**: The format is "DropGroupID:XXX"  in which "XXX" is the ID from AACT database.
 
 **label**: DropGroup
 
@@ -1041,22 +1095,111 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
 34,330 Periods with 10 attributes.
 
+Definition: Discrete stages of a clinical study during which numbers of participants at specific significant events or points of time are reported.
+
+There is no limit to the number of periods that may be used to describe a single study. Each subsequent period represents a study stage following the previous period. That is, participants "flow" from earlier to later periods. 
+
+> Among 34,330 periods,
+>
+> Number of periods, Count 
+>
+> 27,578 (80.3%),             3     (STARTED/NOT COMPLETED/COMPLETED)
+>
+>   4,662 (13.6%),             4
+>
+>   1,168   (3.4%),             5
+>
+> ​     553   (1.6%),             6
+
 **id**: The format is "PeriodID:XXX".
 
 **label:** Period
 
 **Attributes:**
 
-1. period
-2. description
-3. num_started
-4. started_description
-5. num_not_completed
-6. not_completed_description
-7. num_completed
-8. completed_description
-9. addtional_count
-10. additional_description
+1. **period**
+
+   Definition: period title.
+
+   Example: "Second Intervention (1day)"; "Washout (1 Week)"
+
+   > Statistics:
+   >
+   > 2,992 unique period titles.
+   >
+   > Top 5 most frequent period titles:
+   >
+   > Number of periods, Number of drop records, name
+   >
+   > 16,151 (47.0%)           65,468 (53.0%)           Overall Study
+   >
+   > ​      427  (1.2%)                  755  (0.7%)           Period 2
+   >
+   > ​      396  (1.1%)                  827  (0.6%)           Period 1
+   >
+   > ​      260  (0.8%)                1,868  (1.5%)          Treatment Period
+   >
+   > ​      217  (0.6%)                   616  (0.5%)          Treatment Period 1
+
+2. **num_started**
+
+   Definition: Number of participants initiating the period. In the first period, it is the number of participants assigned to each arm or group.
+
+3. **started_description**
+
+   Definition: Additional information about the Started milestone or Milestone Data.
+
+   Example: "All participants received all of the 4 interventions"
+
+   > Statistics:
+   >
+   > 30,877         (89.9%)           ""
+   >
+   >   3,453         (10.1%)           any description
+
+4. **num_not_completed**
+
+   Definition: Number of participants (and units, if applicable) that did not complete the study or period. This is calculated automatically by subtracting Completed from Started. 
+
+   This calculated number doesn't have the associated description.
+
+5. **num_completed**
+
+   Definition: Number of participants at the end of the period.
+
+6. **completed_description**
+
+   Example: "Postoperative day one pain score not available for one patient"
+
+   > Statistics:
+   >
+   > 32,417        (94.4%)           ""
+   >
+   >   1,913           (5.6%)          any description
+
+7. **additional_count**
+
+   Definition: Any specific events or time points in the study when the numbers of participants (and units, if applicable) are reported. 
+
+   Note that we combined all the additional count of participants into one entry. The format of that entry is "name~count~name~count....". 
+
+   Example: "Switched to Pembrolizumab~4~Treated~15~"
+
+   > Statistics:
+   >
+   > 27,665        (80.6%)          ""
+   >
+   >   6,665        (19.4%)          any additional count
+
+8. **additional_description**
+
+   Example: "~~" or "Row represents Ixekizumab data only.~Row represents Ixekizumab data only."
+
+   > Statistics:
+   >
+   > 33,430       (97.4%)          "" (no additional counts) or "~~~" (have additional counts but no additional description)
+   >
+   > ​     900         (2.6%)
 
 
 
@@ -1070,11 +1213,27 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
 **Attributes:**
 
-1. reason
+1. **reason**
 
    Definition: Additional information about participants who did not complete the study or period.
 
-2. count
+   Example: "Lost to Follow-up", "Withdrawal by Subject"
+
+   > 6,424 unique dropout reasons
+   >
+   > Top 5 most frequent dropout reasons:
+   >
+   > 17,262 (13.96%)      Withdrawal by Subject
+   >
+   > 16,782 (13.57%)      Adverse Event
+   >
+   > 14,287 (11.55%)      Lost to Follow-up
+   >
+   >   8,794   (7.11%)      Protocol Violation
+   >
+   >   7,213   (5.83%)      Lack of Efficacy
+
+2. **count**
 
    
 
@@ -1121,3 +1280,120 @@ There are 4,617 edges between drug and standard term. One drug is associated wit
 
 
 **Note: ** in the database, each relation will have an inverse relation to make the edge double directed. For example, between the study A and condition B, we will have an edge A->B with label Study::Condition and an edge B->A with label Condition::Study. Relations have the same attributes and statistics (e.g., number of edges in the relation) with their inverse relation.
+
+
+
+## Outcome Subgraph
+
+<img src="./image/outcome_subgraph.png" alt="outcome_subgraph" style="zoom:50%;" />
+
+### Study and OutcomeGroup 
+
+There are 22,272 edges between study and outcomegroup.
+
+**id**: The format is "study::outcomegroup:XXX".
+
+**label**:  study::outcomegroup
+
+**from:** StudyID:XXX
+
+**to:**  OutcomeGroupID:XXX
+
+
+
+### Study and Outcome
+
+There are 88,386 edges between study and outcomegroup.
+
+**id**: The format is "study::outcome:XXX".
+
+**label**:  study::outcome
+
+**from:** StudyID:XXX
+
+**to:**  OutcomeID:XXX
+
+
+
+### Outcome and ClusterOutcome
+
+There are 88,244 edges between outcome and clusteroutcome.
+
+**id**: The format is "outcome::clusteroutcome:XXX".
+
+**label**:  outcome::clusteroutcome
+
+**from:** OutcomeID:XXX
+
+**to:**  ClusterOutcomeID:XXX
+
+
+
+### Outcome and StandardOutcome
+
+There are 57,910 edges between 37,735 unique outcomes and 492 standard outcomes.
+
+**id**: The format is "outcome::standardoutcome:XXX".
+
+**label**:  outcome::standardoutcome
+
+**from:** OutcomeID:XXX
+
+**to:**  StandardOutcomeID:XXX
+
+
+
+### Outcome and OutcomeAnalysis
+
+There are 107,314 edges between 45,707 unique outcomes and 107,314 outcome analyses.
+
+**id**: The format is "outcome::outcomeanalysis:XXX".
+
+**label**:  outcome::outcomeanalysis
+
+**from:** OutcomeID:XXX
+
+**to:**  OutcomeAnalysisID:XXX
+
+
+
+### OutcomeAnalysis and Method
+
+There are 107,314 edges between 45,707 unique outcomes and 107,314 outcome analyses.
+
+
+
+### Outcome and OutcomeMeasurement
+
+### Outcome and OutcomeGroup
+
+### OutcomeMeasurement and OutcomeGroup
+
+### 
+
+
+
+
+
+
+
+## Baseline Subgraph
+
+<img src="./image/baseline_subgraph.png" alt="baseline_subgraph" style="zoom:60%;" />
+
+<img src="./image/baseline_relation.png" alt="baseline_relation" style="zoom:50%;" />
+
+### Study and BaselineGroup 
+
+There are 22,272 edges between study and baselinegroup.
+
+
+
+## Event Subgraph
+
+<img src="./image/event_subgraph.png" alt="event_subgraph" style="zoom:70%;" />
+
+## Drop Subgraph
+
+
+
