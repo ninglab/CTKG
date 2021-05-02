@@ -14,11 +14,11 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
 
 **Attributes:**
 
-1. **last_update_submitted_qc_date**: 
+1. **last_update_submitted_qc_date** 
 
    Example: 2020-04-10
 
-2. **last_update_posted_date**: 
+2. **last_update_posted_date** 
 
    Example: 2020-04-21
 
@@ -30,7 +30,7 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
    >
    > 3,786 (46.1%) Estimate
 
-4. **start_month_year**: 
+4. **start_month_year** 
 
    Example: "July 1, 2017"
 
@@ -42,19 +42,19 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
    >
    > 2,436 (29.7%) Actual
 
-6. **start_date**: 
+6. **start_date** 
 
    Example: 2017-07-01
 
-7. **verification_month_year**: 
+7. **verification_month_year** 
 
    Example: April 2020
 
-8. **primary_completion_month_year**: 
+8. **primary_completion_month_year** 
 
    Example: 2020-04-30
 
-9. **primary_completion_date_type**: 
+9. **primary_completion_date_type** 
 
    Example: "July 15, 2018"
 
@@ -120,7 +120,7 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
 
 17. **last_known_status**: Active, not recruiting/""
 
-18. **phase**: 
+18. **phase** 
 
     Definition: For a clinical trial of a drug product (including a biological product), the numerical phase of such clinical trial, consistent with terminology in 21 CFR 312.21 and in 21 CFR 312.85 for phase 4 studies.
 
@@ -138,7 +138,7 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >    132   (1.6%) ""
     >      16   (0.2%) Early Phase 1
 
-19. **enrollment**:
+19. **enrollment**
 
     Definition:  The estimated total number of participants to be enrolled (target  number) or the actual total number of participants that are enrolled in  the clinical study.
 
@@ -152,7 +152,9 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >
     > ​        1 Anticipated
 
-21. **source**: University of Pittsburgh
+21. **source** 
+
+    Example: University of Pittsburgh
 
     > Statistics: 
     >
@@ -160,25 +162,25 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >
     > 218 of them are in more than 5 institutes
 
-22. **number_of_arms**:
+22. **number_of_arms**
 
     Definition: The number of arms in the clinical trial. For a trial with multiple  periods or phases that have different numbers of arms, the maximum  number of arms during all periods or phases. "Arm" means a pre-specified group or subgroup of participant(s) in a  clinical trial assigned to receive specific intervention(s) (or no  intervention) according to a protocol. 
 
     Example: 2
 
-23. **number_of_groups**: 
+23. **number_of_groups** 
 
     Example: 2
 
     > Statistics: 8,081(98.4%) ""
 
-24. **why_stoped**: 
+24. **why_stoped** 
 
     Example: "Lack of efficacy"
 
     > Statistics: 7,729 (94.1%) ""
 
-25. **allocation**:
+25. **allocation**
 
     Definition: The method by which participants are assigned to arms in a clinical trial. 
 
@@ -187,11 +189,11 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >  Statistics: 
     >
     >  7,019 (85.5%) Randomized
-    >    602   (7.3%) N/A
-    >    406   (4.9%) Non-Randomized (i.e., Participants may choose which group they want to be in, or they may be assigned to the groups by the researchers.)
-    >    183   (2.2%) ""
+    >       602   (7.3%) N/A
+    >       406   (4.9%) Non-Randomized (i.e., Participants may choose which group they want to be in, or they may be assigned to the groups by the    researchers.)
+    >       183   (2.2%) ""
 
-26. **intervention_model**: 
+26. **intervention_model** 
 
     Definition: The strategy for assigning interventions to participants.
 
@@ -200,13 +202,13 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     > Statistics: 
     >
     > 6,308 (76.8%) Parallel Assignment (i.e., participants are assigned to one of two or more groups in parallel for the duration of the study)
-    >      879 (10.7%) Single Group Assignment (i.e., clinical trials with a single arm)
-    >      742   (9.0%) Crossover Assignment (i.e., groups of participants receive two or more interventions in a specific order.)
-    >      167   (2.0%) ""
-    >        93   (1.1%) Factorial Assignment (i.e., groups of participants receive one of several combinations of interventions)
-    >        21   (0.2%) Sequential Assignment
+    >       879 (10.7%) Single Group Assignment (i.e., clinical trials with a single arm)
+    >       742   (9.0%) Crossover Assignment (i.e., groups of participants receive two or more interventions in a specific order.)
+    >       167   (2.0%) ""
+    >         93   (1.1%) Factorial Assignment (i.e., groups of participants receive one of several combinations of interventions)
+    >         21   (0.2%) Sequential Assignment
 
-27. **primary_purpose**:
+27. **primary_purpose**
 
     Definition: The main objective of the intervention(s) being evaluated by the clinical trial. 
 
@@ -215,20 +217,20 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     > Statistics:  
     >
     > 7,069 (86.1%) Treatment
-    >      453   (5.5%) Prevention
-    >      221   (2.7%) ""
-    >      145   (1.8%) Basic Science
-    >      138   (1.7%) Supportive Care
-    >        93   (1.1%) Other
-    >        71   (0.9%) Diagnostic
-    >        16   (0.2%) Health Services Research
-    >          4   (0.0%) Screening
+    >       453   (5.5%) Prevention
+    >       221   (2.7%) ""
+    >       145   (1.8%) Basic Science
+    >       138   (1.7%) Supportive Care
+    >         93   (1.1%) Other
+    >         71   (0.9%) Diagnostic
+    >         16   (0.2%) Health Services Research
+    >           4   (0.0%) Screening
 
 28. **time_perspective**: Prospective/Retrospective/Cross-Sectional 
 
     > Statistics: 8,080 (98.4%) ""
 
-29. **masking**:
+29. **masking**
 
     Definition: The party or parties involved in the clinical trial who are prevented  from having knowledge of the interventions assigned to individual  participants. 
 
@@ -243,13 +245,13 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >       310   (3.8%) Single
     >       171   (2.1%) ""
 
-30. **masking_description**:  
+30. **masking_description**  
 
     Example: "This is a phase 4 double blind study, which will use a triple dummy design for dosing."
 
     > Statistics: 8,074 (98.3%) ""
 
-31. **intervention_model_description**: 
+31. **intervention_model_description** 
 
     Example:  "Phase I clinical trial, controlled, of parallel groups, double blind, randomized, exploratory."
 
@@ -293,9 +295,13 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >
     >       300   (3.7%) Male
 
-38. **minimum_age**: 18 Years
+38. **minimum_age**
 
-39. **maximum_age**:  65 Years
+    Example: 18 Years
+
+39. **maximum_age**
+
+    Example:  65 Years
 
 40. **healthy_volunteers**: No/"Accepts Healthy Volunteers"
 
@@ -307,19 +313,19 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >
     > ​     16 ""
 
-41. **population**: 
+41. **population** 
 
     Example: "Korean patients with T2DM"
 
     > Statistics: 8,078 (98.4%) ""
 
-42. **criteria**:
+42. **criteria**
 
     Definition: A limited list of criteria for selection of participants in the clinical study, provided in terms of inclusion and exclusion criteria and suitable for assisting potential participants in identifying clinical  studies of interest. 
 
     Example: "~ Inclusion Criteria:  A subject must be 12 years of age or older, ..." (inclusion and exclusion criterion)
 
-43. **gender_description**: 
+43. **gender_description** 
 
     Example: "Androgenetic Alopecia in Males"
 
@@ -329,7 +335,7 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
 
     > Statistics: 29 t and 8,181 (99.6%) ""
 
-45. **description**: 
+45. **description** 
 
     Example: "The primary objective of the study is to determine whether armodafinil treatment..."
 
@@ -343,15 +349,15 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >
     >       202   (2.5%) studies have nct_alias 
 
-47. **id_value**: 
+47. **id_value** 
 
     Example: "0000-072;2007_650"
 
-48. **pmid**: 
+48. **pmid** 
 
     Example: "15292498;11025867;16670414;1003364"
 
-49. **reference_type**: reference|results_reference
+49. **reference_type**: reference/results_reference
 
     > Statistics: 
     >
@@ -373,7 +379,7 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
 
 **Attributes**:
 
-1. **name**: 
+1. **name** 
 
    Example: "bicalutamide"
 
@@ -389,7 +395,7 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
 
 **Attributes**:
 
-1. **name**: 
+1. **name** 
 
    Example: "Bicalutamide"
 
@@ -405,7 +411,7 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
 
 **Attributes**:
 
-1. **name**: 
+1. **name** 
 
    Example: "Fever"
 
