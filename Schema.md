@@ -1,3 +1,7 @@
+# Schema
+
+![](/home/bo/Documents/AACT/Github/Schema.png)
+
 # Nodes
 
 Please refer to this [link][def] for detailed definition of attributes. We also list the definition of attributes which could be hard to understand. 
