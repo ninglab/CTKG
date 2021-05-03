@@ -14,7 +14,7 @@ The following table shows the description and attributes for each node type. We 
 
 ## Study
 
-Each study node represents a clinical study. CTKG includes 8,210 clinical studies. Each study has 49 attributes and an id "StudyID:NCTXXX". 
+Each study node represents a clinical study. CTKG includes 8,210 study nodes. Each study has 49 attributes and an id "StudyID:NCTXXX". 
 
 **Attributes:**
 
@@ -463,11 +463,7 @@ Each condition node represents a condition/disease studied in clinical studies. 
    
    Example: "Fever"
 
-
-
-## OutcomeSubgraph
-
-### OutcomeGroup
+## OutcomeGroup
 
 32,499 outcome groups with 3 attributes
 
@@ -487,9 +483,7 @@ Each condition node represents a condition/disease studied in clinical studies. 
 
    Example: "We examined naltrexone-induced changes in brain signal during the processing of contextual cues by extracting brain responses in the rACC and comparing then during the baseline (placebo only) and the naltrexone session using paired-t test statistical analysis."
 
-
-
-### Outcome
+## Outcome
 
 88,386 outcomes with 5 attributes
 
@@ -527,7 +521,7 @@ Each condition node represents a condition/disease studied in clinical studies. 
 
    
 
-### StandardOutcome
+## StandardOutcome
 
 492 standard outcomes with 1 attribute.
 
@@ -1301,9 +1295,7 @@ This relation indicates which conditions are studied in which studies. For examp
 
 This relation indicates which drugs could be normalized to which standard terms. For example, the triplet (dmards, drug-term, Antirheumatic Agents) indicates the drug "dmards" could be normalized to the standard term "Antirheumatic Agents". There are 4,617 edges of this relation between drug nodes and term nodes. Each edge of this relation type has an id "Drug::Term:XXX", and we don't have any attributes on this relation.
 
-## Outcome Subgraph
 
-<img src="./image/outcome_subgraph.png" alt="outcome_subgraph" style="zoom:50%;" />
 
 ### Study and OutcomeGroup 
 
