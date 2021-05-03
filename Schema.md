@@ -1,6 +1,12 @@
+```
+
+
+
+```
+
 # Clinical Trial Knowledge Graph (CTKG)
 
-Clinical Trial Knowledge Graph (CTKG) is a comprehensive knowledge graph relating clinical studies, study groups, drugs, conditions, adverse events, outcome analyses and outcomes. CTKG represents information from the [AACT][aact] database as a knowledge graph to capture the relations among nodes. CTKG includes 1,493,518 nodes belonging to 19 node-types; and 3,452,837 triplets belonging to 21 relation-types. These 21 relation-types show a type of interaction between one of the 19 node-type pairs as depicted in the figure below.  In CTKG, we have two types of relations between the study and drug nodes. For the rest of the node-type pairs, we have at most one relation for each of them.
+Clinical Trial Knowledge Graph (CTKG) is a comprehensive knowledge graph relating clinical studies, study groups, drugs, conditions, adverse events, outcome analyses and outcomes. CTKG represents information from the [AACT][aact] database as a knowledge graph to capture the relations among nodes. CTKG includes 1,493,518 nodes belonging to 19 node-types; and **XXX** triplets belonging to 21 relation-types. These 21 relation-types show a type of interaction between one of the 19 node-type pairs as depicted in the figure below.  In CTKG, we have two types of relations between the study and drug nodes. For the rest of the node-type pairs, we have at most one relation for each of them.
 
 [aact]: https://aact.ctti-clinicaltrials.org/connect
 
@@ -14,7 +20,7 @@ The following table shows the description and attributes for each node type. We 
 
 ## Study
 
-Each study node represents a clinical study. CTKG includes 8,210 study nodes. Each study has 49 attributes and an id "StudyID:NCTXXX". 
+Each study node represents a clinical study. CTKG includes 8,210 clinical studies. Each study has 49 attributes and an id "StudyID:NCTXXX". 
 
 **Attributes:**
 
@@ -74,9 +80,9 @@ Each study node represents a clinical study. CTKG includes 8,210 study nodes. Ea
    >
    > 8,188 (99.7%) Actual
    >
-   > ​     19 "" 
+   >   19 "" 
    >
-   > ​       3 Anticipated
+   > ​    3 Anticipated
 
 9. **primary_completion_date**
 
@@ -92,7 +98,7 @@ Each study node represents a clinical study. CTKG includes 8,210 study nodes. Ea
     >
     > 8,209 (99.9%) ""
     >
-    > ​        1               7 Days
+    > ​       1               7 Days
 
 11. **study_type** 
 
@@ -102,9 +108,9 @@ Each study node represents a clinical study. CTKG includes 8,210 study nodes. Ea
     >
     > 8,078 (98.4%) Interventional 
     >
-    > ​    131   (1.6%) Observational       
+    >  131   (1.6%) Observational       
     >
-    > ​        1    (0.0%) Observational [Patient Registry]
+    > ​     1    (0.0%) Observational [Patient Registry]
 
 12. **brief_title**
 
@@ -126,13 +132,13 @@ Each study node represents a clinical study. CTKG includes 8,210 study nodes. Ea
     >
     > 7,325 (89.2%) Completed
     >
-    > ​    560 (6.8%) Terminated
+    >  560 (6.8%) Terminated
     >
-    > ​    311 (3.8%) Active, not recruiting
+    >  311 (3.8%) Active, not recruiting
     >
-    > ​      12 Unknown status
+    >    12 Unknown status
     >
-    > ​        2 Recruiting
+    > ​     2 Recruiting
 
 15. **phase** 
 
@@ -145,12 +151,12 @@ Each study node represents a clinical study. CTKG includes 8,210 study nodes. Ea
     > 3,507 (42.7%) Phase 3
     > 1,984 (24.2%) Phase 2
     > 1,409 (17.2%) Phase 4
-    >    424   (5.2%) N/A
-    >    345   (4.2%) Phase 1
-    >    218   (2.7%) Phase 1/Phase 2
-    >    175   (2.1%) Phase 2/Phase 3
-    >    132   (1.6%) ""
-    >        16   (0.2%) Early Phase 1
+    > 424   (5.2%) N/A
+    > 345   (4.2%) Phase 1
+    > 218   (2.7%) Phase 1/Phase 2
+    > 175   (2.1%) Phase 2/Phase 3
+    > 132   (1.6%) ""
+    >     16   (0.2%) Early Phase 1
 
 16. **enrollment**
 
@@ -211,9 +217,9 @@ Each study node represents a clinical study. CTKG includes 8,210 study nodes. Ea
     >  Statistics: 
     >
     >  7,019 (85.5%) Randomized
-    >     602   (7.3%) N/A
-    >     406   (4.9%) Non-Randomized (i.e., Participants may choose which group they want to be in, or they may be assigned to the groups by the    researchers.)
-    >     183   (2.2%) ""
+    >   602   (7.3%) N/A
+    >   406   (4.9%) Non-Randomized (i.e., Participants may choose which group they want to be in, or they may be assigned to the groups by the    researchers.)
+    >   183   (2.2%) ""
 
 23. **intervention_model** 
 
@@ -224,11 +230,11 @@ Each study node represents a clinical study. CTKG includes 8,210 study nodes. Ea
     > Statistics: 
     >
     > 6,308 (76.8%) Parallel Assignment (i.e., participants are assigned to one of two or more groups in parallel for the duration of the study)
-    >    879 (10.7%) Single Group Assignment (i.e., clinical trials with a single arm)
-    >    742   (9.0%) Crossover Assignment (i.e., groups of participants receive two or more interventions in a specific order.)
-    >    167   (2.0%) ""
-    >      93   (1.1%) Factorial Assignment (i.e., groups of participants receive one of several combinations of interventions)
-    >      21   (0.2%) Sequential Assignment
+    > 879 (10.7%) Single Group Assignment (i.e., clinical trials with a single arm)
+    > 742   (9.0%) Crossover Assignment (i.e., groups of participants receive two or more interventions in a specific order.)
+    > 167   (2.0%) ""
+    >   93   (1.1%) Factorial Assignment (i.e., groups of participants receive one of several combinations of interventions)
+    >   21   (0.2%) Sequential Assignment
 
 24. **primary_purpose**
 
@@ -239,14 +245,14 @@ Each study node represents a clinical study. CTKG includes 8,210 study nodes. Ea
     > Statistics:  
     >
     > 7,069 (86.1%) Treatment
-    >    453   (5.5%) Prevention
-    >    221   (2.7%) ""
-    >    145   (1.8%) Basic Science
-    >    138   (1.7%) Supportive Care
-    >      93   (1.1%) Other
-    >      71   (0.9%) Diagnostic
-    >      16   (0.2%) Health Services Research
-    >        4   (0.0%) Screening
+    > 453   (5.5%) Prevention
+    > 221   (2.7%) ""
+    > 145   (1.8%) Basic Science
+    > 138   (1.7%) Supportive Care
+    >   93   (1.1%) Other
+    >   71   (0.9%) Diagnostic
+    >   16   (0.2%) Health Services Research
+    >     4   (0.0%) Screening
 
 25. **time_perspective**: Prospective/Retrospective/Cross-Sectional 
 
@@ -265,9 +271,9 @@ Each study node represents a clinical study. CTKG includes 8,210 study nodes. Ea
     > 2,771 (33.8%) None (Open Label)
     > 1,986 (24.2%) Double
     > 1,982 (24.2%) Quadruple
-    >    990 (12.1%) Triple
-    >    310   (3.8%) Single
-    >    171   (2.1%) ""
+    > 990 (12.1%) Triple
+    > 310   (3.8%) Single
+    > 171   (2.1%) ""
 
 27. **masking_description**  
 
@@ -323,9 +329,9 @@ Each study node represents a clinical study. CTKG includes 8,210 study nodes. Ea
     >
     > 7,256 (88.4%) All
     >
-    >    654   (8.0%) Female
+    > 654   (8.0%) Female
     >
-    >    300   (3.7%) Male
+    > 300   (3.7%) Male
 
 35. **minimum_age**
 
@@ -347,17 +353,17 @@ Each study node represents a clinical study. CTKG includes 8,210 study nodes. Ea
     >
     > 7,462 (90.9%) No
     >
-    >    732  (8.9%) "Accepts Healthy Volunteers"
+    > 732  (8.9%) "Accepts Healthy Volunteers"
     >
-    > ​     16 ""
-
+    >   16 ""
+    
 38. **population** 
 
     Definition: A description of the population from which the groups or cohorts will be selected (for example, primary care clinic, community sample, residents of a certain town).
 
     Example: "Korean patients with T2DM"
 
-    > Statistics: 8,078 (98.4%) ""
+    >  Statistics: 8,078 (98.4%) ""
 
 39. **criteria**
 
@@ -395,7 +401,7 @@ Each study node represents a clinical study. CTKG includes 8,210 study nodes. Ea
     >
     > 4,078 (49.7%) studies have secondary_id
     >
-    >    202   (2.5%) studies have nct_alias 
+    > 202   (2.5%) studies have nct_alias 
 
 44. **id_value** 
 
@@ -445,7 +451,7 @@ Each term node represents a normalized or standard drug name. CTKG includes 2,75
 
 1. **name**
 
-   Definition: the normalized or standard drug name  
+   Definition: the normalized or standard drug name.
    
    Example: "Bicalutamide"
 
@@ -462,38 +468,44 @@ Each condition node represents a condition/disease studied in clinical studies. 
    Definition: the name of the condition/disease studied in the clinical study
    
    Example: "Fever"
+   
+   
 
 ## OutcomeGroup
 
-32,499 outcome groups with 3 attributes
-
-**id**: The format is "OutcomeGroupID:xxx".
-
-**label**: OutcomeGroup
+Each *OutcomeGroup* node represents an arm or a comparison group for describing the outcomes of a study. The groups are based on the pre-specified protocol and/or statistical analysis plan. CTKG includes 32,241 *OutcomeGroup* nodes. Each *OutcomeGroup* node has an id "OutcomeGroupID:XXX" and 3 attributes.
 
 **Attributes:**
 
-1. **ctgov_group**
+1. **ctgov_group_code**:
+
+   Definition: The group code provided by ClinicalTrials.gov.
+
+   Example: "O1"
 
 2. **title**
 
+   Definition: Descriptive label used to identify each arm or group.
+
    Example: "fMRI BOLD Responses in the rACC Cortex (Naltrexone vs Placebo)"
 
-3. **description** 
+3. **description**
+
+   Definition: Brief description of each arm or group.
 
    Example: "We examined naltrexone-induced changes in brain signal during the processing of contextual cues by extracting brain responses in the rACC and comparing then during the baseline (placebo only) and the naltrexone session using paired-t test statistical analysis."
 
+
+
 ## Outcome
 
-88,386 outcomes with 5 attributes
-
-**id**:  The format is "OutcomeID:xxx".
-
-**label**: Outcome
+Each *Outcome* node represents an variable that is monitored during a study to document the impact that a given intervention or exposure has on the health of a given population[^1]. CTKG includes 88,386 *Outcome* nodes. Each *Outcome* node has an id "Outcome:XXX" and 4 attributes.
 
 **Attributes:**
 
 1. **type**
+
+   Definition: The type of the outcome node, selected from 4 types below (i.e., "Primary", "Secondary", "Other Pre-specified Outcomes", "Post-Hoc").  The primary outcome is the variable that is the most relevant to answer the research question, and thus ideally should be patient-centered[^1]. The secondary outcome is the additional outcome monitored to help interpret the results of the primary outcome.[^1]
 
    > Statistics:
    >
@@ -501,21 +513,25 @@ Each condition node represents a condition/disease studied in clinical studies. 
    >
    > 15,534  (17.6%)  Primary
    >
-   >   2,830    (3.2%)   Other Pre-specified Outcomes
+   >     2,830    (3.2%)   Other Pre-specified Outcomes
    >
    > ​     289    (0.3%)   Post-Hoc
 
 2. **title**
 
+   Definition: Name of the specific outcome.
+
    Example: "Naltrexone-induced Changes in BOLD Responses in the rACC Cortex During the Processing of Contextual Cues"
 
 3. **description**
+
+   Definition: Name of the specific outcome.
 
    Example: "In order to identify naltrexone-induced changes in the neural correlates of contextual processing, ..."
 
 4. **time_frame**
 
-   Definition: Time point(s) at which the measurement is assessed for the specific metric used.
+   Definition: Time point(s) at which the outcome is assessed for the specific metric used.
 
    Example: "[Approximately at day 1, 7]"
 
@@ -523,39 +539,29 @@ Each condition node represents a condition/disease studied in clinical studies. 
 
 ## StandardOutcome
 
-492 standard outcomes with 1 attribute.
-
-These standard outcomes are extracted from the abbreviations in the outcome titles and descriptions. Those unrelated outcomes have been manually filtered and those similar outcomes (e.g., "visual analog pain score" and "visual analogue pain scales") have been manually merged.
-
-**id**: The format is "StandardOutcomeID:XXX".
-
-**label**: StandardOutcome
+Each *StandardOutcome* node represents a standard variable that can be commonly used in clinical studies. In CTKG, these *StandardOutcome* nodes are extracted from the abbreviations in the outcome titles and descriptions. Those abbreviations unrelated with the outcomes have been manually filtered. Similar phrases (e.g., "visual analog pain score" and "visual analogue pain scales") identified from the abbreviations (e.g., "VAS") have been manually merged. The CTKG includes 492 *StandardOutcome* nodes. Each *StandardOutcome* node has an id "StandardOutcomeID:XXX" and 1 attribute.
 
 **Attributes:**
 
 1. **name**
 
+   Definition: The name of the *StandardOutcome* Node.
+   
    Example: "blood oxygen level dependent"
 
 
 
-### ClusterOutcome
+## ClusterOutcome
 
-200 cluster outcomes with 5 attributes.
+Each *ClusterOutcome* node represents a cluster that is identified from the titles of *Outcome* nodes using the repeated bisection clustering algorithm in CLUTO. For each title, a set of words including noun, adv, verb and adj is extracted to compute the TF-IDF vector. These calculated TF-IDF vectors are further clustered into 200 clusters. The CTKG includes 200 *ClusterOutcome* nodes. Each *ClusterOutcome* node has an id "ClusterOutcomeID:XXX" and 5 attributes.
 
-We first extracted from the outcome titles a set of words including noun, adv, verb and adj. Then, each outcome title is represented as the TF-IDF vector calculated from the extracted words. These TF-IDF vectors are further clustered into 200 clusters using the repeated bisection clustering algorithm in CLUTO. 
-
-Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations (e.g., "GAD-7" or "IL-6") cannot be clustered. 
-
-**id**: The format is "ClusterOutcomeID:XXX".
-
-**label**: ClusterOutcome
+**Note**: Among 88,386 outcome titles, 142 (0.16%) outcome titles are with only abbreviations (e.g., "GAD-7" or "IL-6"). These outcome titles don't contain any meaningful words and thus cannot be represented by the TF-IDF vectors for clustering. 
 
 **Attributes:**
 
  1. **size**
 
-    The size of clusters range from 86 to 1,493.
+    Definition: The number of outcome titles in the specific cluster. The size of clusters range from 86 to 1,493.
 
  2. **ISim**
 
@@ -583,33 +589,41 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
     
 
-### OutcomeMeasure
+## OutcomeMeasure
 
-690,626 outcome measurements with 9 attributes.
-
-**id**: The format is "OutcomeMeasureID:XXX" in which the "XXX" is from the AACT database.
-
-**label**: OutcomeMeasure
+Each *OutcomeMeasure* node represents an outcome measurement of an variable (i.e., *Outcome* node) on an arm or a group (i.e., *OutcomeGroup* node). The CTKG includes 690,626 *OutcomeMeasure* nodes. Each *OutcomeMeasure* node has an id "OutcomeMeasureID:XXX" and 9 attributes.
 
 **Attributes:**
 
 1. **classification**
 
-   Example: "At week 24", "Interproximal analysis at week 24"
+   Definition: The outcome measurement may fall into different categories (e.g., different time periods or metric levels).
+
+   Example: "At week 24", "At week 12", "At week 24 with baseline MGI >2.00", "At week 24 with baseline MGI <=2.00" ;  "Green lissamine grade 4", "Green lissamine grade 3", "Green lissamine grade 2".
 
    Statistics: 142,515 (20.6%) ""
 
 2. **category**
 
-   Definition: "Name of distinct category or row for an outcome measure, if any."
+   Definition: Name of distinct category or row for an outcome measure, if any. 
 
    Example: "Yes"/"No","No flare up"/"Flare up", "Abnormal CS"/"Abnormal NCS".
+
+   Example with both category and classification properties:
+
+   > ...|Total|No flare up|Acute Increase in Pain Score (Acute Exacerbation of Pain)|...
+   >
+   > ...|Total|Flare up|Acute Increase in Pain Score (Acute Exacerbation of Pain)|...
+   >
+   > ...|Day 4|No flare up|Acute Increase in Pain Score (Acute Exacerbation of Pain)|...
+   >
+   > ...|Day 4|Flare up|Acute Increase in Pain Score (Acute Exacerbation of Pain)|...
 
    Statistics:  674,127 (97.6%) ""
 
 3. **param_type**
 
-   Definition: "The type of data for the outcome measure"
+   Definition: The type of data for the outcome measure.
 
    > Statistics:
    >
@@ -617,33 +631,37 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
    >
    > 249,245      (36.1%)    Mean
    >
-   >   76,099      (11.0%)    Least Squares Mean
+   >    76,099      (11.0%)    Least Squares Mean
    >
-   >   64,858         (9.4%)    Count of Participants
+   >    64,858         (9.4%)    Count of Participants
    >
-   >   31,243         (4.5%)    Median
+   >    31,243         (4.5%)    Median
    >
-   >   14,703         (2.1%)    Geometric Mean
+   >    14,703         (2.1%)    Geometric Mean
    >
-   > ​        665        (0.1%)    Geometric Least Squares Mean
+   > ​      665        (0.1%)    Geometric Least Squares Mean
    >
-   > ​        261                       Count of Units
+   > ​      261                       Count of Units
    >
-   > ​          45                       ""
+   > ​        45                       ""
    >
-   > ​          39                        Log mean
+   > ​        39                        Log mean
    >
-   > ​          22                        Other including "age normed" (6), "age & education normed" (6), "g/dL" (5), "ng/mL" (3), "age" (2).
+   > ​        22                        Other including "age normed" (6), "age & education normed" (6), "g/dL" (5), "ng/mL" (3), "age" (2).
 
 4. **param_value**
 
+   Definition: The measurement value for each *OutcomeMeasure* node on the specific *OutcomeGroup*.
+
 5. **type_dispersion**
+
+   Definition: The statistics used to measure the dispersion of the measurement values.
 
    > Statistics:
    >
    > 297,612    (43.1%)        "" (may means not applicable)
    >
-   > 207,039    (30.0%)        Standard Deviation
+   > 207,039    (30.0%)      Standard Deviation
    >
    >   98,956    (14.3%)        Standard Error
    >
@@ -667,23 +685,33 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
 6. **dispersion_value**
 
+   Definition: The measurement value of dispersion for each *OutcomeMeasure* node on the specific *OutcomeGroup*.
+
+   > Statistics:  372,954    (54.0%)    ""
+
 7. **dispersion_lower_limit**
 
+   Definition:  This property is used for reporting the lower limit of the interquartile range or full range.
+
+   > Statistics:  608,820    (88.2%)    ""
+
 8. **dispersion_upper_limit**
+
+   Definition:  This property is used for reporting the upper limit of the interquartile range or full range.
+
+   > Statistics:  608,949    (88.2%)    ""
 
 9. **explanation_na**
 
    Definition: Explain why outcome measure data are not available, if "NA" is reported for Outcome Measure Data.
 
-   
+   > Statistics: 677,500     (98.1%)   ""
 
-### OutcomeAnalysis
 
-107,314 outcome analyses with 15 attributes.
 
-**id**: The format is "OutcomeAnalysisID:XXX" in which the "XXX" is from the AACT database.
+## OutcomeAnalysis
 
-**label**: OutcomeAnalysis
+Each *OutcomeAnalysis* node represents the result of scientifically appropriate tests of statistical significance of an outcome variable. The CTKG includes 107,314 *OutcomeAnalysis* nodes. Each *OutcomeAnalysis* node has an id "OutcomeAnalysisID:XXX" and 15 attributes.
 
 **Attributes:**
 
@@ -711,7 +739,13 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
 2. **non_inferiority_type_description**
 
+   Definition: If the non_inferiority_type is "Non-inferiority" or "Equivalence,", additional details is expected to be provided to describe the selected non_inferiority_type, including details of the power calculation (if not previously provided), definition of non-inferiority or equivalence margin, and other key parameters.
+
+   > Statistics:  101,147      (94.3%)          ""
+
 3. **param_type**
+
+   Definition: The type of data for the outcome analysis.
 
    Example: "Mechanistic hypothesis: naltrexone will block contextual processing."
 
@@ -735,11 +769,13 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
 4. **param_value**
 
-   > Statistics:
-   >
-   > 33,286          (31.0%)       ""
+   Definition: The value for each *OutcomeAnalysis* node.
+
+   > Statistics:  33,286          (31.0%)       ""
 
 5. **dispersion_type**
+
+   Definition: The type of the measure of dispersion for the outcome analysis.
 
    > Statistics:
    >
@@ -751,11 +787,13 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
 6. **dispersion_value**
 
-   > Statistics:
-   >
-   > 85,491          (79.7%)       ""
+   Definition: The measure of dispersion for each *OutcomeAnalysis* node.
+
+   > Statistics:  85,491          (79.7%)       ""
 
 7. **p_value_modifier**
+
+   Definition: The modifier of p_value, typically a less than or greater than sign.
 
    > Statistics:
    >
@@ -771,9 +809,9 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
 8. **p_value**
 
-   > Statistics:
-   >
-   > 15,837          (14.8%)       "" 
+   Definition: The p_value of the statistical test that can be used to reject or retain the null hypothesis.
+
+   Statistics:  15,837          (14.8%)       "" 
 
 9. **p_value_description**
 
@@ -831,7 +869,9 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
     
 
-### Statistical Method
+## Method
+
+Each *Method* represents a statistical method that is used for node 20,599 event groups with 3 attributes
 
 933 statistical methods with 1 attribute
 
@@ -847,11 +887,15 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
 
 
-## BaseSubgraph
+## BaseGroup
 
-### BaseGroup
+Each *BaselineGroup* node 20,599 event groups with 3 attributes
 
 27,068 outcome groups with 3 attributes
+
+> 6,952 baseline groups (25.68% over all baseline groups) are with the title "Total". These baseline groups are summaries of all the other reporting baseline groups in the studies.
+>
+> 20,116 baseline groups (74.32%) represent a single group of participants.
 
 **id**: BaselineGroupID: ; 
 
@@ -871,7 +915,9 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
    
 
-### BaselineRecord
+## BaselineRecord
+
+Each *BaselineRecord* node 20,599 event groups with 3 attributes
 
 315,533 baseline records with 12 attributes.
 
@@ -885,20 +931,16 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
    Example: "United States"; "Male"; "Female"
 
-   > Statistics:
-   >
-   > 192,923         (61.1%)           ""
-
+   Statistics:  192,923         (61.1%)           ""
+   
 2. **category**
 
    Definition: Name of distinct category or row for a baseline measure, if any.
 
    Example:  "Unknown or Not Reported"; "Not Hispanic or Latino", "Hispanic or Latino","Male"
 
-   > Statistics:
-   >
-   > 172,555          (54.7%)          ""
-
+   Statistics:  172,555          (54.7%)          ""
+   
 3. **units**
 
    Example: "participants", "years", "units on a scale"
@@ -951,9 +993,7 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
 7. **dispersion_value**
 
-   > Statistics:
-   >
-   > 266,061          (84.3%)            ""
+   Statistics:  266,061          (84.3%)            ""
 
 8. **dispersion_lower_limit**
 
@@ -967,11 +1007,9 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
 
 
-## EventSubgraph
+## EventGroup
 
-### EventGroup
-
-20,599 event groups with 3 attributes
+Each *EventGroup* node 20,599 event groups with 3 attributes
 
 **id**: The format is "EventGroupID:XXX" in which "XXX" is the ID from AACT database.
 
@@ -1021,9 +1059,9 @@ Among 88,386 outcome titles, 142 (0.16%) outcome titles with only abbreviations 
 
 
 
-### AdverseEvent
+## AdverseEvent
 
-12,640 adverse events with 5 attributes.
+Each *AdverseEvent* node is 21,288 adverse events with 5 attributes.
 
 Note that instead of directly using the terms in the dataset, we tried to normalize them so that these terms can match with the **Medical Dictionary for Regulatory Activities (MedDRA) Terminology**. Please see https://www.meddra.org/ for details. 
 
@@ -1057,9 +1095,9 @@ Before normalization, the original database contains 42,435 unique adverse event
 
    > Statistics:
    >
-   > 10,176          (80.5%)           0 (terms cannot be normalized to match with the MedDRA terms)
+   > 10,151          (80.5%)           "" (terms cannot be normalized to match with the MedDRA terms)
    >
-   >   2,464          (19.5%)           MedDRA code
+   >   11,137          (19.5%)           MedDRA code
 
 3. **term_type**
 
@@ -1067,13 +1105,13 @@ Before normalization, the original database contains 42,435 unique adverse event
 
    > Statistics:
    >
-   > 10,176         (80.5%)         None
+   > 10,670                               PT
    >
-   >   2,309         (18.3%)         PT
+   > 10,151         (80.5%)         None
    >
-   > ​     134            (1.1%)        HLT
+   > ​     268            (1.1%)        HLT
    >
-   > ​       21            (0.1%)        HLGT
+   > ​       22            (0.1%)        SOC
 
 4. **high_level_term**
 
@@ -1085,9 +1123,9 @@ Before normalization, the original database contains 42,435 unique adverse event
 
    
 
-### Organ
+## Organ
 
-27 outcomes with 1 attribute.
+29 outcomes with 1 attribute.
 
 Definition: High-level categories used to group adverse event terms by body or organ system.
 
@@ -1103,9 +1141,7 @@ Definition: High-level categories used to group adverse event terms by body or o
 
 
 
-## DropSubgraph
-
-### DropGroup
+## DropGroup
 
 22,272 drop groups with 3 attributes
 
@@ -1129,7 +1165,7 @@ Definition: High-level categories used to group adverse event terms by body or o
 
 
 
-### Period
+## Period
 
 34,330 Periods with 10 attributes.
 
@@ -1148,10 +1184,6 @@ There is no limit to the number of periods that may be used to describe a single
 >   1,168   (3.4%),             5
 >
 > ​     553   (1.6%),             6
-
-**id**: The format is "PeriodID:XXX".
-
-**label:** Period
 
 **Attributes:**
 
@@ -1189,12 +1221,8 @@ There is no limit to the number of periods that may be used to describe a single
 
    Example: "All participants received all of the 4 interventions"
 
-   > Statistics:
-   >
-   > 30,877         (89.9%)           ""
-   >
-   >   3,453         (10.1%)           any description
-
+   Statistics:  30,877         (89.9%)           ""
+   
 4. **num_not_completed**
 
    Definition: Number of participants (and units, if applicable) that did not complete the study or period. This is calculated automatically by subtracting Completed from Started. 
@@ -1209,12 +1237,8 @@ There is no limit to the number of periods that may be used to describe a single
 
    Example: "Postoperative day one pain score not available for one patient"
 
-   > Statistics:
-   >
-   > 32,417        (94.4%)           ""
-   >
-   >   1,913           (5.6%)          any description
-
+   Statistics:  32,417        (94.4%)           ""
+   
 7. **additional_count**
 
    Definition: Any specific events or time points in the study when the numbers of participants (and units, if applicable) are reported. 
@@ -1223,25 +1247,18 @@ There is no limit to the number of periods that may be used to describe a single
 
    Example: "Switched to Pembrolizumab~4~Treated~15~"
 
-   > Statistics:
-   >
-   > 27,665        (80.6%)          ""
-   >
-   >   6,665        (19.4%)          any additional count
-
+   Statistics:  27,665        (80.6%)          ""
+   
 8. **additional_description**
 
    Example: "~~" or "Row represents Ixekizumab data only.~Row represents Ixekizumab data only."
 
-   > Statistics:
-   >
-   > 33,430       (97.4%)          "" (no additional counts) or "~~~" (have additional counts but no additional description)
-   >
-   > ​     900         (2.6%)
+   Statistics:  33,430       (97.4%)      "" (no additional counts) or "~~~" (have additional counts but no additional description)
+   
 
 
 
-### DropRecord
+## DropRecord
 
 123,627 drop records with 2 attributes.
 
@@ -1297,9 +1314,9 @@ This relation indicates which drugs could be normalized to which standard terms.
 
 
 
-### Study and OutcomeGroup 
+## Study-OutcomeGroup relation
 
-There are 22,272 edges between study and outcomegroup.
+There are 22,272 edges between nodes of study and nodes of outcomegroup.
 
 **id**: The format is "study::outcomegroup:XXX".
 
@@ -1311,9 +1328,9 @@ There are 22,272 edges between study and outcomegroup.
 
 
 
-### Study and Outcome
+## Study-Outcome relation
 
-There are 88,386 edges between study and outcomegroup.
+There are 88,386 edges between nodes of study and nodes of outcomegroup.
 
 **id**: The format is "study::outcome:XXX".
 
@@ -1325,9 +1342,9 @@ There are 88,386 edges between study and outcomegroup.
 
 
 
-### Outcome and ClusterOutcome
+## Outcome-ClusterOutcome relation
 
-There are 88,244 edges between outcome and clusteroutcome.
+There are 88,244 edges between 88,244 nodes of outcome and 200 nodes of clusteroutcome.
 
 **id**: The format is "outcome::clusteroutcome:XXX".
 
@@ -1339,9 +1356,13 @@ There are 88,244 edges between outcome and clusteroutcome.
 
 
 
-### Outcome and StandardOutcome
+## Outcome-StandardOutcome relation
 
-There are 57,910 edges between 37,735 unique outcomes and 492 standard outcomes.
+There are 57,910 edges between 37,735 nodes of unique outcomes and 492 nodes of standard outcomes.
+
+Each edge connects nodes of outcomes from individual studies and nodes of standard outcomes extracted from abbreviations.
+
+
 
 **id**: The format is "outcome::standardoutcome:XXX".
 
@@ -1353,9 +1374,9 @@ There are 57,910 edges between 37,735 unique outcomes and 492 standard outcomes.
 
 
 
-### Outcome and OutcomeAnalysis
+## Outcome-OutcomeAnalysis relation
 
-There are 107,314 edges between 45,707 unique outcomes and 107,314 outcome analyses.
+There are 107,314 edges between 45,707 nodes of unique outcomes and 107,314 nodes of outcome analyses.
 
 **id**: The format is "outcome::outcomeanalysis:XXX".
 
@@ -1367,43 +1388,226 @@ There are 107,314 edges between 45,707 unique outcomes and 107,314 outcome analy
 
 
 
-### OutcomeAnalysis and Method
+## OutcomeAnalysis-Method relation
 
-There are 107,314 edges between 45,707 unique outcomes and 107,314 outcome analyses.
+There are 91,475 edges between 91,475 nodes of outcome analyses and 933 nodes of methods.
 
+> Most frequent methods:
+>
+> 20,521 (19.1%) ancova
+>
+> 11,261 (10.5%) mixed models analysis
+>
+>   7,664   (7.1%) anova
+>
+>   6,212  (5.8%) cochran-mantel-haenszel
+>
+>   5,400  (5.0%) t-test, 2 sided
+>
+>   3,849  (3.6%) regression, logistic
+>
+>   3,751  (3.5%) wilcoxon (mann-whitney)
 
+**id:** The format is "outcomeanalysis::method:XXX".
 
-### Outcome and OutcomeMeasurement
+**label:** outcomeanalysis::method
 
-### Outcome and OutcomeGroup
+**from:** OutcomeAnalysisID:1792070
 
-### OutcomeMeasurement and OutcomeGroup
-
-### 
-
-
-
-
-
-
-
-## Baseline Subgraph
-
-<img src="./image/baseline_subgraph.png" alt="baseline_subgraph" style="zoom:60%;" />
-
-<img src="./image/baseline_relation.png" alt="baseline_relation" style="zoom:50%;" />
-
-### Study and BaselineGroup 
-
-There are 22,272 edges between study and baselinegroup.
+**to**: MethodID:2
 
 
 
-## Event Subgraph
+## Outcome-OutcomeMeasure relation
 
-<img src="./image/event_subgraph.png" alt="event_subgraph" style="zoom:70%;" />
+There are 690,626 edges between 85,905 nodes of outcomes and 690,626 nodes of outcome measurements.
 
-## Drop Subgraph
+**id:** The format is "outcomeanalysis::method:XXX".
+
+**label:** outcomeanalysis::method
+
+**from:** OutcomeID:XXX
+
+**to**: OutcomeMeasureID:XXX
 
 
 
+## OutcomeMeasure-OutcomeGroup relation
+
+There are 690,626 edges between 32,241 nodes of outcome groups and 690,626 nodes of outcome measurements.
+
+**id:** The format is "outcomegroup::outcomemeasure:XXX".
+
+**label:** outcomegroup::outcomemeasure
+
+**from:** OutcomeGroupID:XXX
+
+**to**: OutcomeMeasureID:XXX
+
+
+
+## Study-BaselineGroup relation
+
+There are 27,068 edges between 8,210 nodes of studies and 27,068 nodes of baseline groups.
+
+Each study has 3.30 baseline groups on average.
+
+
+
+**id:** The format is "study::baselinegroup:XXX".
+
+**label:** study::baselinegroup
+
+**from:** StudyID:XXX
+
+**to**: BaselineGroupID:XXX
+
+
+
+## BaselineGroup-BaselineRecord relation
+
+There are 315,533 edges between 27,068 nodes of baseline groups and 315,533 nodes of baseline records.
+
+Each baseline group has 11.66 baseline records on average.
+
+
+
+**id:** The format is "baselinegroup::baselinerecord:XXX".
+
+**label:** baselinegroup::baselinerecord
+
+**from:** BaselineGroupID:XXX
+
+**to**: BaselineRecordID:XXX
+
+
+
+## Study-EventGroup relation 
+
+There are 20,599 edges between 7491 nodes of studies and 20599 nodes of event groups.
+
+Each study has 2.75 event groups on average.
+
+
+
+**id:** The format is "study::eventgroup:XXX".
+
+**label:** study::eventgroup
+
+**from:** StudyID:XXX
+
+**to**: EventGroupID:XXX
+
+
+
+## EventGroup-AdverseEvent relation
+
+There are 966,450 edges between 20,571 nodes of eventgroups and 12,640 nodes of adverse events.
+
+Each event groups are connected with 966,450/20,571 = 46.98 adverse events on average.
+
+Each adverse events are connected with 966,450/12,640 = 76.46 event groups on average.
+
+
+
+**id:** The format is "eventgroup::adverseevent:XXX".
+
+**label:** eventgroup::adverseevent
+
+**from:** EventGroupID:XXX
+
+**to**: AdverseEventID:XXX
+
+**Attributes:**
+
+1. **type**
+
+   
+
+2. **original_adverse_term**
+
+   Definition: Original adverse event terms
+
+   
+
+3. **assessment_type**
+
+   Definition: The type of approach taken to collect adverse event information.
+
+   
+
+4. **num_affected**
+
+   Definition: Number of participants, in each arm/group, experiencing at least one event being reported.
+
+   
+
+5. **num_participants**
+
+   Definition: Number of participants assessed, in each arm/group, for adverse events (that is, the denominator for calculating frequency of adverse events). Leave blank to indicate that the value specified as the total at risk in the arm/group for the table should be used.
+
+   
+
+6. **event_count**
+
+   Definition: Number of occurrences, in each arm/group, of the adverse event being reported.
+
+## AdverseEvent-Organ relation
+
+There are 12,640 edges between 12640 adverse events and 27 organs.
+
+**id:** The format is "adverseevent::organ:XXX".
+
+**label:** adverseevent::organ
+
+**from:** AdverseEventID:XXX
+
+**to**: OrganID:XXX
+
+
+
+## Study-DropGroup relation
+
+There are 22,272 edges between 8,210 baseline groups and 22,272 baseline records.
+
+**id:** The format is "study::dropgroup:XXX".
+
+**label:** study::dropgroup
+
+**from:** StudyID:XXX
+
+**to**: DropGroupID:XXX
+
+
+
+## DropGroup-Period relation
+
+There are 34,330 edges between 22,272 baseline groups and 34,330 periods.
+
+**id:** The format is "baselinegroup::periods:XXX".
+
+**label:** baselinegroup::periods
+
+**from:** BaselineGroupID:XXX
+
+**to**: PeriodsID:XXX
+
+
+
+## Period-DropRecord relation
+
+There are 123,627 edges between 25,956 periods and 123,627 periods.
+
+**id:** The format is "period::droprecord:XXX".
+
+**label:** period::droprecord
+
+**from:** PeriodID:XXX
+
+**to**: DropRecordID:XXX
+
+
+
+# Reference
+
+[^1]: Ferreira, Juliana & Patino, Cecilia. (2017). Types of outcomes in clinical research. Jornal Brasileiro de Pneumologia. 43. 5-5. 
