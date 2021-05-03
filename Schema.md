@@ -1285,41 +1285,21 @@ There is no limit to the number of periods that may be used to describe a single
 
 # Relations
 
-## study and used drug
+## Study-UsedDrug relation
 
-There are 29,428 edges between studies and the drugs used in the study. This relation indicates which drugs are used in the study. The used drugs are the drugs found in the intervention or group title/description of the study.
+This relation indicates which drugs are used in which studies. For example, the triplet (NCT00000378,  study-usedDrug, bicalutamide) indicates that the drug "bicalutamide" has been used in the study with id "NCT00000378". There are 29,428 edges of this relation type between study nodes and drug nodes. Each edge of this relation type has an id "Study::UsedDrug::XXX", and we don't have any attributes on this relation.
 
-1. id: Study::UsedDrug::0
-2. label: study::usedDrug
-3. from: StudyID:NCT00000378
-4. to: DrugID:85
+## Study-StudiedDrug relation
 
-## Study and studied drug
+This relation indicates which drugs are studied in which studied. For example, the triplet (NCT00000378,  study-studiedDrug, bicalutamide) indicates that the drug "bicalutamide" is studied in the study with id "NCT00000378". In CTKG, for a certain clinical study, the studied drugs are the drugs extracted from the title/description of study groups of this study. There are 23,308 edges of this relation type between study nodes and drug nodes. Each edge of this relation type has an id "Study::StudiedDrug::XXX", and we don't have any attributes on this relation.
 
-There are 23,308 edges between studies and studied drugs. This relation indicates which drugs are studied in the study. The studied drugs are the drugs only from the group title/description of the study. All the studied drugs are also used drugs.
+## Study-Condition relation
 
-1. id: Study::StudiedDrug::0
-2. label: study::studiedDrug
-3. from: StudyID:NCT00000378
-4. to: DrugID:85
+This relation indicates which conditions are studied in which studies. For example, the triplet (NCT00000378,  study-condition, Fever) indicates that the study "NCT00000378" studies how to mitigate the condition "Fever". There are 17,259 edges of this relation type between study nodes and condition nodes. Each edge of this relation type has an id "Study::Condition::XXX", and we don't have any attributes on this relation.
 
-## Study and Condition
+## Drug-Term relation
 
-There are 17,259 edges between studies and conditions. This relation indicates the conditions studied in the study.
-
-1. id: Study::Condition::0
-2. label: study::condition
-3. from: StudyID:NCT02761980
-4. to: ConditionID:0
-
-## Drug and standard term
-
-There are 4,617 edges between drug and standard term. One drug is associated with a drug name. Since multiple drug names may be for the same standard drug. We normalize the drug names with the standard terms.
-
-1. id: drug::term:0
-2. label: drug::term
-3. from: DrugID:0
-4. to: TermID:0
+This relation indicates which drugs could be normalized to which standard terms. For example, the triplet (dmards, drug-term, Antirheumatic Agents) indicates the drug "dmards" could be normalized to the standard term "Antirheumatic Agents". There are 4,617 edges of this relation between drug nodes and term nodes. Each edge of this relation type has an id "Drug::Term:XXX", and we don't have any attributes on this relation.
 
 ## Outcome Subgraph
 
