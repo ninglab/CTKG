@@ -1,32 +1,38 @@
-# Schema
+# Clinical Trial Knowledge Graph (CTKG)
+
+Clinical Trial Knowledge Graph (CTKG) is a comprehensive knowledge graph relating clinical studies, study groups, drugs, conditions, adverse events, outcome analyses and outcomes. CTKG represents information from the [AACT][aact] database as a knowledge graph to capture the relations among nodes. CTKG includes 1,493,518 nodes belonging to 19 node-types; and **XXX** triplets belonging to 21 relation-types. These 21 relation-types show a type of interaction between one of the 19 node-type pairs as depicted in the figure below.  In CTKG, we have two types of relations between the study and drug nodes. For the rest of the node-type pairs, we have at most one relation for each of them.
+
+[aact]: https://aact.ctti-clinicaltrials.org/connect
 
 ![](./Schema.png)
 
 # Nodes
 
-Please refer to this [link][def] for detailed definition of attributes. We also list the definition of attributes which could be hard to understand. 
+The following table shows the description and attributes for each node type. We list brief definition of attributes. Please refer to this [link][def] for detailed definitions.
 
 [def]: https://support.typora.io/Markdown-Reference/#reference-links
 
 ## Study
 
-8,210 studies with 51 attributes.
-
-**id**: The format is "StudyID:NCTXXX".
-
-**label**: Study
+Each study node represents a clinical study. CTKG includes 8,210 clinical studies. Each study has 49 attributes and an id "StudyID:NCTXXX". 
 
 **Attributes:**
 
-1. **last_update_submitted_qc_date** 
+1. **last_update_submitted_qc_date**
+
+   Definition: the date that the last update was submitted 
 
    Example: 2020-04-10
 
 2. **last_update_posted_date** 
 
+   Definition: The estimated or actual date on which the last update was posted 
+
    Example: 2020-04-21
 
 3. **last_update_posted_date_type**: Actual/Estimate
+
+   Definition: This attribute shows the last update posted date is actual or estimated.
 
    > Statistics:
    >
@@ -34,11 +40,9 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
    >
    > 3,786 (46.1%) Estimate
 
-4. **start_month_year** 
+4. **start_date_type**:  Actual/"" 
 
-   Example: "July 1, 2017"
-
-5. **start_date_type**:  Actual/"" 
+   Definition: This attribute shows the start date is actual or estimated.
 
    > Statistics: 
    >
@@ -46,39 +50,43 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
    >
    > 2,436 (29.7%) Actual
 
-6. **start_date** 
+5. **start_date** 
+
+   Definition: The estimated date on which the clinical study will be open for recruitment of participants, or the actual date on which the first  participant was enrolled.
 
    Example: 2017-07-01
 
-7. **verification_month_year** 
+6. **verification_month_year** 
+
+   Definition: The date on which the responsible party last verified the clinical study information in the entire ClinicalTrials.gov record for the clinical  study, even if no additional or updated information is being submitted.
 
    Example: April 2020
 
-8. **primary_completion_month_year** 
+7. **verification_date** 
 
    Example: 2020-04-30
 
-9. **primary_completion_date_type** 
+8. **primary_completion_date_type**: Actual/Anticipated/"" 
 
-   Example: "July 15, 2018"
+   Definition: This attribute shows the primary completion date is actual or estimated.
 
-10. **primary_completion_date_type**: Actual/Anticipated/"" 
+   > Statistics: 
+   >
+   > 8,188 (99.7%) Actual
+   >
+   > ​     19 "" 
+   >
+   > ​       3 Anticipated
 
-    > Statistics: 
-    >
-    > 8,188 (99.7%) Actual
-    >
-    > ​     19 "" 
-    >
-    > ​       3 Anticipated
+9. **primary_completion_date**
 
-11. **primary_completion_date**
+   Definition: The date that the final participant was examined or received an intervention for the purposes of final collection of data for the primary outcome, whether the clinical study concluded according to the pre-specified protocol or was terminated. In the case of clinical studies with more than one primary outcome measure with different completion dates, this term refers to the date on which data collection is completed for all of the primary outcomes.
 
-    Definition: The date that the final participant was examined or received an intervention for the purposes of final collection of data for the primary outcome, whether the clinical study concluded according to the pre-specified protocol or was terminated. In the case of clinical studies with more than one primary outcome measure with different completion dates, this term refers to the date on which data collection is completed for all of the primary outcomes.
+   Example: 2018-07-15
 
-    Example: 2018-07-15
+10. **target_duration**
 
-12. **target_duration**
+    Definition: For Patient Registries, the anticipated time period over which each  participant is to be followed. Provide a number and select a Unit of  Time (years, months, weeks, days). 
 
     > Statistics: 
     >
@@ -86,7 +94,7 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >
     > ​        1               7 Days
 
-13. **study_type** 
+11. **study_type** 
 
     Definition: The nature of the investigation or investigational use for which clinical study information is being submitted.
 
@@ -98,33 +106,35 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >
     > ​        1    (0.0%) Observational [Patient Registry]
 
-14. **brief_title**
+12. **brief_title**
 
     Definition: A short title of the clinical study written in language intended for the lay public.
 
     Example: "Study of Naltrexone-Induced Blockade of Antidepressant Effects"
 
-15. **official_title**
+13. **official_title**
+
+    Definition: The title of the clinical study, corresponding to the title of the protocol.
 
     Example: "Naltrexone-induced Blockade of Neural Responses Induced by Fast-Acting Antidepressant Effects"
 
-16. **overall_status**: Completed/Terminated/Active, not recruiting/Unknown status/Recruiting 
+14. **overall_status**: Completed/Terminated/Active, not recruiting/Unknown status/Recruiting 
+
+    Definition: The recruitment status for the clinical study as a whole, based upon the status of the individual sites. If at least one facility in a  multi-site clinical study has an Individual Site Status of "Recruiting," then the Overall Recruitment Status for the study must be "Recruiting."
 
     > Statistics: 
     >
     > 7,325 (89.2%) Completed
     >
-    > 560 (6.8%) Terminated
+    > ​    560 (6.8%) Terminated
     >
-    > 311 (3.8%) Active, not recruiting
+    > ​    311 (3.8%) Active, not recruiting
     >
-    > ​     12 Unknown status
+    > ​      12 Unknown status
     >
-    > ​       2 Recruiting
+    > ​        2 Recruiting
 
-17. **last_known_status**: Active, not recruiting/""
-
-18. **phase** 
+15. **phase** 
 
     Definition: For a clinical trial of a drug product (including a biological product), the numerical phase of such clinical trial, consistent with terminology in 21 CFR 312.21 and in 21 CFR 312.85 for phase 4 studies.
 
@@ -135,20 +145,22 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     > 3,507 (42.7%) Phase 3
     > 1,984 (24.2%) Phase 2
     > 1,409 (17.2%) Phase 4
-    > 424   (5.2%) N/A
-    > 345   (4.2%) Phase 1
-    > 218   (2.7%) Phase 1/Phase 2
-    > 175   (2.1%) Phase 2/Phase 3
-    > 132   (1.6%) ""
-    >   16   (0.2%) Early Phase 1
+    >    424   (5.2%) N/A
+    >    345   (4.2%) Phase 1
+    >    218   (2.7%) Phase 1/Phase 2
+    >    175   (2.1%) Phase 2/Phase 3
+    >    132   (1.6%) ""
+    >        16   (0.2%) Early Phase 1
 
-19. **enrollment**
+16. **enrollment**
 
     Definition:  The estimated total number of participants to be enrolled (target  number) or the actual total number of participants that are enrolled in  the clinical study.
 
     Example: 60
 
-20. **enrollment_type**: Actual/Anticipated
+17. **enrollment_type**: Actual/Anticipated
+
+    Definition: This attribute shows the total number of participants to be enrolled is estimated or actual.
 
     > Statistics: 
     >
@@ -156,7 +168,9 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >
     > ​        1 Anticipated
 
-21. **source** 
+18. **source** 
+
+    Definition: This attribute shows the institute which conducts the clinical study.
 
     Example: University of Pittsburgh
 
@@ -166,25 +180,29 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >
     > 218 of them are in more than 5 institutes
 
-22. **number_of_arms**
+19. **number_of_arms**
 
     Definition: The number of arms in the clinical trial. For a trial with multiple  periods or phases that have different numbers of arms, the maximum  number of arms during all periods or phases. "Arm" means a pre-specified group or subgroup of participant(s) in a  clinical trial assigned to receive specific intervention(s) (or no  intervention) according to a protocol. 
 
     Example: 2
 
-23. **number_of_groups** 
+20. **number_of_groups** 
+
+    Definition: Number of study groups/cohorts. Enter "1" for a single-group study. Many observational studies have one group/cohort; case control studies  typically have two.
 
     Example: 2
 
     > Statistics: 8,081(98.4%) ""
 
-24. **why_stoped** 
+21. **why_stoped** 
+
+    Definition: A brief explanation of the reason(s) why such clinical study was stopped (for a clinical study that is "Suspended," "Terminated," or "Withdrawn" prior to its planned completion as anticipated by the protocol).
 
     Example: "Lack of efficacy"
 
     > Statistics: 7,729 (94.1%) ""
 
-25. **allocation**
+22. **allocation**
 
     Definition: The method by which participants are assigned to arms in a clinical trial. 
 
@@ -197,7 +215,7 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >     406   (4.9%) Non-Randomized (i.e., Participants may choose which group they want to be in, or they may be assigned to the groups by the    researchers.)
     >     183   (2.2%) ""
 
-26. **intervention_model** 
+23. **intervention_model** 
 
     Definition: The strategy for assigning interventions to participants.
 
@@ -212,7 +230,7 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >      93   (1.1%) Factorial Assignment (i.e., groups of participants receive one of several combinations of interventions)
     >      21   (0.2%) Sequential Assignment
 
-27. **primary_purpose**
+24. **primary_purpose**
 
     Definition: The main objective of the intervention(s) being evaluated by the clinical trial. 
 
@@ -230,11 +248,13 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >      16   (0.2%) Health Services Research
     >        4   (0.0%) Screening
 
-28. **time_perspective**: Prospective/Retrospective/Cross-Sectional 
+25. **time_perspective**: Prospective/Retrospective/Cross-Sectional 
+
+    Definition: Temporal relationship of observation period to time of participant enrollment.
 
     > Statistics: 8,080 (98.4%) ""
 
-29. **masking**
+26. **masking**
 
     Definition: The party or parties involved in the clinical trial who are prevented  from having knowledge of the interventions assigned to individual  participants. 
 
@@ -249,47 +269,55 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >    310   (3.8%) Single
     >    171   (2.1%) ""
 
-30. **masking_description**  
+27. **masking_description**  
+
+    Definition: Provide information about other parties who may be masked in the clinical trial, if any.
 
     Example: "This is a phase 4 double blind study, which will use a triple dummy design for dosing."
 
     > Statistics: 8,074 (98.3%) ""
 
-31. **intervention_model_description** 
+28. **intervention_model_description** 
+
+    Definition: Provide details about the Interventional Study Model.
 
     Example:  "Phase I clinical trial, controlled, of parallel groups, double blind, randomized, exploratory."
 
     > Statistics: 8,080 (98.4%) ""
 
-32. **subject_masked**: t/""
+29. **subject_masked**: t/""
 
     Definition: True if participants are prevented from having knowledge of the interventions assigned to individual participants.
 
     > Statistics: 4,844 (59.0%) t and 3,366 (41.0%) ""
 
-33. **caregiver_masked**: t/""
+30. **caregiver_masked**: t/""
 
     Definition: True if caregivers are prevented from having knowledge of the interventions assigned to individual participants. 
 
     > Statistics: 2,614 (31.8%) t and 5,596 (68.2%) ""
 
-34. **investigator_masked**: t/""
+31. **investigator_masked**: t/""
 
     Definition: True if investigators are prevented from having knowledge of the interventions assigned to individual participants.
 
     > Statistics: 4,718 (57.5%) t and 3,492 (42.5%) ""
 
-35. **outcomes_assessor_masked**: t/""
+32. **outcomes_assessor_masked**: t/""
 
     Definition: True if outcomes assessors are prevented from having knowledge of the interventions assigned to individual participants.
 
     > Statistics: 2,613 (31.8%) t and 5,597 (68.2%) ""
 
-36. **sampling_method**: Probability Sample/Non-Probability Sample
+33. **sampling_method**: Probability Sample/Non-Probability Sample
+
+    Definition: Indicate the method used for the sampling approach and explain in the Detailed Description.
 
     > Statistics: 8,078 (98.4%) ""
 
-37. **gender**: All/Female/Male
+34. **gender**: All/Female/Male
+
+    Definition: This attribute shows the acceptable gender for the clinical study.
 
     > Statistics: 
     >
@@ -299,15 +327,21 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >
     >    300   (3.7%) Male
 
-38. **minimum_age**
+35. **minimum_age**
+
+    Definition: This attribute shows the minimum acceptable age of participants for the clinical study.
 
     Example: 18 Years
 
-39. **maximum_age**
+36. **maximum_age**
+
+    Definition: This attribute shows the maximum acceptable age of participants for the clinical study
 
     Example:  65 Years
 
-40. **healthy_volunteers**: No/"Accepts Healthy Volunteers"
+37. **healthy_volunteers**: No/"Accepts Healthy Volunteers"
+
+    Definition: Indication that participants who do not have a disease or condition, or  related conditions or symptoms, under study in the clinical study are  permitted to participate in the clinical study.
 
     > Statistics: 
     >
@@ -317,33 +351,43 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >
     > ​     16 ""
 
-41. **population** 
+38. **population** 
+
+    Definition: A description of the population from which the groups or cohorts will be selected (for example, primary care clinic, community sample, residents of a certain town).
 
     Example: "Korean patients with T2DM"
 
     > Statistics: 8,078 (98.4%) ""
 
-42. **criteria**
+39. **criteria**
 
     Definition: A limited list of criteria for selection of participants in the clinical study, provided in terms of inclusion and exclusion criteria and suitable for assisting potential participants in identifying clinical  studies of interest. 
 
     Example: "~ Inclusion Criteria:  A subject must be 12 years of age or older, ..." (inclusion and exclusion criterion)
 
-43. **gender_description** 
+40. **gender_description** 
+
+    Definition: If eligibility is based on gender, provide descriptive information about Gender criteria.
 
     Example: "Androgenetic Alopecia in Males"
 
     > Statistics: 8,198 (99.9%) ""
 
-44. **gender_based**: t/"" (True of "")
+41. **gender_based**: t/"" (True of "")
+
+    Definition: If applicable, indicate whether participant eligibility is based on gender.
 
     > Statistics: 29 t and 8,181 (99.6%) ""
 
-45. **description** 
+42. **description** 
+
+    Definition: a description of the clinical study
 
     Example: "The primary objective of the study is to determine whether armodafinil treatment..."
 
-46. **id_type**: org_study_id/secondary_id/nct_alias
+43. **id_type**: org_study_id/secondary_id/nct_alias
+
+    Definition: This attribute indicates if the corresponding id value is the organization's Unique Protocol Identification Number or a number assigned by other publicly available clinical trial registries.  
 
     > Statistics: 
     >
@@ -353,15 +397,21 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
     >
     >    202   (2.5%) studies have nct_alias 
 
-47. **id_value** 
+44. **id_value** 
 
     Example: "0000-072;2007_650"
 
-48. **pmid** 
+45. **pmid** 
+
+    Definition: PubMed Unique Identifier
 
     Example: "15292498;11025867;16670414;1003364"
 
-49. **reference_type**: reference/results_reference
+46. **reference_type**: reference/results_reference
+
+    Definition: This attribute indicates if the reference is a bibliographic reference or a reference provided reports on results from this clinical study.
+
+    Definition: 
 
     > Statistics: 
     >
@@ -375,48 +425,42 @@ Please refer to this [link][def] for detailed definition of attributes. We also 
 
 ## Drug
 
-4,617 drugs with 3 attributes
-
-**id**: The format is "DrugID:XXX"
-
-**label**: Drug
+Each drug node represents a drug name extracted from the intervention or group title/description of clinical studies. CTKG includes 4,617 drug nodes. Each drug node has an id "DrugID:XXX" and 1 attribute.
 
 **Attributes**:
 
 1. **name** 
 
+   Definition: the drug name extracted from the intervention or group title/description of clinical studies.
+   
    Example: "bicalutamide"
 
 
 
-## Standard Term
+## Term
 
-2,751 terms with 3 attributes
-
-**id**: The format is "TermID:XXX"
-
-**label**: Term
+Each term node represents a normalized or standard drug name. CTKG includes 2,751 term nodes. Each term node has an id "TermID:XXX" and 1 attribute.
 
 **Attributes**:
 
-1. **name** 
+1. **name**
 
+   Definition: the normalized or standard drug name  
+   
    Example: "Bicalutamide"
 
 
 
 ## Condition
 
-1,394 conditions with 3 attributes
-
-**id**: The format is "ConditionID:XXX"
-
-**label**: Condition
+Each condition node represents a condition/disease studied in clinical studies. CTKG includes 1,394 condition nodes. Each condition node has an id "ConditionID:XXX" and 1 attribute.
 
 **Attributes**:
 
 1. **name** 
 
+   Definition: the name of the condition/disease studied in the clinical study
+   
    Example: "Fever"
 
 
@@ -1276,12 +1320,6 @@ There are 4,617 edges between drug and standard term. One drug is associated wit
 2. label: drug::term
 3. from: DrugID:0
 4. to: TermID:0
-
-
-
-**Note: ** in the database, each relation will have an inverse relation to make the edge double directed. For example, between the study A and condition B, we will have an edge A->B with label Study::Condition and an edge B->A with label Condition::Study. Relations have the same attributes and statistics (e.g., number of edges in the relation) with their inverse relation.
-
-
 
 ## Outcome Subgraph
 
