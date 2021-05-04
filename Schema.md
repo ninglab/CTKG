@@ -9,13 +9,13 @@ Clinical Trial Knowledge Graph (CTKG) is a comprehensive knowledge graph relatin
 
 # Nodes
 
-The following table shows the description and attributes for each node type. We list brief definition of attributes. Please refer to this [link][def] for detailed definitions.
+The following table shows the description and attributes for each node type. We list the brief definition of attributes. Please refer to this [link][def] for detailed definitions.
 
 [def]: https://support.typora.io/Markdown-Reference/#reference-links
 
 ## Study
 
-Each study node represents a clinical study. Clinical studies study the effect of drugs in treating conditions. CTKG includes 8,210 clinical study nodes. Each study has 49 attributes and an id "StudyID:NCTXXX". 
+Each *study* node represents a clinical study. Clinical studies study the effect of drugs in treating conditions. CTKG includes 8,210 clinical *study* nodes. Each *study* node has 49 attributes and an id "StudyID:NCTXXX". 
 
 **Attributes:**
 
@@ -426,7 +426,7 @@ Each study node represents a clinical study. Clinical studies study the effect o
 
 ## Drug
 
-Each drug node represents a drug name extracted from the intervention or group title/description of clinical studies. CTKG includes 4,617 drug nodes. Each drug node has an id "DrugID:XXX" and 1 attribute.
+Each *drug* node represents a drug name extracted from the intervention or group title/description of clinical studies. CTKG includes 4,617 *drug* nodes. Each *drug* node has an id "DrugID:XXX" and 1 attribute.
 
 **Attributes**:
 
@@ -440,7 +440,7 @@ Each drug node represents a drug name extracted from the intervention or group t
 
 ## Term
 
-Each term node represents a normalized or standard drug name. CTKG includes 2,751 term nodes. Each term node has an id "TermID:XXX" and 1 attribute.
+Each *term* node represents a normalized or standard drug name. CTKG includes 2,751 *term* nodes. Each *term* node has an id "TermID:XXX" and 1 attribute.
 
 **Attributes**:
 
@@ -454,7 +454,7 @@ Each term node represents a normalized or standard drug name. CTKG includes 2,75
 
 ## Condition
 
-Each condition node represents a condition/disease studied in clinical studies. CTKG includes 1,394 condition nodes. Each condition node has an id "ConditionID:XXX" and 1 attribute.
+Each *condition* node represents a condition/disease studied in clinical studies. CTKG includes 1,394 *condition* nodes. Each *condition* node has an id "ConditionID:XXX" and 1 attribute.
 
 **Attributes**:
 
@@ -1361,8 +1361,6 @@ This relation indicates which statistical method the *OutcomeAnalysis* node uses
 >
 > 3,751  (3.5%) wilcoxon (mann-whitney)
 >
-> 
->
 > The number above represents the number of *OutcomeAnalysis* nodes with the specific methods.
 
 
@@ -1389,7 +1387,7 @@ This relation indicates which *Study* the specific *BaselineGroup* belongs to. F
 
 This relation indicates which *BaselineGroup* the measurement value in the *BaselineRecord* node belongs to. For example, the triplet (10828802,*BaselineGroup-BaselineRecord*,12255269) indicates that the *BaselineRecord* node with ID "12255269" is for the *BaselineGroup* with ID "10828802".  There are 315,533 edges between 27,068 nodes of *BaselineGroup* and 315,533 nodes of *BaselineRecord*. Each edge of this relation type has an id "baselinegroup::baselinerecord:XXX".
 
-Each relation is associated with two attributes:
+Each relation is associated with 2 attributes:
 
 1. **title**
 
@@ -1443,7 +1441,7 @@ This relation indicates which *Study* the *EventGroup* node belongs to. For exam
 
 This relation indicates which *AdverseEvent* appears in the participants in the *EventGroup* . For example, the *AdverseEvent* node with id "12620" has the name "dizziness/drowsiness". Then, the triplet (10828809,*EventGroup-AdverseEvent*,12620) indicates that participants in the *EventGroup* node with ID "12255269" can have "dizziness/drowsiness" adverse event.  There are 966,450 edges between 20,571 nodes of *EventGroup* and 12,640 nodes of *AdverseEvent*. Each edge of this relation type has an id "eventgroup::adverseevent:XXX".
 
-Each relation is associated with six attributes:
+Each relation is associated with 6 attributes:
 
 1. **type**
 
@@ -1512,3 +1510,4 @@ This relation indicates that in each period specified by the *Period* node, the 
 # Reference
 
 [^1]: Ferreira, Juliana & Patino, Cecilia. (2017). Types of outcomes in clinical research. Jornal Brasileiro de Pneumologia. 43. 5-5. 
+
