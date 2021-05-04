@@ -15,7 +15,7 @@ The following table shows the description and attributes for each node type. We 
 
 ## Study
 
-Each study node represents a clinical study. CTKG includes 8,210 clinical studies. Each study has 49 attributes and an id "StudyID:NCTXXX". 
+Each study node represents a clinical study. Clinical studies study the effect of drugs in treating conditions. CTKG includes 8,210 clinical study nodes. Each study has 49 attributes and an id "StudyID:NCTXXX". 
 
 **Attributes:**
 
