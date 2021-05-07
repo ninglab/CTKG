@@ -1,6 +1,6 @@
 <!-- md-toc-begin -->
 
-* [Nodes](#Nodes)
+- [Nodes](#Nodes)
 
 <!-- md-toc-end -->
 
