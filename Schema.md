@@ -1,7 +1,7 @@
 <!-- md-toc-begin -->
-
-- [Nodes](#Nodes)
-
+[Nodes](#Nodes)
+- [1. Study](##Study)
+- [2. Drug](##Drug)
 <!-- md-toc-end -->
 
 # Clinical Trial Knowledge Graph (CTKG)
@@ -14,7 +14,7 @@ Clinical Trial Knowledge Graph (CTKG) is a comprehensive knowledge graph relatin
 
 # Nodes
 
-The following table shows the description and attributes for each node type. We list the brief definition of attributes. Please refer to this [link][def] for detailed definitions.
+The following table shows the description and attributes for each node type. We list the brief definition of attributes. Please refer to this [link][https://prsinfo.clinicaltrials.gov/results_definitions.html] for detailed definitions.
 
 [def]: https://support.typora.io/Markdown-Reference/#reference-links
 
