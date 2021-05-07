@@ -1542,7 +1542,7 @@ Each relation is associated with 6 attributes:
 
 ## 19. AdverseEvent-Organ relation
 
-This relation indicates which organ system the adverse event belongs to. For example, the *Organ* node with ID "0" has the name "Infections and infestations". Then, the triplet (0, *AdverseEvent-Organ*, 0) indicates that the adverse event specified by the *AdverseEvent* node with ID "0" can be grouped by body or organ system to the category "Infections and infestations". There are 21,286 edges between 21,286 adverse events and 30 organs, and we don't have any attributes on this relation.
+This relation indicates which organ system the adverse event belongs to. For example, the *Organ* node with ID "0" has the name "Infections and infestations". Then, the triplet (0, *AdverseEvent-Organ*, 0) indicates that the adverse event specified by the *AdverseEvent* node with ID "0" can be grouped by body or organ system to the category "Infections and infestations". There are 21,286 edges between 21,286 adverse events and 29 organs, and we don't have any attributes on this relation.
 
 
 
