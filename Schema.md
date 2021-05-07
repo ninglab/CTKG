@@ -1,7 +1,7 @@
 <!-- md-toc-begin -->
 [Nodes](#Nodes)
-- [1. Study](##Study)
-- [2. Drug](##Drug)
+- [1. Study](#1-study)
+- [2. Drug](#2-drug)
 <!-- md-toc-end -->
 
 # Clinical Trial Knowledge Graph (CTKG)
