@@ -48,7 +48,7 @@
 
 # Clinical Trial Knowledge Graph (CTKG)
 
-Clinical Trial Knowledge Graph (CTKG) is a comprehensive knowledge graph relating clinical studies, study groups, drugs, conditions, adverse events, outcome analyses and outcomes. CTKG represents information from the [AACT](https://aact.ctti-clinicaltrials.org/connect) database as a knowledge graph to capture the relations among nodes. CTKG includes 1,504,294 nodes belonging to 19 node-types; and **7,349,016** triplets belonging to 22 relation-types. These 22 relation-types show a type of interaction between one of the 19 node-type pairs as depicted in the figure below.  In CTKG, we have two types of relations between the study and drug nodes. For the rest of the node-type pairs, we have at most one relation for each of them.
+Clinical Trial Knowledge Graph (CTKG) is a comprehensive knowledge graph relating clinical studies, study groups, drugs, conditions, adverse events, outcome analyses and outcomes. CTKG represents information from the [AACT](https://aact.ctti-clinicaltrials.org/connect) database as a knowledge graph to capture the relations among nodes. CTKG includes 1,504,294 nodes belonging to 19 node-types; and 7,349,016 triplets belonging to 22 relation-types. These 22 relation-types show a type of interaction between one of the 19 node-type pairs as depicted in the figure below.  In CTKG, we have two types of relations between the study and drug nodes. For the rest of the node-type pairs, we have at most one relation for each of them.
 
 ![](./Schema.png)
 
@@ -1333,31 +1333,35 @@ Each *DropRecord* node documents the number of participants who didn't complete 
 
 # Relations
 
-## 1. Study-UsedDrug relation
+## 1. Study-StudiedDrug relation
 
-This relation indicates which drugs are used in which studies. For example, the triplet (NCT00000378,  study-usedDrug, bicalutamide) indicates that the drug "bicalutamide" has been used in the study with id "NCT00000378". There are 29,428 edges of this relation type between study nodes and drug nodes. Each edge of this relation type has an id "Study::UsedDrug::XXX", and we don't have any attributes on this relation.
+This relation indicates which drugs are studied in which studies. For example, the triplet (NCT00000378,  study-studiedDrug, bicalutamide) indicates that the drug "bicalutamide" is studied in the study with id "NCT00000378". In CTKG, for a certain clinical study, the studied drugs are the drugs extracted from the title/description of study groups of this study. There are 23,308 edges of this relation type between study nodes and drug nodes. Each edge of this relation type has an id "Study::StudiedDrug::XXX", and we don't have any attributes on this relation.
 
 
 
-## 2. Study-StudiedDrug relation
+## 2. Study-UsedDrug relation
 
-This relation indicates which drugs are studied in which studied. For example, the triplet (NCT00000378,  study-studiedDrug, bicalutamide) indicates that the drug "bicalutamide" is studied in the study with id "NCT00000378". In CTKG, for a certain clinical study, the studied drugs are the drugs extracted from the title/description of study groups of this study. There are 23,308 edges of this relation type between study nodes and drug nodes. Each edge of this relation type has an id "Study::StudiedDrug::XXX", and we don't have any attributes on this relation.
+This relation indicates which drugs are used but not studied in which studies. For example, the triplet (NCT00000620,  *study-usedDrug*, yondelis) indicates that the drug "yondelis" has been used in the study with id "NCT00000378". However, this drug is not the studied drug in this study. For a study, the used drugs are defined as drugs that are in the interventions of the study but not in the title/description of the study groups in the study. There are 6,120 edges of this relation type between study nodes and drug nodes. Each edge of this relation type has an id "Study::UsedDrug::XXX", and we don't have any attributes on this relation.
 
 
 
 ## 3. Study-Condition relation
 
-This relation indicates which conditions are studied in which studies. For example, the triplet (NCT00000378,  study-condition, Fever) indicates that the study "NCT00000378" studies how to mitigate the condition "Fever". There are 17,259 edges of this relation type between study nodes and condition nodes. Each edge of this relation type has an id "Study::Condition::XXX", and we don't have any attributes on this relation.
+This relation indicates which conditions are studied in which studies. For example, the triplet (NCT00000378,  *study-condition*, Fever) indicates that the study "NCT00000378" studies how to mitigate the condition "Fever". There are 17,259 edges of this relation type between study nodes and condition nodes. Each edge of this relation type has an id "Study::Condition::XXX", and we don't have any attributes on this relation.
 
 
 
 ## 4. Drug-Term relation
 
-This relation indicates which drugs could be normalized to which standard terms. For example, the triplet (dmards, drug-term, Antirheumatic Agents) indicates the drug "dmards" could be normalized to the standard term "Antirheumatic Agents". There are 4,617 edges of this relation between drug nodes and term nodes. Each edge of this relation type has an id "Drug::Term:XXX", and we don't have any attributes on this relation.
+This relation indicates which drugs could be normalized to which standard terms. For example, the triplet (dmards, *drug-term*, Antirheumatic Agents) indicates the drug "dmards" could be normalized to the standard term "Antirheumatic Agents". There are 4,617 edges of this relation between drug nodes and term nodes. Each edge of this relation type has an id "Drug::Term:XXX", and we don't have any attributes on this relation.
+
+
 
 ## 5. Drug-EventGroup relation
 
 This relation indicates which drugs are used in the specific *EventGroup* node. For example, the *Drug* node with ID "311" has the drug name "naltrexone". Then, the triplet (311,*drug-eventgroup*,10828809) indicates the drug "naltrexone" is used or studied in this *EventGroup*. There are 33,625 edges of this relation between 3,712 *Drug* nodes and 21,831 *EventGroup* nodes. Each edge of this relation type has an id "drug::eventgroup:XXX", and we don't have any attributes on this relation.
+
+
 
 
 ## 6. Study-OutcomeGroup relation
