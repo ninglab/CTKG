@@ -54,11 +54,11 @@ Clinical Trial Knowledge Graph (CTKG) is a comprehensive knowledge graph relatin
 
 # Nodes
 
-The following table shows the description and attributes for each node type. We list the brief definition of attributes. Please refer to this [!link](https://prsinfo.clinicaltrials.gov/results_definitions.html) for detailed definitions.
+The following table shows the description and attributes for each node type. We list the brief definition of attributes. Please refer to this [link](https://prsinfo.clinicaltrials.gov/results_definitions.html) for detailed definitions.
 
 ## 1. Study
 
-Each *study* node represents a clinical study. Clinical studies study the effect of drugs in treating conditions. CTKG includes 8,210 clinical *study* nodes. Each *study* node has 49 attributes and an id "StudyID:NCTXXX". 
+Each *study* node represents a clinical study. Clinical studies study the effect of drugs in treating conditions. CTKG includes 8,210 clinical *study* nodes. Each *study* node has 46 attributes and an id "StudyID:NCTXXX". 
 
 **Attributes:**
 
@@ -136,7 +136,7 @@ Each *study* node represents a clinical study. Clinical studies study the effect
     >
     > 8,209 (99.9%) ""
     >
-    >  1               7 Days
+    > 1               7 Days
 
 11. **study_type** 
 
@@ -210,7 +210,7 @@ Each *study* node represents a clinical study. Clinical studies study the effect
     >
     > 8,209 (99.9%) Actual
     >
-    >   1 Anticipated
+    > 1 Anticipated
 
 18. **source** 
 
@@ -551,9 +551,9 @@ Each *Outcome* node represents an variable that is monitored during a study to d
    >
    > 15,534  (17.6%)  Primary
    >
-   >     2,830    (3.2%)   Other Pre-specified Outcomes
+   >  2,830    (3.2%)   Other Pre-specified Outcomes
    >
-   > ​     289    (0.3%)   Post-Hoc
+   >   289    (0.3%)   Post-Hoc
 
 2. **title**
 
@@ -669,23 +669,23 @@ Each *OutcomeMeasure* node represents an outcome measurement of an variable (i.e
    >
    > 249,245      (36.1%)    Mean
    >
-   >    76,099      (11.0%)    Least Squares Mean
+   > 76,099      (11.0%)    Least Squares Mean
    >
-   >    64,858         (9.4%)    Count of Participants
+   > 64,858         (9.4%)    Count of Participants
    >
-   >    31,243         (4.5%)    Median
+   > 31,243         (4.5%)    Median
    >
-   >    14,703         (2.1%)    Geometric Mean
+   > 14,703         (2.1%)    Geometric Mean
    >
-   > ​      665        (0.1%)    Geometric Least Squares Mean
+   >    665        (0.1%)    Geometric Least Squares Mean
    >
-   > ​      261                       Count of Units
+   >    261                       Count of Units
    >
-   > ​        45                       ""
+   > ​    45                       ""
    >
-   > ​        39                        Log mean
+   > ​    39                        Log mean
    >
-   > ​        22                        Other including "age normed" (6), "age & education normed" (6), "g/dL" (5), "ng/mL" (3), "age" (2).
+   > ​    22                        Other including "age normed" (6 nodes), "age & education normed" (6 nodes), "g/dL" (5 nodes), "ng/mL" (3 nodes), "age" (2 nodes).
 
 4. **param_value**
 
@@ -701,21 +701,21 @@ Each *OutcomeMeasure* node represents an outcome measurement of an variable (i.e
    >
    > 207,039    (30.0%)      Standard Deviation
    >
-   >   98,956    (14.3%)        Standard Error
+   > 98,956    (14.3%)        Standard Error
    >
-   >   54,922      (8.0%)        95% Confidence Interval
+   > 54,922      (8.0%)        95% Confidence Interval
    >
-   >   11,984      (1.7%)        Full Range
+   > 11,984      (1.7%)        Full Range
    >
-   > ​    8,837      (1.3%)        Inter-Quartile Range
+   >  8,837      (1.3%)        Inter-Quartile Range
    >
-   > ​    8,620      (1.2%)        Geometric Coefficient of Variation
+   >  8,620      (1.2%)        Geometric Coefficient of Variation
    >
-   > ​    1,844      (0.3%)        90% Confidence Interval
+   >  1,844      (0.3%)        90% Confidence Interval
    >
-   > ​       633      (0.1%)        80% Confidence Interval
+   > ​    633      (0.1%)        80% Confidence Interval
    >
-   > ​       120                         97.5% Confidence Interval
+   > ​    120                         97.5% Confidence Interval
    >
    > 
    >
@@ -749,7 +749,7 @@ Each *OutcomeMeasure* node represents an outcome measurement of an variable (i.e
 
 ## 10. OutcomeAnalysis
 
-Each *OutcomeAnalysis* node represents the result of scientifically appropriate tests of statistical significance of an outcome variable. The CTKG includes 107,314 *OutcomeAnalysis* nodes. Each *OutcomeAnalysis* node has an id "OutcomeAnalysisID:XXX" and 15 attributes.
+Each *OutcomeAnalysis* node represents the result of scientifically appropriate tests of statistical significance of an outcome variable. The CTKG includes 107,314 *OutcomeAnalysis* nodes. Each *OutcomeAnalysis* node has an id "OutcomeAnalysisID:XXX" and 16 attributes.
 
 **Attributes:**
 
@@ -763,17 +763,17 @@ Each *OutcomeAnalysis* node represents the result of scientifically appropriate 
    >
    > 16,127        (15.0%)          Superiority
    >
-   >   8,969           (8.4%)           Other
+   > 8,969           (8.4%)           Other
    >
-   >   4,686           (4.4%)           Superiority or Other (legacy)
+   > 4,686           (4.4%)           Superiority or Other (legacy)
    >
-   >   2,534           (2.4%)           Non-Inferiority or Equivalence
+   > 2,534           (2.4%)           Non-Inferiority or Equivalence
    >
-   > ​     780           (0.7%)         Non-Inferiority
+   >   780           (0.7%)         Non-Inferiority
    >
-   > ​     415           (0.4%)         Equivalence
+   >   415           (0.4%)         Equivalence
    >
-   > ​       60           (0.1%)         Non-Inferiority or Equivalence (legacy)
+   > ​     60           (0.1%)         Non-Inferiority or Equivalence (legacy)
 
 2. **non_inferiority_type_description**
 
@@ -793,15 +793,15 @@ Each *OutcomeAnalysis* node represents the result of scientifically appropriate 
    >
    > 18,792         (17.5%)        Mean Difference (Final Values)
    >
-   >   7,580           (7.1%)        LS Mean Difference
+   > 7,580           (7.1%)        LS Mean Difference
    >
-   >   5,812           (5.4%)        Odds Ratio (OR)
+   > 5,812           (5.4%)        Odds Ratio (OR)
    >
-   >   5,429           (5.1%)        Mean Difference (Net)
+   > 5,429           (5.1%)        Mean Difference (Net)
    >
-   >   5,054           (4.7%)        Hazard Ratio (HR)
+   > 5,054           (4.7%)        Hazard Ratio (HR)
    >
-   >   
+   > 
    >
    > 31,361         other types
 
@@ -821,7 +821,7 @@ Each *OutcomeAnalysis* node represents the result of scientifically appropriate 
    >
    > 20,547          (19.1%)       Standard Error of the Mean
    >
-   >   1,276               (1.2%)      Standard Deviation
+   > 1,276               (1.2%)      Standard Deviation
 
 6. **dispersion_value**
 
@@ -839,11 +839,11 @@ Each *OutcomeAnalysis* node represents the result of scientifically appropriate 
    >
    > 30,444          (28.4%)       <
    >
-   >   1,027            (1.0%)        =
+   > 1,027            (1.0%)        =
    >
-   > ​     980            (0.9%)        >
+   >   980            (0.9%)        >
    >
-   > ​       64            "<=" (58); "p<" (3); ">=" (2); "NS" (1)
+   > ​    64            "<=" (58); "p<" (3); ">=" (2); "NS" (1)
 
 8. **p_value**
 
@@ -865,7 +865,7 @@ Each *OutcomeAnalysis* node represents the result of scientifically appropriate 
     >
     > 44,984          (41.9%)          ""
     >
-    > ​      289            (0.3%)          1-Sided
+    >    289            (0.3%)          1-Sided
 
 11. **confidence_interval_percent**
 
@@ -877,7 +877,7 @@ Each *OutcomeAnalysis* node represents the result of scientifically appropriate 
     >
     > 4,748              (4.4%)         90.0
     >
-    > ​     726              (0.7%)         80.0
+    >   726              (0.7%)         80.0
     >
     > 
     >
@@ -982,11 +982,11 @@ Each *BaselineRecord* node represents a data record of a specific baseline measu
    >
    > 256,681          (81.3%)          participants
    >
-   >   26,116            (8.3%)           years
+   > 26,116            (8.3%)           years
    >
-   > ​    5,463            (1.7%)           units on a scale
+   >  5,463            (1.7%)           units on a scale
    >
-   > ​    2,075            (0.7%)           mg/dl
+   >  2,075            (0.7%)           mg/dl
    >
    > 25,198     other
 
@@ -996,19 +996,19 @@ Each *BaselineRecord* node represents a data record of a specific baseline measu
    >
    > 163,729          (51.9%)           count of participants
    >
-   >   96,329          (30.5%)           number
+   > 96,329          (30.5%)           number
    >
-   >   50,326          (15.9%)           mean
+   > 50,326          (15.9%)           mean
    >
-   > ​    4,940            (1.6%)           median
+   >  4,940            (1.6%)           median
    >
-   > ​          98                                  count of units
+   >    98                                  count of units
    >
-   > ​          64                                  geometric mean
+   >    64                                  geometric mean
    >
-   > ​          41                                  least squares mean
+   >    41                                  least squares mean
    >
-   > ​            6                                  log mean
+   > ​    6                                   log mean
 
 5. **param_value**
 
@@ -1018,11 +1018,11 @@ Each *BaselineRecord* node represents a data record of a specific baseline measu
    >
    > 260,156          (82.4%)           ""
    >
-   >   49,188          (15.6%)           Standard deviation
+   > 49,188          (15.6%)           Standard deviation
    >
-   > ​    3,751            (1.2%)           Full range
+   >  3,751            (1.2%)           Full range
    >
-   > ​    2,438            (0.8%)           Inter-quartile range
+   >  2,438            (0.8%)           Inter-quartile range
 
 7. **dispersion_value**
 
@@ -1042,7 +1042,7 @@ Each *BaselineRecord* node represents a data record of a specific baseline measu
 
 ## 14. EventGroup
 
-Each *EventGroup* node represents an arm or a comparison group for describing the adverse events data collected from the participants in the group. The groups are based on the pre-specified protocol and/or statistical analysis plan. CTKG includes 20,599 *EventGroup* nodes. Each *EventGroup* node has an id "EventGroupID:XXX" and 8 attributes.
+Each *EventGroup* node represents an arm or a comparison group for describing the adverse events data collected from the participants in the group. The groups are based on the pre-specified protocol and/or statistical analysis plan. CTKG includes 22,725 EventGroup* nodes. Each *EventGroup* node has an id "EventGroupID:XXX" and 9 attributes.
 
 **Attributes:**
 
@@ -1136,7 +1136,7 @@ Before normalization, the original database contains 42,435 unique adverse event
    >
    > 10,151          (80.5%)           "" (terms cannot be normalized to match with the MedDRA terms)
    >
-   >   11,137          (19.5%)           MedDRA code
+   > 11,137          (19.5%)           MedDRA code
 
 3. **term_type**
 
@@ -1148,9 +1148,9 @@ Before normalization, the original database contains 42,435 unique adverse event
    >
    > 10,151         (80.5%)         None
    >
-   > ​     268            (1.1%)        HLT
+   >   268            (1.1%)        HLT
    >
-   > ​       22            (0.1%)        SOC
+   >    22            (0.1%)        SOC
 
 4. **high_level_term**
 
@@ -1164,7 +1164,7 @@ Before normalization, the original database contains 42,435 unique adverse event
 
 ## 16. Organ
 
-Each *Organ* represent a high-level category used to group adverse event terms by body or organ system. The CTKG includes 30 *Organ* nodes. Each *Organ* node has an id "OrganID:XXX" and 1 attribute. 
+Each *Organ* represent a high-level category used to group adverse event terms by body or organ system. The CTKG includes 29 *Organ* nodes. Each *Organ* node has an id "OrganID:XXX" and 1 attribute. 
 
 **Attributes:**
 
@@ -1214,11 +1214,11 @@ Each *Period* node represents a stage of a study or an interval of study activit
 >
 > 27,578 (80.3%),                      3     (STARTED/NOT COMPLETED/COMPLETED)
 >
->   4,662 (13.6%),                      4
+> 4,662 (13.6%),                      4
 >
->   1,168   (3.4%),                      5
+> 1,168   (3.4%),                      5
 >
-> ​     553   (1.6%),                      6
+>   553   (1.6%),                      6
 
 
 
@@ -1240,13 +1240,13 @@ Each *Period* node represents a stage of a study or an interval of study activit
    >
    > 16,151 (47.0%)           65,468 (53.0%)           Overall Study
    >
-   > ​      427  (1.2%)                  755  (0.7%)           Period 2
+   >    427  (1.2%)                  755  (0.7%)           Period 2
    >
-   > ​      396  (1.1%)                  827  (0.6%)           Period 1
+   >    396  (1.1%)                  827  (0.6%)           Period 1
    >
-   > ​      260  (0.8%)                1,868  (1.5%)          Treatment Period
+   >    260  (0.8%)                1,868  (1.5%)          Treatment Period
    >
-   > ​      217  (0.6%)                   616  (0.5%)          Treatment Period 1
+   >    217  (0.6%)                   616  (0.5%)          Treatment Period 1
 
 2. **num_started**
 
@@ -1321,9 +1321,9 @@ Each *DropRecord* node documents the number of participants who didn't complete 
    >
    > 14,287 (11.55%)      Lost to Follow-up
    >
-   >   8,794   (7.11%)      Protocol Violation
+   > 8,794   (7.11%)      Protocol Violation
    >
-   >   7,213   (5.83%)      Lack of Efficacy
+   > 7,213   (5.83%)      Lack of Efficacy
 
 2. **count**
 
@@ -1359,7 +1359,7 @@ This relation indicates which drugs could be normalized to which standard terms.
 
 ## 5. Drug-EventGroup relation
 
-This relation indicates which drugs are used in the specific *EventGroup* node. For example, the *Drug* node with ID "311" has the drug name "naltrexone". Then, the triplet (311,*drug-eventgroup*,10828809) indicates the drug "naltrexone" is used or studied in this *EventGroup*. There are 33,625 edges of this relation between 3,712 *Drug* nodes and 21,831 *EventGroup* nodes. Each edge of this relation type has an id "drug::eventgroup:XXX", and we don't have any attributes on this relation.
+This relation indicates which drugs are used in the specific *EventGroup* node. For example, the *Drug* node with ID "311" has the drug name "naltrexone". Then, the triplet (311,*drug-eventgroup*,10828809) indicates the drug "naltrexone" is used or studied in this *EventGroup*. There are 33,624 edges of this relation between 3,712 *Drug* nodes and 21,831 *EventGroup* nodes. Each edge of this relation type has an id "drug::eventgroup:XXX", and we don't have any attributes on this relation.
 
 
 
@@ -1446,9 +1446,9 @@ This relation indicates which *Study* the specific *BaselineGroup* belongs to. F
 
 ## 16. BaselineGroup-BaselineRecord relation
 
-This relation indicates which *BaselineGroup* the measurement value in the *BaselineRecord* node belongs to. For example, the triplet (10828802,*BaselineGroup-BaselineRecord*,12255269) indicates that the *BaselineRecord* node with ID "12255269" is for the *BaselineGroup* with ID "10828802".  There are 315,533 edges between 27,068 nodes of *BaselineGroup* and 315,533 nodes of *BaselineRecord*. Each edge of this relation type has an id "baselinegroup::baselinerecord:XXX".
+This relation indicates which *BaselineGroup* the measurement value in the *BaselineRecord* node belongs to. For example, the triplet (10828802,*BaselineGroup-BaselineRecord*,12255269) indicates that the *BaselineRecord* node with ID "12255269" is for the *BaselineGroup* with ID "10828802".  There are 315,533 edges between 27,068 nodes of *BaselineGroup* and 315,533 nodes of *BaselineRecord*. Each edge of this relation type has an id "baselinegroup::baselinerecord:XXX" and 2 attributes.
 
-Each relation is associated with 2 attributes:
+**Attributes:**
 
 1. **title**
 
@@ -1468,19 +1468,19 @@ Each relation is associated with 2 attributes:
    >
    > 10,872 (40.2%)     35,578 (11.3%);       Region of Enrollment
    >
-   >   6,548 (24.2%) 	33,543 (10.6%);	   Race/Ethnicity, Customized
+   > 6,548 (24.2%) 	33,543 (10.6%);	   Race/Ethnicity, Customized
    >
-   >   5,436 (20.1%)     38,142 (12.1%);       Race (NIH/OMB)
+   > 5,436 (20.1%)     38,142 (12.1%);       Race (NIH/OMB)
    >
-   >   4,483 (16.6%)     13,469   (4.3%)        Ethnicity (NIH/OMB)
+   > 4,483 (16.6%)     13,469   (4.3%)        Ethnicity (NIH/OMB)
    >
-   >   3,929 (14.5%)     11,867   (3.8%)        Age, Customized
+   > 3,929 (14.5%)     11,867   (3.8%)        Age, Customized
    >
-   > ​    1,563 (5.8%)       1,625    (0.5%)        Weight
+   >  1,563 (5.8%)       1,625    (0.5%)        Weight
    >
-   > ​    1,165 (4.3%)       1,248    (0.4%)       Body Mass Index (BMI)
+   >  1,165 (4.3%)       1,248    (0.4%)       Body Mass Index (BMI)
    >
-   > ​    1,074 (4.0%)       1,082    (0.3%)       Height
+   >  1,074 (4.0%)       1,082    (0.3%)       Height
    >
    > These most frequent titles can cover 73% baseline records.
    >
@@ -1500,203 +1500,9 @@ This relation indicates which *Study* the *EventGroup* node belongs to. For exam
 
 ## 18. EventGroup-AdverseEvent relation
 
-This relation indicates which *AdverseEvent* appears in the participants in the *EventGroup* . For example, the *AdverseEvent* node with id "12620" has the name "dizziness/drowsiness". Then, the triplet (10828809,*EventGroup-AdverseEvent*,12620) indicates that participants in the *EventGroup* node with ID "12255269" can have "dizziness/drowsiness" adverse event.  There are 966,450 edges between 20,571 nodes of *EventGroup* and 12,640 nodes of *AdverseEvent*. Each edge of this relation type has an id "eventgroup::adverseevent:XXX".
+This relation indicates which *AdverseEvent* appears in the participants in the *EventGroup* . For example, the *AdverseEvent* node with id "12620" has the name "dizziness/drowsiness". Then, the triplet (10828809,*EventGroup-AdverseEvent*,12620) indicates that participants in the *EventGroup* node with ID "10828809" can have "dizziness/drowsiness" adverse event.  There are 966,450 edges between 20,571 nodes of *EventGroup* and 12,640 nodes of *AdverseEvent*. Each edge of this relation type has an id "eventgroup::adverseevent:XXX" and 6 attributes.
 
-Each relation is associated with 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-s:
+**Attributes:**
 
 1. **type**
 
@@ -1722,7 +1528,7 @@ s:
    >
    > 232,503          (24.1%)           Non-systematic Assessment
    >
-   >   28,025            (2.9%)            ""
+   > 28,025            (2.9%)            ""
 
 4. **num_affected**
 
