@@ -909,7 +909,7 @@ Each *OutcomeAnalysis* node represents the result of scientifically appropriate 
 
 ## 11. Method
 
-Each *Method* node represents a statistical method that is used in the statistical analyses of outcomes. The CTKG includes 933 *Method* nodes. Each *Method* node has an id "MethodID:XXX" and 1 attribute.
+Each *Method* node represents a statistical method that is used in the statistical analyses of outcomes. The CTKG includes 907 *Method* nodes. Each *Method* node has an id "MethodID:XXX" and 1 attribute.
 
 **Attributes:**
 
