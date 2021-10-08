@@ -1151,49 +1151,15 @@ Before normalization, the original database contains 42,473 unique adverse event
 
 **Attributes:**
 
-1. **term_name**
+1. **term**
 
    Definition: The name of the adverse event. The names of some adverse events are included in the MedDRA dictionary.
 
    Example: "nodule, pulmonary"; "diarrhea-no colostom"
 
-2. **medDRA_code**
+Due to the licensing restrictions of MedDRA, we didn't specify which terms are MedDRA terms and only kept the name of adverse event as the attribute of the adverse event node .
 
-   Definition: The corresponding MedDRA code of the term, if any.
 
-   Example: "10003205", "0"
-
-   > Statistics:
-   >
-   > 7,393          (80.5%)           "" (terms cannot be normalized to match with the MedDRA terms)
-   >
-   >   11,153          (19.5%)           MedDRA code
-
-3. **term_type**
-
-   Definition: The corresponding MedDRA level of the term, if any.
-
-   > Statistics:
-   >
-   > 10,694        (57.7%)          PT
-   >
-   >   7,393         (40.0%)         None
-   >
-   > ​     249            (1.3%)        HLT
-   >
-   > ​     188            (1.0%)        HLGT
-   >
-   > ​       22            (0.1%)        SOC
-
-4. **high_level_term**
-
-   Definition: The corresponding high level term of the adverse event term (from MedDRA dictionary).
-
-5. **high_group_level_term**
-
-   Definition: The corresponding high group level term of the adverse event term (from MedDRA dictionary).
-
-   
 
 ## 16. Organ
 
