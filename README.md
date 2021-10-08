@@ -4,7 +4,7 @@ Clinical Trials Knowledge Graph (CTKG) is a knowledge graph constructed over the
 
 
 
-<img src="E:\PhDInOSU\Project\AACT\github\Clinical-Trial-Knowledge-Graph\Schema.png" alt="Schema" style="zoom:40%;" />
+<img src=".\Schema.png" alt="Schema" style="zoom:40%;" />
 
 
 
