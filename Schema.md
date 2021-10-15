@@ -56,6 +56,8 @@ Clinical Trial Knowledge Graph (CTKG) is a comprehensive knowledge graph relatin
 
 ![](./Schema.png)
 
+
+
 # Nodes
 
 The following table shows the description and attributes for each node type. We list the brief definition of attributes. Please refer to this [link][def] for detailed definitions.
