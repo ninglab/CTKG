@@ -16,7 +16,13 @@ The directory <code>rawdata</code> contains all the entities and relations:
 * <code>relations.zip</code> : the attributes of relations between two types of entities (e.g., "study"--- study-drug ---"drug").
 * <code>reverse.zip</code> : the attributes of reverse relations between two types of entities (e.g., "drug" --- drug-study --- "study").
 
+### Embedding analysis
 
+The directory <code>scripts</code> contains all the jupyter notebooks for the embedding analysis:
+
+* <code>loading_ctkg_in_dgl.ipynb</code> is a notebook to load CTKG as a graph using the Deep Graph Library (https://www.dgl.ai/).
+* <code>Train_embeddings.ipynb</code> is a notebook to generate the embeddings for nodes and relations in CTKG.
+* <code>Subtype_entity_similarity_analysis.ipynb</code> is a notebook to retrieve similar nodes of a certain node type.
 
 # Reference
 
