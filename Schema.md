@@ -5,52 +5,50 @@
 - [Clinical Trial Knowledge Graph (CTKG)](#clinical-trial-knowledge-graph-ctkg)
 - [Nodes](#nodes)
   - [1. Study](#1-study)
-  - [2. Drug](#2-drug)
-  - [3. Term](#3-term)
-  - [4. Condition](#4-condition)
-  - [5. OutcomeGroup](#5-outcomegroup)
-  - [6. Outcome](#6-outcome)
-  - [7. StandardOutcome](#7-standardoutcome)
-  - [8. ClusterOutcome](#8-clusteroutcome)
-  - [9. OutcomeMeasure](#9-outcomemeasure)
-  - [10. OutcomeAnalysis](#10-outcomeanalysis)
-  - [11. Method](#11-method)
-  - [12. BaselineGroup](#12-baselinegroup)
-  - [13. BaselineRecord](#13-baselinerecord)
-  - [14. EventGroup](#14-eventgroup)
-  - [15. AdverseEvent](#15-adverseevent)
-  - [16. Organ](#16-organ)
-  - [17. DropGroup](#17-dropgroup)
-  - [18. Period](#18-period)
-  - [19. DropRecord](#19-droprecord)
+  - [2. DrugTerm](#2-drugterm)
+  - [3. Condition](#3-condition)
+  - [4. OutcomeGroup](#4-outcomegroup)
+  - [5. Outcome](#5-outcome)
+  - [6. StandardOutcome](#6-standardoutcome)
+  - [7. ClusterOutcome](#7-clusteroutcome)
+  - [8. OutcomeMeasure](#8-outcomemeasure)
+  - [9. OutcomeAnalysis](#9-outcomeanalysis)
+  - [10. Method](#10-method)
+  - [11. BaselineGroup](#12-baselinegroup)
+  - [12. BaselineRecord](#13-baselinerecord)
+  - [13. EventGroup](#14-eventgroup)
+  - [14. AdverseEvent](#15-adverseevent)
+  - [15. Organ](#16-organ)
+  - [16. DropGroup](#17-dropgroup)
+  - [17. Period](#18-period)
+  - [18. DropRecord](#19-droprecord)
 - [Relations](#relations)
   - [1. study-useddrug relation](#1-study-useddrug-relation)
   - [2. study-studieddrug relation](#2-study-studieddrug-relation)
   - [3. Study-Condition relation](#3-study-condition-relation)
-  - [4. Drug-Term relation](#4-drug-term-relation)
-  - [5. Drug-EventGroup relation](#5-drug-eventgroup-relation)
-  - [6. Study-OutcomeGroup relation](#6-study-outcomegroup-relation)
-  - [7. Study-Outcome relation](#7-study-outcome-relation)
-  - [8. Outcome-ClusterOutcome relation](#8-outcome-clusteroutcome-relation)
-  - [9. Outcome-StandardOutcome relation](#9-outcome-standardoutcome-relation)
-  - [10. Outcome-OutcomeAnalysis relation](#10-outcome-outcomeanalysis-relation)
-  - [11. OutcomeAnalysis-Method relation](#11-outcomeanalysis-method-relation)
-  - [12. OutcomeAnalysis-OutcomeGroup relation](#12-outcomeanalysis-outcomegroup-relation)
-  - [13. Outcome-OutcomeMeasure relation](#13-outcome-outcomemeasure-relation)
-  - [14. OutcomeMeasure-OutcomeGroup relation](#14-outcomemeasure-outcomegroup-relation)
-  - [15. Study-BaselineGroup relation](#15-study-baselinegroup-relation)
-  - [16. BaselineGroup-BaselineRecord relation](#16-baselinegroup-baselinerecord-relation)
-  - [17. Study-EventGroup relation](#17-study-eventgroup-relation)
-  - [18. EventGroup-AdverseEvent relation](#18-eventgroup-adverseevent-relation)
-  - [19. AdverseEvent-Organ relation](#19-adverseevent-organ-relation)
-  - [20. Study-DropGroup relation](#20-study-dropgroup-relation)
-  - [21. DropGroup-Period relation](#21-dropgroup-period-relation)
-  - [22. Period-DropRecord relation](#22-period-droprecord-relation)
+  - [4. DrugTerm-EventGroup relation](#4-drugterm-eventgroup-relation)
+  - [5. Study-OutcomeGroup relation](#5-study-outcomegroup-relation)
+  - [6. Study-Outcome relation](#6-study-outcome-relation)
+  - [7. Outcome-ClusterOutcome relation](#7-outcome-clusteroutcome-relation)
+  - [8. Outcome-StandardOutcome relation](#8-outcome-standardoutcome-relation)
+  - [9. Outcome-OutcomeAnalysis relation](#9-outcome-outcomeanalysis-relation)
+  - [10. OutcomeAnalysis-Method relation](#10-outcomeanalysis-method-relation)
+  - [11. OutcomeAnalysis-OutcomeGroup relation](#11-outcomeanalysis-outcomegroup-relation)
+  - [12. Outcome-OutcomeMeasure relation](#12-outcome-outcomemeasure-relation)
+  - [13. OutcomeMeasure-OutcomeGroup relation](#13-outcomemeasure-outcomegroup-relation)
+  - [14. Study-BaselineGroup relation](#14-study-baselinegroup-relation)
+  - [15. BaselineGroup-BaselineRecord relation](#15-baselinegroup-baselinerecord-relation)
+  - [16. Study-EventGroup relation](#16-study-eventgroup-relation)
+  - [17. EventGroup-AdverseEvent relation](#17-eventgroup-adverseevent-relation)
+  - [18. AdverseEvent-Organ relation](#18-adverseevent-organ-relation)
+  - [19. Study-DropGroup relation](#19-study-dropgroup-relation)
+  - [20. DropGroup-Period relation](#20-dropgroup-period-relation)
+  - [21. Period-DropRecord relation](#21-period-droprecord-relation)
     <!-- md-toc-end -->
 
 # Clinical Trial Knowledge Graph (CTKG)
 
-Clinical Trial Knowledge Graph (CTKG) is a comprehensive knowledge graph relating clinical studies, study groups, drugs, conditions, adverse events, outcome analyses and outcomes. CTKG represents information from the [AACT][aact] database as a knowledge graph to capture the relations among nodes. CTKG includes **1,501,333** nodes belonging to 19 node-types; and **3,664,619** triplets belonging to 22 relation-types. These 22 relation-types show a type of interaction between one of the 19 node-type pairs as depicted in the figure below.  In CTKG, we have two types of relations between the study and drug nodes. For the rest of the node-type pairs, we have at most one relation for each of them.
+Clinical Trial Knowledge Graph (CTKG) is a comprehensive knowledge graph relating clinical studies, study groups, drugs, conditions, adverse events, outcome analyses and outcomes. CTKG represents information from the [AACT][aact] database as a knowledge graph to capture the relations among nodes. CTKG includes **1,496,684** nodes belonging to 18 node-types; and **3,659,444** triplets belonging to 21 relation-types. These 21 relation-types show a type of interaction between one of the 18 node-type pairs as depicted in the figure below.  In CTKG, we have two types of relations between the study and drug nodes. For the rest of the node-type pairs, we have at most one relation for each of them.
 
 [aact]: https://aact.ctti-clinicaltrials.org/connect
 
@@ -495,35 +493,21 @@ Each *study* node represents a clinical study. Clinical studies study the effect
 
 
 
-## 2. Drug
+## 2. DrugTerm
 
-Each *drug* node represents a drug name extracted from the intervention or group title/description of clinical studies. CTKG includes 4,617 *drug* nodes. Each *drug* node has an id "DrugID:XXX" and 1 attribute.
+Each *drug-term* node represents a normalized drug name extracted from the intervention or group title/description of clinical studies. CTKG includes 2,548 *drug-term* nodes. Each *drug-term* node has an id "TermID:XXX" and 1 attribute.
 
 **Attributes**:
 
 1. **name** 
 
-   Definition: the drug name extracted from the intervention or group title/description of clinical studies.
+   Definition: the normalized drug term name extracted from the intervention or group title/description of clinical studies.
    
    Example: "bicalutamide"
 
 
 
-## 3. Term
-
-Each *term* node represents a normalized or standard drug name. CTKG includes 2,588 *term* nodes. Each *term* node has an id "TermID:XXX" and 1 attribute.
-
-**Attributes**:
-
-1. **name**
-
-   Definition: the normalized or standard drug name.
-   
-   Example: "Bicalutamide"
-
-
-
-## 4. Condition
+## 3. Condition
 
 Each *condition* node represents a condition/disease studied in clinical studies. CTKG includes 1,394 *condition* nodes. Each *condition* node has an id "ConditionID:XXX" and 1 attribute.
 
@@ -537,7 +521,7 @@ Each *condition* node represents a condition/disease studied in clinical studies
    
    
 
-## 5. OutcomeGroup
+## 4. OutcomeGroup
 
 Each *OutcomeGroup* node represents an arm or a comparison group for describing the outcomes of a study. The groups are based on the pre-specified protocol and/or statistical analysis plan. CTKG includes 32,499 *OutcomeGroup* nodes. Each *OutcomeGroup* node has an id "OutcomeGroupID:XXX" and 3 attributes.
 
@@ -563,7 +547,7 @@ Each *OutcomeGroup* node represents an arm or a comparison group for describing 
 
 
 
-## 6. Outcome
+## 5. Outcome
 
 Each *Outcome* node represents an variable that is monitored during a study to document the impact that a given intervention or exposure has on the health of a given population[^1]. CTKG includes 88,386 *Outcome* nodes. Each *Outcome* node has an id "Outcome:XXX" and 4 attributes.
 
@@ -603,9 +587,9 @@ Each *Outcome* node represents an variable that is monitored during a study to d
 
    
 
-## 7. StandardOutcome
+## 6. StandardOutcome
 
-Each *StandardOutcome* node represents a standard variable that can be commonly used in clinical studies. In CTKG, these *StandardOutcome* nodes are extracted from the abbreviations in the outcome titles and descriptions. Those abbreviations unrelated with the outcomes have been manually filtered. Similar phrases (e.g., "visual analog pain score" and "visual analogue pain scales") identified from the abbreviations (e.g., "VAS") have been manually merged. Some popular standard outcomes are manually added (e.g., "Chemosis", ).The CTKG includes 484 *StandardOutcome* nodes. Each *StandardOutcome* node has an id "StandardOutcomeID:XXX" and 1 attribute.
+Each *StandardOutcome* node represents a standard variable that can be commonly used in clinical studies. In CTKG, these *StandardOutcome* nodes are extracted from the abbreviations in the outcome titles and descriptions. Those abbreviations unrelated with the outcomes have been manually filtered. Similar phrases (e.g., "visual analog pain score" and "visual analogue pain scales") identified from the abbreviations (e.g., "VAS") have been manually merged. Some popular standard outcomes are manually added (e.g., "Chemosis", ).The CTKG includes 492 *StandardOutcome* nodes. Each *StandardOutcome* node has an id "StandardOutcomeID:XXX" and 1 attribute.
 
 **Attributes:**
 
@@ -617,7 +601,7 @@ Each *StandardOutcome* node represents a standard variable that can be commonly 
 
 
 
-## 8. ClusterOutcome
+## 7. ClusterOutcome
 
 Each *ClusterOutcome* node represents a cluster that is identified from the titles of *Outcome* nodes using the repeated bisection clustering algorithm in CLUTO. For each title, a set of words including noun, adv, verb and adj is extracted to compute the TF-IDF vector. These calculated TF-IDF vectors are further clustered into 200 clusters. The CTKG includes 200 *ClusterOutcome* nodes. Each *ClusterOutcome* node has an id "ClusterOutcomeID:XXX" and 5 attributes.
 
@@ -655,7 +639,7 @@ Each *ClusterOutcome* node represents a cluster that is identified from the titl
 
     
 
-## 9. OutcomeMeasure
+## 8. OutcomeMeasure
 
 Each *OutcomeMeasure* node represents an outcome measurement of an variable (i.e., *Outcome* node) on an arm or a group (i.e., *OutcomeGroup* node). The CTKG includes 690,626 *OutcomeMeasure* nodes. Each *OutcomeMeasure* node has an id "OutcomeMeasureID:XXX" and 9 attributes.
 
@@ -775,7 +759,7 @@ Each *OutcomeMeasure* node represents an outcome measurement of an variable (i.e
 
 
 
-## 10. OutcomeAnalysis
+## 9. OutcomeAnalysis
 
 Each *OutcomeAnalysis* node represents the result of scientifically appropriate tests of statistical significance of an outcome variable. The CTKG includes 107,295 *OutcomeAnalysis* nodes. Each *OutcomeAnalysis* node has an id "OutcomeAnalysisID:XXX" and 15 attributes.
 
@@ -931,7 +915,7 @@ Each *OutcomeAnalysis* node represents the result of scientifically appropriate 
 
     
 
-## 11. Method
+## 10. Method
 
 Each *Method* node represents a statistical method that is used in the statistical analyses of outcomes. The CTKG includes 907 *Method* nodes. Each *Method* node has an id "MethodID:XXX" and 1 attribute.
 
@@ -945,7 +929,7 @@ Each *Method* node represents a statistical method that is used in the statistic
 
 
 
-## 12. BaselineGroup
+## 11. BaselineGroup
 
 Each *BaselineGroup* node represents an arm or a comparison group for describing the demographic or the data collected from the participants in the group. The groups are based on the pre-specified protocol and/or statistical analysis plan. CTKG includes 27,068 *BaselineGroup* nodes. Each *BaselineGroup* node has an id "BaselineGroupID:XXX" and 3 attributes.
 
@@ -977,7 +961,7 @@ Each *BaselineGroup* node represents an arm or a comparison group for describing
 
    
 
-## 13. BaselineRecord
+## 12. BaselineRecord
 
 Each *BaselineGroup* node represents an arm or a comparison group for describing the demographic or the data collected from the participants in the group. The groups are based on the pre-specified protocol and/or statistical analysis plan. CTKG includes 27,068 *BaselineGroup* nodes. Each *BaselineGroup* node has an id "BaselineGroupID:XXX" and 3 attributes.
 
@@ -1073,7 +1057,7 @@ Each *BaselineRecord* node 20,599 event groups with 3 attributes
 
 
 
-## 14. EventGroup
+## 13. EventGroup
 
 Each *EventGroup* node represents an arm or a comparison group for describing the adverse events data collected from the participants in the group. The groups are based on the pre-specified protocol and/or statistical analysis plan. CTKG includes 22,725 *EventGroup* nodes. Each *EventGroup* node has an id "EventGroupID:XXX" and 8 attributes.
 
@@ -1135,7 +1119,7 @@ Each *EventGroup* node represents an arm or a comparison group for describing th
 
 
 
-## 15. AdverseEvent
+## 14. AdverseEvent
 
 The definition of adverse event is "any untoward or unfavorable medical occurrence in a participant, including any abnormal sign (for example, abnormal physical exam or laboratory finding), symptom, or disease, temporally associated with the participant’s participation in the research, whether or not considered related to the participant’s participation in the research."
 
@@ -1163,7 +1147,7 @@ Due to the licensing restrictions of MedDRA, we didn't specify which terms are M
 
 
 
-## 16. Organ
+## 15. Organ
 
 Each *Organ* represent a high-level category used to group adverse event terms by body or organ system. The CTKG includes 27 *Organ* nodes. Each *Organ* node has an id "OrganID:XXX" and 1 attribute. 
 
@@ -1177,7 +1161,7 @@ Each *Organ* represent a high-level category used to group adverse event terms b
 
 
 
-## 17. DropGroup
+## 16. DropGroup
 
 Each *DropGroup* node represents an arm or a comparison group for describing the progress of research participants through each stage of a study. The groups are based on the pre-specified protocol and/or statistical analysis plan. The CTKG includes 22,272 *DropGroup* nodes. Each *DropGroup* node has an id "DropGroupID:XXX" and 3 attributes.
 
@@ -1203,7 +1187,7 @@ Each *DropGroup* node represents an arm or a comparison group for describing the
 
 
 
-## 18. Period
+## 17. Period
 
 Each *Period* node represents a stage of a study or an interval of study activity, that can be used to report the number of participants at different stages of the studies. The CTKG includes 34,330 *Period* nodes. Each *Period* node has an id "PeriodID:XXX" and 10 attributes.
 
@@ -1300,7 +1284,7 @@ Each *Period* node represents a stage of a study or an interval of study activit
 
 
 
-## 19. DropRecord
+## 18. DropRecord
 
 Each *DropRecord* node documents the number of participants who didn't complete the period with a specific reason. The CTKG includes 123,627 *DropRecord* nodes. Each *DropRecord* node has an id "DropRecrodID:XXX" and 2 attributes.
 
@@ -1336,13 +1320,13 @@ Each *DropRecord* node documents the number of participants who didn't complete 
 
 ## 1. Study-UsedDrug relation
 
-This relation indicates which drugs are used in which studies. For example, the triplet (NCT00000378,  study-usedDrug, bicalutamide) indicates that the drug "bicalutamide" has been used in the study with id "NCT00000378". There are 6,120 edges of this relation type between study nodes and drug nodes. Each edge of this relation type has an id "Study::UsedDrug::XXX", and we don't have any attributes on this relation.
+This relation indicates which drugs are used in which studies. For example, the triplet (NCT00000378,  study-usedDrug, bicalutamide) indicates that the drug "bicalutamide" has been used in the study with id "NCT00000378". There are 6,113 edges of this relation type between study nodes and drug nodes. Each edge of this relation type has an id "Study::UsedDrug::XXX", and we don't have any attributes on this relation.
 
 
 
 ## 2. Study-StudiedDrug relation
 
-This relation indicates which drugs are studied in which studied. For example, the triplet (NCT00000378,  study-studiedDrug, bicalutamide) indicates that the drug "bicalutamide" is studied in the study with id "NCT00000378". In CTKG, for a certain clinical study, the studied drugs are the drugs extracted from the title/description of study groups of this study. There are 23,308 edges of this relation type between study nodes and drug nodes. Each edge of this relation type has an id "Study::StudiedDrug::XXX", and we don't have any attributes on this relation.
+This relation indicates which drugs are studied in which studied. For example, the triplet (NCT00000378,  study-studiedDrug, bicalutamide) indicates that the drug "bicalutamide" is studied in the study with id "NCT00000378". In CTKG, for a certain clinical study, the studied drugs are the drugs extracted from the title/description of study groups of this study. There are 23,188 edges of this relation type between study nodes and drug nodes. Each edge of this relation type has an id "Study::StudiedDrug::XXX", and we don't have any attributes on this relation.
 
 
 
@@ -1352,49 +1336,43 @@ This relation indicates which conditions are studied in which studies. For examp
 
 
 
-## 4. Drug-Term relation
+## 4. Drug-EventGroup relation
 
-This relation indicates which drugs could be normalized to which standard terms. For example, the triplet (dmards, drug-term, Antirheumatic Agents) indicates the drug "dmards" could be normalized to the standard term "Antirheumatic Agents". There are 4,617 edges of this relation between drug nodes and term nodes. Each edge of this relation type has an id "Drug::Term:XXX", and we don't have any attributes on this relation.
-
-
-
-## 5. Drug-EventGroup relation
-
-This relation indicates which drugs could be used in the group of participants specified by the "event-group" node. For example, the triplet (naltrexone, drug-eventgroup, 10828809) indicates the drug "naltrexone" is used in the *EventGroup* "10828809". This indicates that the adverse events happened within the event group could be induced by the drug "naltrexone". There are 33,624 edges of this relation between drug nodes and event group nodes. Each edge of this relation type has an id "Drug::EventGroup:XXX", and we don't have any attributes on this relation.
+This relation indicates which drugs could be used in the group of participants specified by the "event-group" node. For example, the triplet (naltrexone, drug-eventgroup, 10828809) indicates the drug "naltrexone" is used in the *EventGroup* "10828809". This indicates that the adverse events happened within the event group could be induced by the drug "naltrexone". There are 33,453 edges of this relation between drug nodes and event group nodes. Each edge of this relation type has an id "Drug::EventGroup:XXX", and we don't have any attributes on this relation.
 
 
 
-## 6. Study-OutcomeGroup relation
+## 5. Study-OutcomeGroup relation
 
 This relation indicates which *Study* the specific *OutcomeGroup* belongs to. For example, the triplet (NCT04322526,*Study-OutcomeGroup*,10828807) indicates that the *OutcomeGroup* node with ID "10828807" belongs to the *Study* with ID "NCT04322526". There are 32,499 edges of this relation between the *Study* nodes and the *OutcomeGroup* nodes. Each edge of this relation type has an id "study::outcomegroup:XXX", and we don't have any attributes on this relation.
 
 
 
-## 7. Study-Outcome relation
+## 6. Study-Outcome relation
 
 This relation indicates which *Study* the specific *Outcome* belongs to. For example, the triplet (NCT04322526,*Study-Outcome*,3290500) indicates that the *Outcome* node with ID "3290500" belongs to the *Study* with ID "NCT04322526". There are 88,386 edges of this relation between the *Study* nodes and the *Outcome* nodes. Each edge of this relation type has an id "study::putcome:XXX", and we don't have any attributes on this relation.
 
 
 
-## 8. Outcome-ClusterOutcome relation
+## 7. Outcome-ClusterOutcome relation
 
 This relation indicates which *ClusterOutcome* the title of the specific *Outcome* node belongs to after clustering. For example, the triplet (3290500,*Outcome-ClusterOutcome*,125) indicates that according to the clustering results, the *Outcome* node with ID "3290500" belongs to the *ClusterOutcome* with ID "125". There are 88,244 edges of this relation between the *Outcome* nodes and the *ClusterOutcome* nodes. Each edge of this relation type has an id "outcome::clusteroutcome:XXX", and we don't have any attributes on this relation.
 
 
 
-## 9. Outcome-StandardOutcome relation
+## 8. Outcome-StandardOutcome relation
 
-This relation indicates which *StandardOutcome* nodes the title or the description of the specific *Outcome* includes. For example, the *StandardOutcome* node with ID "0" has name "blood oxygen level dependent". Then, the triplet (3290500,*Outcome-StandardOutcome*, 0) indicates that the title or the description of the *Outcome* node with ID "3290500" should contain the full name "blood oxygen level dependent" or the corresponding abbreviation "BOLD". There are 50,773 edges of this relation between the *Outcome* nodes and the *StandardOutcome* nodes. Each edge of this relation type has an id "outcome::standardoutcome:XXX", and we don't have any attributes on this relation.
+This relation indicates which *StandardOutcome* nodes the title or the description of the specific *Outcome* includes. For example, the *StandardOutcome* node with ID "0" has name "blood oxygen level dependent". Then, the triplet (3290500,*Outcome-StandardOutcome*, 0) indicates that the title or the description of the *Outcome* node with ID "3290500" should contain the full name "blood oxygen level dependent" or the corresponding abbreviation "BOLD". There are 58,819 edges of this relation between the *Outcome* nodes and the *StandardOutcome* nodes. Each edge of this relation type has an id "outcome::standardoutcome:XXX", and we don't have any attributes on this relation.
 
 
 
-## 10. Outcome-OutcomeAnalysis relation
+## 9. Outcome-OutcomeAnalysis relation
 
 This relation indicates which variable specified by the *Outcome* node the statistic analysis result *OutcomeAnalysis* node compares. For example, the triplet (3290500,*Outcome-OutcomeAnalysis*,1791998) indicates that the *OutcomeAnalysis* node with ID "1791998" analyzed the efficacy of intervention by comparing the outcome. There are 107,294 edges of this relation between 45,689 *Outcome* nodes and 107,294 *OutcomeAnalysis* nodes. Each edge of this relation type has an id "outcome::outcomeanalysis:XXX", and we don't have any attributes on this relation.
 
 
 
-## 11. OutcomeAnalysis-Method relation
+## 10. OutcomeAnalysis-Method relation
 
 This relation indicates which statistical method the *OutcomeAnalysis* node uses to test the outcome. For example, the *method* node with id "4" has the name "t-test, 2 sided". Then, the triplet (1791998,*OutcomeAnalysis-Method*,4) indicates that the *OutcomeAnalysis* node with ID "1791998" uses "t-test, 2 sided" to test the specific outcome. There are 91,463 edges of this relation between 91,463 *OutcomeAnalysis* nodes and 907 *Method* nodes. Each edge of this relation type has an id "outcomeanalysis::method:XXX", and we don't have any attributes on this relation.
 
@@ -1420,31 +1398,31 @@ This relation indicates which statistical method the *OutcomeAnalysis* node uses
 
 
 
-## 12. OutcomeAnalysis-OutcomeGroup relation
+## 11. OutcomeAnalysis-OutcomeGroup relation
 
 This relation indicates which arm or group specified by the *OutcomeGroup* node is involved in the *OutcomeAnalysis* node.  For example, the triplet (1791998,*OutcomeAnalysis-OutcomeGroup*,10828807) indicates that the *OutcomeGroup* node with ID "10828807" is involved into the statistical analysis specified by the *OutcomeAnalysis* node with ID "1791998". There are 209,314 edges of this relation between 107,294 *OutcomeAnalysis* nodes and 23,923 *OutcomeGroup* nodes. Each edge of this relation type has an id "OutcomeAnalysis::OutcomeGroup", and we don't have any attributes on this relation.
 
 
 
-## 13. Outcome-OutcomeMeasure relation
+## 12. Outcome-OutcomeMeasure relation
 
 This relation indicates which *variable* (i.e., *Outcome* node) the *OutcomeMeasure* node measures on an arm or a group. For example, the *Outcome* node with id "3290500" has the title "Naltrexone-induced Changes in BOLD Responses in the rACC Cortex During the Processing of Contextual Cues". Then, the triplet (3290500,*Outcome-OutcomeMeasure*,25354504) indicates that the *OutcomeMeasure* node with ID "25354504" measures the "changes in BOLD Responses" on a specific *OutcomeGroup*. There are 690,626 edges of this relation between  85,905 *Outcome* nodes and 690,626 *OutcomeMeasure* nodes. Each edge of this relation type has an id "outcome::outcomemeasure:XXX", and we don't have any attributes on this relation.
 
 
 
-## 14. OutcomeMeasure-OutcomeGroup relation
+## 13. OutcomeMeasure-OutcomeGroup relation
 
 This relation indicates which *OutcomeGroup* the *OutcomeMeasure* node measures on. For example, the triplet (25354504,*OutcomeMeasure-OutcomeGroup*,10828807) indicates that the *OutcomeMeasure* node with ID "25354504" measures the outcome variable on a group specified by the *OutcomeGroup* node with ID "10828807". There are 690,541 edges between 690,541 nodes of *OutcomeMeasure* and 32,240 nodes of *OutcomeGroup*. Each edge of this relation type has an id "outcomemeasure::outcomegroup:XXX", and we don't have any attributes on this relation.
 
 
 
-## 15. Study-BaselineGroup relation
+## 14. Study-BaselineGroup relation
 
 This relation indicates which *Study* the specific *BaselineGroup* belongs to. For example, the triplet (NCT04322526,*Study-BaselineGroup*,10828802) indicates that the *BaselineGroup* node with ID "10828802" belongs to the *Study* with ID "NCT04322526".  There are 27,068 edges between 8209 nodes of *Study* and 27,068 nodes of *BaselineGroup*. Each edge of this relation type has an id "study::baselinegroup:XXX", and we don't have any attributes on this relation.
 
 
 
-## 16. BaselineGroup-BaselineRecord relation
+## 15. BaselineGroup-BaselineRecord relation
 
 This relation indicates which *BaselineGroup* the measurement value in the *BaselineRecord* node belongs to. For example, the triplet (10828802,*BaselineGroup-BaselineRecord*,12255269) indicates that the *BaselineRecord* node with ID "12255269" is for the *BaselineGroup* with ID "10828802".  There are 315,533 edges between 27,068 nodes of *BaselineGroup* and 315,533 nodes of *BaselineRecord*. Each edge of this relation type has an id "baselinegroup::baselinerecord:XXX".
 
@@ -1492,13 +1470,13 @@ Each relation is associated with 2 attributes:
 
    
 
-## 17. Study-EventGroup relation 
+## 16. Study-EventGroup relation 
 
 This relation indicates which *Study* the *EventGroup* node belongs to. For example, the triplet (NCT04322526,*Study-EventGroup*,10828809) indicates that the *EventGroup* node with ID "10828809" belongs to the *Study* with ID "NCT04322526". There are 22,725 edges between 8,172 nodes of *Study* and 22,725 nodes of *EventGroup*. Each edge of this relation type has an id "study::eventgroup:XXX", and we don't have any attributes on this relation.
 
 
 
-## 18. EventGroup-AdverseEvent relation
+## 17. EventGroup-AdverseEvent relation
 
 This relation indicates which *AdverseEvent* appears in the participants in the *EventGroup* . For example, the *AdverseEvent* node with id "12620" has the name "dizziness/drowsiness". Then, the triplet (10828809,*EventGroup-AdverseEvent*,12620) indicates that participants in the *EventGroup* node with ID "12255269" can have "dizziness/drowsiness" adverse event.  There are 966,450 edges between 20,571 nodes of *EventGroup* and 18,546 nodes of *AdverseEvent*. Each edge of this relation type has an id "eventgroup::adverseevent:XXX".
 
@@ -1544,25 +1522,25 @@ Each relation is associated with 6 attributes:
 
 
 
-## 19. AdverseEvent-Organ relation
+## 18. AdverseEvent-Organ relation
 
 This relation indicates which organ system the adverse event belongs to. For example, the *Organ* node with ID "0" has the name "Infections and infestations". Then, the triplet (0, *AdverseEvent-Organ*, 0) indicates that the adverse event specified by the *AdverseEvent* node with ID "0" can be grouped by body or organ system to the category "Infections and infestations". There are 18,546 edges between 18,546 adverse events and 27 organs, and we don't have any attributes on this relation.
 
 
 
-## 20. Study-DropGroup relation
+## 19. Study-DropGroup relation
 
 This relation indicates which *Study* the *DropGroup* node belongs to. For example, the triplet (NCT04322526,*Study-DropGroup*,10828805) indicates that the *DropGroup* node with ID "10828805" belongs to the *Study* with ID "NCT04322526". There are 22,272 edges between 8,210 nodes of *Study* and 22,272 nodes of *DropGroup*. Each edge of this relation type has an id "study::dropgroup:XXX", and we don't have any attributes on this relation.
 
 
 
-## 21. DropGroup-Period relation
+## 20. DropGroup-Period relation
 
 This relation indicates that the *DropGroup* node has a discrete stage specified by the *period* node. For example, the *period* node with ID "0" has period "Second Intervention (1day)". Then, the triplet (10828805,*DropGroup-Period*,0) indicates that the *DropGroup* node with ID "10828805" has the stage "Second Intervention (1day)". There are 34,330 edges between 22,272 nodes of *DropGroup* and 34,330  nodes of *DropGroup*. Each edge of this relation type has an id "dropgroup::period:XXX", and we don't have any attributes on this relation.
 
 
 
-## 22. Period-DropRecord relation
+## 21. Period-DropRecord relation
 
 This relation indicates that in each period specified by the *Period* node, the CTKG has at least one *DropRecord* node which documents the number of participants who cannot complete the period with the specific reason. For example, the *period* node with ID "1" has period "Washout (1 Week)". Then, the triplet (1,*Period-DropRecord*,3181066) indicates that in this period, several participants in the *DropGroup* connected with the *Period*, didn't complete the period with a specific reason. There are 123,627 edges between 25,956 nodes of *Period* and 123,627 nodes of *DropRecord*. Each edge of this relation type has an id "period::droprecord:XXX", and we don't have any attributes on this relation.
 
