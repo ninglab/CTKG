@@ -48,7 +48,7 @@
 
 # Clinical Trial Knowledge Graph (CTKG)
 
-Clinical Trial Knowledge Graph (CTKG) is a comprehensive knowledge graph relating clinical studies, study groups, drugs, conditions, adverse events, outcome analyses and outcomes. CTKG represents information from the [AACT][aact] database as a knowledge graph to capture the relations among nodes. CTKG includes **1,496,684** nodes belonging to 18 node-types; and **3,659,444** triplets belonging to 21 relation-types. These 21 relation-types show a type of interaction between one of the 18 node-type pairs as depicted in the figure below.  In CTKG, we have two types of relations between the study and drug nodes. For the rest of the node-type pairs, we have at most one relation for each of them.
+Clinical Trial Knowledge Graph (CTKG) is a comprehensive knowledge graph relating clinical studies, study groups, drugs, conditions, adverse events, outcome analyses and outcomes. CTKG represents information from the [AACT][aact] database as a knowledge graph to capture the relations among nodes. CTKG includes **1,496,684** nodes belonging to 18 node-types; and **3,667,750** triplets belonging to 21 relation-types. These 21 relation-types show a type of interaction between one of the 18 node-type pairs as depicted in the figure below.  In CTKG, we have two types of relations between the study and drug nodes. For the rest of the node-type pairs, we have at most one relation for each of them.
 
 [aact]: https://aact.ctti-clinicaltrials.org/connect
 
@@ -60,7 +60,7 @@ Clinical Trial Knowledge Graph (CTKG) is a comprehensive knowledge graph relatin
 
 The following table shows the description and attributes for each node type. We list the brief definition of attributes. Please refer to this [link][def] for detailed definitions.
 
-[def]: https://support.typora.io/Markdown-Reference/#reference-links
+[def]: https://prsinfo.clinicaltrials.gov/results_definitions.html
 
 ## 1. Study
 
@@ -495,7 +495,7 @@ Each *study* node represents a clinical study. Clinical studies study the effect
 
 ## 2. DrugTerm
 
-Each *drug-term* node represents a normalized drug name extracted from the intervention or group title/description of clinical studies. CTKG includes 2,548 *drug-term* nodes. Each *drug-term* node has an id "TermID:XXX" and 1 attribute.
+Each *drug-term* node represents a normalized drug name extracted from the intervention or group title/description of clinical studies. CTKG includes 2,548 *drug-term* nodes. Each *drug-term* node has an id "DrugID:XXX" and 1 attribute.
 
 **Attributes**:
 
@@ -1320,13 +1320,13 @@ Each *DropRecord* node documents the number of participants who didn't complete 
 
 ## 1. Study-UsedDrug relation
 
-This relation indicates which drugs are used in which studies. For example, the triplet (NCT00000378,  study-usedDrug, bicalutamide) indicates that the drug "bicalutamide" has been used in the study with id "NCT00000378". There are 6,113 edges of this relation type between study nodes and drug nodes. Each edge of this relation type has an id "Study::UsedDrug::XXX", and we don't have any attributes on this relation.
+This relation indicates which drugs are used in which studies. For example, the triplet (NCT00000378,  study-usedDrug, bicalutamide) indicates that the drug "bicalutamide" has been used in the study with id "NCT00000378". There are 6,113 edges of this relation type between study nodes and drug-term nodes. Each edge of this relation type has an id "Study::UsedDrug::XXX", and we don't have any attributes on this relation.
 
 
 
 ## 2. Study-StudiedDrug relation
 
-This relation indicates which drugs are studied in which studied. For example, the triplet (NCT00000378,  study-studiedDrug, bicalutamide) indicates that the drug "bicalutamide" is studied in the study with id "NCT00000378". In CTKG, for a certain clinical study, the studied drugs are the drugs extracted from the title/description of study groups of this study. There are 23,188 edges of this relation type between study nodes and drug nodes. Each edge of this relation type has an id "Study::StudiedDrug::XXX", and we don't have any attributes on this relation.
+This relation indicates which drugs are studied in which studied. For example, the triplet (NCT00000378,  study-studiedDrug, bicalutamide) indicates that the drug "bicalutamide" is studied in the study with id "NCT00000378". In CTKG, for a certain clinical study, the studied drugs are the drugs extracted from the title/description of study groups of this study. There are 23,188 edges of this relation type between study nodes and drug-term nodes. Each edge of this relation type has an id "Study::StudiedDrug::XXX", and we don't have any attributes on this relation.
 
 
 
@@ -1338,7 +1338,7 @@ This relation indicates which conditions are studied in which studies. For examp
 
 ## 4. Drug-EventGroup relation
 
-This relation indicates which drugs could be used in the group of participants specified by the "event-group" node. For example, the triplet (naltrexone, drug-eventgroup, 10828809) indicates the drug "naltrexone" is used in the *EventGroup* "10828809". This indicates that the adverse events happened within the event group could be induced by the drug "naltrexone". There are 33,453 edges of this relation between drug nodes and event group nodes. Each edge of this relation type has an id "Drug::EventGroup:XXX", and we don't have any attributes on this relation.
+This relation indicates which drugs could be used in the group of participants specified by the "event-group" node. For example, the triplet (naltrexone, drug-eventgroup, 10828809) indicates the drug "naltrexone" is used in the *EventGroup* "10828809". This indicates that the adverse events happened within the event group could be induced by the drug "naltrexone". There are 33,453 edges of this relation between drug-term nodes and event group nodes. Each edge of this relation type has an id "Drug::EventGroup:XXX", and we don't have any attributes on this relation.
 
 
 
