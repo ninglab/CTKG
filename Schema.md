@@ -1,64 +1,70 @@
 <!-- md-toc-begin -->
+
 # Contents
+
 - [Clinical Trial Knowledge Graph (CTKG)](#clinical-trial-knowledge-graph-ctkg)
 - [Nodes](#nodes)
-   - [1. Study](#1-study)
-   - [2. Drug](#2-drug)
-   - [3. Term](#3-term)
-   - [4. Condition](#4-condition)
-   - [5. OutcomeGroup](#5-outcomegroup)
-   - [6. Outcome](#6-outcome)
-   - [7. StandardOutcome](#7-standardoutcome)
-   - [8. ClusterOutcome](#8-clusteroutcome)
-   - [9. OutcomeMeasure](#9-outcomemeasure)
-   - [10. OutcomeAnalysis](#10-outcomeanalysis)
-   - [11. Method](#11-method)
-   - [12. BaselineGroup](#12-baselinegroup)
-   - [13. BaselineRecord](#13-baselinerecord)
-   - [14. EventGroup](#14-eventgroup)
-   - [15. AdverseEvent](#15-adverseevent)
-   - [16. Organ](#16-organ)
-   - [17. DropGroup](#17-dropgroup)
-   - [18. Period](#18-period)
-   - [19. DropRecord](#19-droprecord)
+  - [1. Study](#1-study)
+  - [2. DrugTerm](#2-drugterm)
+  - [3. Condition](#3-condition)
+  - [4. OutcomeGroup](#4-outcomegroup)
+  - [5. Outcome](#5-outcome)
+  - [6. StandardOutcome](#6-standardoutcome)
+  - [7. ClusterOutcome](#7-clusteroutcome)
+  - [8. OutcomeMeasure](#8-outcomemeasure)
+  - [9. OutcomeAnalysis](#9-outcomeanalysis)
+  - [10. Method](#10-method)
+  - [11. BaselineGroup](#12-baselinegroup)
+  - [12. BaselineRecord](#13-baselinerecord)
+  - [13. EventGroup](#14-eventgroup)
+  - [14. AdverseEvent](#15-adverseevent)
+  - [15. Organ](#16-organ)
+  - [16. DropGroup](#17-dropgroup)
+  - [17. Period](#18-period)
+  - [18. DropRecord](#19-droprecord)
 - [Relations](#relations)
-   - [1. study-useddrug relation](#1-study-useddrug-relation)
-   - [2. study-studieddrug relation](#2-study-studieddrug-relation)
-   - [3. Study-Condition relation](#3-study-condition-relation)
-   - [4. Drug-Term relation](#4-drug-term-relation)
-   - [5. Drug-EventGroup relation](#5-drug-eventgroup-relation)
-   - [6. Study-OutcomeGroup relation](#6-study-outcomegroup-relation)
-   - [7. Study-Outcome relation](#7-study-outcome-relation)
-   - [8. Outcome-ClusterOutcome relation](#8-outcome-clusteroutcome-relation)
-   - [9. Outcome-StandardOutcome relation](#9-outcome-standardoutcome-relation)
-   - [10. Outcome-OutcomeAnalysis relation](#10-outcome-outcomeanalysis-relation)
-   - [11. OutcomeAnalysis-Method relation](#11-outcomeanalysis-method-relation)
-   - [12. OutcomeAnalysis-OutcomeGroup relation](#12-outcomeanalysis-outcomegroup-relation)
-   - [13. Outcome-OutcomeMeasure relation](#13-outcome-outcomemeasure-relation)
-   - [14. OutcomeMeasure-OutcomeGroup relation](#14-outcomemeasure-outcomegroup-relation)
-   - [15. Study-BaselineGroup relation](#15-study-baselinegroup-relation)
-   - [16. BaselineGroup-BaselineRecord relation](#16-baselinegroup-baselinerecord-relation)
-   - [17. Study-EventGroup relation](#17-study-eventgroup-relation)
-   - [18. EventGroup-AdverseEvent relation](#18-eventgroup-adverseevent-relation)
-   - [19. AdverseEvent-Organ relation](#19-adverseevent-organ-relation)
-   - [20. Study-DropGroup relation](#20-study-dropgroup-relation)
-   - [21. DropGroup-Period relation](#21-dropgroup-period-relation)
-   - [22. Period-DropRecord relation](#22-period-droprecord-relation)
-<!-- md-toc-end -->
+  - [1. study-useddrug relation](#1-study-useddrug-relation)
+  - [2. study-studieddrug relation](#2-study-studieddrug-relation)
+  - [3. Study-Condition relation](#3-study-condition-relation)
+  - [4. DrugTerm-EventGroup relation](#4-drugterm-eventgroup-relation)
+  - [5. Study-OutcomeGroup relation](#5-study-outcomegroup-relation)
+  - [6. Study-Outcome relation](#6-study-outcome-relation)
+  - [7. Outcome-ClusterOutcome relation](#7-outcome-clusteroutcome-relation)
+  - [8. Outcome-StandardOutcome relation](#8-outcome-standardoutcome-relation)
+  - [9. Outcome-OutcomeAnalysis relation](#9-outcome-outcomeanalysis-relation)
+  - [10. OutcomeAnalysis-Method relation](#10-outcomeanalysis-method-relation)
+  - [11. OutcomeAnalysis-OutcomeGroup relation](#11-outcomeanalysis-outcomegroup-relation)
+  - [12. Outcome-OutcomeMeasure relation](#12-outcome-outcomemeasure-relation)
+  - [13. OutcomeMeasure-OutcomeGroup relation](#13-outcomemeasure-outcomegroup-relation)
+  - [14. Study-BaselineGroup relation](#14-study-baselinegroup-relation)
+  - [15. BaselineGroup-BaselineRecord relation](#15-baselinegroup-baselinerecord-relation)
+  - [16. Study-EventGroup relation](#16-study-eventgroup-relation)
+  - [17. EventGroup-AdverseEvent relation](#17-eventgroup-adverseevent-relation)
+  - [18. AdverseEvent-Organ relation](#18-adverseevent-organ-relation)
+  - [19. Study-DropGroup relation](#19-study-dropgroup-relation)
+  - [20. DropGroup-Period relation](#20-dropgroup-period-relation)
+  - [21. Period-DropRecord relation](#21-period-droprecord-relation)
+    <!-- md-toc-end -->
 
 # Clinical Trial Knowledge Graph (CTKG)
 
-Clinical Trial Knowledge Graph (CTKG) is a comprehensive knowledge graph relating clinical studies, study groups, drugs, conditions, adverse events, outcome analyses and outcomes. CTKG represents information from the [AACT](https://aact.ctti-clinicaltrials.org/connect) database as a knowledge graph to capture the relations among nodes. CTKG includes 1,504,294 nodes belonging to 19 node-types; and 7,349,016 triplets belonging to 22 relation-types. These 22 relation-types show a type of interaction between one of the 19 node-type pairs as depicted in the figure below.  In CTKG, we have two types of relations between the study and drug nodes. For the rest of the node-type pairs, we have at most one relation for each of them.
+Clinical Trial Knowledge Graph (CTKG) is a comprehensive knowledge graph relating clinical studies, study groups, drugs, conditions, adverse events, outcome analyses and outcomes. CTKG represents information from the [AACT][aact] database as a knowledge graph to capture the relations among nodes. CTKG includes **1,496,684** nodes belonging to 18 node-types; and **3,667,750** triplets belonging to 21 relation-types. These 21 relation-types show a type of interaction between one of the 18 node-type pairs as depicted in the figure below.  In CTKG, we have two types of relations between the study and drug nodes. For the rest of the node-type pairs, we have at most one relation for each of them.
+
+[aact]: https://aact.ctti-clinicaltrials.org/connect
 
 ![](./Schema.png)
 
+
+
 # Nodes
 
-The following table shows the description and attributes for each node type. We list the brief definition of attributes. Please refer to this [link](https://prsinfo.clinicaltrials.gov/results_definitions.html) for detailed definitions.
+The following table shows the description and attributes for each node type. We list the brief definition of attributes. Please refer to this [link][def] for detailed definitions.
+
+[def]: https://prsinfo.clinicaltrials.gov/results_definitions.html
 
 ## 1. Study
 
-Each *study* node represents a clinical study. Clinical studies study the effect of drugs in treating conditions. CTKG includes 8,210 clinical *study* nodes. Each *study* node has 46 attributes and an id "StudyID:NCTXXX". 
+Each *study* node represents a clinical study. Clinical studies study the effect of drugs in treating conditions. CTKG includes 8,210 clinical *study* nodes. Each *study* node has 49 attributes and an id "StudyID:NCTXXX". 
 
 **Attributes:**
 
@@ -84,7 +90,13 @@ Each *study* node represents a clinical study. Clinical studies study the effect
    >
    > 3,786 (46.1%) Estimate
 
-4. **start_date_type**:  Actual/"" 
+4. **start_month_year**: 
+
+   Definition: The start date represented in the format of "month,year"
+
+   Example: "July 1, 2017"
+
+5. **start_date_type**:  Actual/"" 
 
    Definition: This attribute shows the start date is actual or estimated.
 
@@ -94,23 +106,29 @@ Each *study* node represents a clinical study. Clinical studies study the effect
    >
    > 2,436 (29.7%) Actual
 
-5. **start_date** 
+6. **start_date** 
 
    Definition: The estimated date on which the clinical study will be open for recruitment of participants, or the actual date on which the first  participant was enrolled.
 
    Example: 2017-07-01
 
-6. **verification_month_year** 
+7. **verification_month_year** 
 
    Definition: The date on which the responsible party last verified the clinical study information in the entire ClinicalTrials.gov record for the clinical  study, even if no additional or updated information is being submitted.
 
-   Example: April 2020
+   Example: "April 2020"
 
-7. **verification_date** 
+8. **verification_date** 
 
    Example: 2020-04-30
 
-8. **primary_completion_date_type**: Actual/Anticipated/"" 
+9. **primary_completion_month_year**
+
+   Definition: The start date represented in the format of "month,year"
+
+   Example: July 15, 2018"
+
+10. **primary_completion_date_type**: Actual/Anticipated/"" 
 
    Definition: This attribute shows the primary completion date is actual or estimated.
 
@@ -122,13 +140,13 @@ Each *study* node represents a clinical study. Clinical studies study the effect
    >
    > 3 Anticipated
 
-9. **primary_completion_date**
+11. **primary_completion_date**
 
-   Definition: The date that the final participant was examined or received an intervention for the purposes of final collection of data for the primary outcome, whether the clinical study concluded according to the pre-specified protocol or was terminated. In the case of clinical studies with more than one primary outcome measure with different completion dates, this term refers to the date on which data collection is completed for all of the primary outcomes.
+    Definition: The date that the final participant was examined or received an intervention for the purposes of final collection of data for the primary outcome, whether the clinical study concluded according to the pre-specified protocol or was terminated. In the case of clinical studies with more than one primary outcome measure with different completion dates, this term refers to the date on which data collection is completed for all of the primary outcomes.
 
-   Example: 2018-07-15
+    Example: 2018-07-15
 
-10. **target_duration**
+12. **target_duration**
 
     Definition: For Patient Registries, the anticipated time period over which each  participant is to be followed. Provide a number and select a Unit of  Time (years, months, weeks, days). 
 
@@ -136,9 +154,9 @@ Each *study* node represents a clinical study. Clinical studies study the effect
     >
     > 8,209 (99.9%) ""
     >
-    > 1               7 Days
+    >  1               7 Days
 
-11. **study_type** 
+13. **study_type** 
 
     Definition: The nature of the investigation or investigational use for which clinical study information is being submitted.
 
@@ -150,19 +168,19 @@ Each *study* node represents a clinical study. Clinical studies study the effect
     >
     > 1    (0.0%) Observational [Patient Registry]
 
-12. **brief_title**
+14. **brief_title**
 
     Definition: A short title of the clinical study written in language intended for the lay public.
 
     Example: "Study of Naltrexone-Induced Blockade of Antidepressant Effects"
 
-13. **official_title**
+15. **official_title**
 
     Definition: The title of the clinical study, corresponding to the title of the protocol.
 
     Example: "Naltrexone-induced Blockade of Neural Responses Induced by Fast-Acting Antidepressant Effects"
 
-14. **overall_status**: Completed/Terminated/Active, not recruiting/Unknown status/Recruiting 
+16. **overall_status**: Completed/Terminated/Active, not recruiting/Unknown status/Recruiting 
 
     Definition: The recruitment status for the clinical study as a whole, based upon the status of the individual sites. If at least one facility in a  multi-site clinical study has an Individual Site Status of "Recruiting," then the Overall Recruitment Status for the study must be "Recruiting."
 
@@ -178,7 +196,15 @@ Each *study* node represents a clinical study. Clinical studies study the effect
     >
     > 2 Recruiting
 
-15. **phase** 
+17. **last_known_status???????????????**
+
+    > Statistics:
+    >
+    > 8,198 ''
+    >
+    > ​      12 'Active, not recruiting'
+
+18. **phase** 
 
     Definition: For a clinical trial of a drug product (including a biological product), the numerical phase of such clinical trial, consistent with terminology in 21 CFR 312.21 and in 21 CFR 312.85 for phase 4 studies.
 
@@ -196,13 +222,13 @@ Each *study* node represents a clinical study. Clinical studies study the effect
     > 132   (1.6%) ""
     > 16   (0.2%) Early Phase 1
 
-16. **enrollment**
+19. **enrollment**
 
     Definition:  The estimated total number of participants to be enrolled (target  number) or the actual total number of participants that are enrolled in  the clinical study.
 
     Example: 60
 
-17. **enrollment_type**: Actual/Anticipated
+20. **enrollment_type**: Actual/Anticipated
 
     Definition: This attribute shows the total number of participants to be enrolled is estimated or actual.
 
@@ -210,9 +236,9 @@ Each *study* node represents a clinical study. Clinical studies study the effect
     >
     > 8,209 (99.9%) Actual
     >
-    > 1 Anticipated
+    >   1 Anticipated
 
-18. **source** 
+21. **source** 
 
     Definition: This attribute shows the institute which conducts the clinical study.
 
@@ -224,13 +250,13 @@ Each *study* node represents a clinical study. Clinical studies study the effect
     >
     > 218 of them are in more than 5 institutes
 
-19. **number_of_arms**
+22. **number_of_arms**
 
     Definition: The number of arms in the clinical trial. For a trial with multiple  periods or phases that have different numbers of arms, the maximum  number of arms during all periods or phases. "Arm" means a pre-specified group or subgroup of participant(s) in a  clinical trial assigned to receive specific intervention(s) (or no  intervention) according to a protocol. 
 
     Example: 2
 
-20. **number_of_groups** 
+23. **number_of_groups** 
 
     Definition: Number of study groups/cohorts. Enter "1" for a single-group study. Many observational studies have one group/cohort; case control studies  typically have two.
 
@@ -238,7 +264,7 @@ Each *study* node represents a clinical study. Clinical studies study the effect
 
     > Statistics: 8,081(98.4%) ""
 
-21. **why_stoped** 
+24. **why_stoped** 
 
     Definition: A brief explanation of the reason(s) why such clinical study was stopped (for a clinical study that is "Suspended," "Terminated," or "Withdrawn" prior to its planned completion as anticipated by the protocol).
 
@@ -246,7 +272,7 @@ Each *study* node represents a clinical study. Clinical studies study the effect
 
     > Statistics: 7,729 (94.1%) ""
 
-22. **allocation**
+25. **allocation**
 
     Definition: The method by which participants are assigned to arms in a clinical trial. 
 
@@ -259,7 +285,7 @@ Each *study* node represents a clinical study. Clinical studies study the effect
     >  406   (4.9%) Non-Randomized (i.e., Participants may choose which group they want to be in, or they may be assigned to the groups by the    researchers.)
     >  183   (2.2%) ""
 
-23. **intervention_model** 
+26. **intervention_model** 
 
     Definition: The strategy for assigning interventions to participants.
 
@@ -274,7 +300,7 @@ Each *study* node represents a clinical study. Clinical studies study the effect
     > 93   (1.1%) Factorial Assignment (i.e., groups of participants receive one of several combinations of interventions)
     > 21   (0.2%) Sequential Assignment
 
-24. **primary_purpose**
+27. **primary_purpose**
 
     Definition: The main objective of the intervention(s) being evaluated by the clinical trial. 
 
@@ -292,13 +318,13 @@ Each *study* node represents a clinical study. Clinical studies study the effect
     > 16   (0.2%) Health Services Research
     > 4   (0.0%) Screening
 
-25. **time_perspective**: Prospective/Retrospective/Cross-Sectional 
+28. **time_perspective**: Prospective/Retrospective/Cross-Sectional 
 
     Definition: Temporal relationship of observation period to time of participant enrollment.
 
     > Statistics: 8,080 (98.4%) ""
 
-26. **masking**
+29. **masking**
 
     Definition: The party or parties involved in the clinical trial who are prevented  from having knowledge of the interventions assigned to individual  participants. 
 
@@ -313,7 +339,7 @@ Each *study* node represents a clinical study. Clinical studies study the effect
     > 310   (3.8%) Single
     > 171   (2.1%) ""
 
-27. **masking_description**  
+30. **masking_description**  
 
     Definition: Provide information about other parties who may be masked in the clinical trial, if any.
 
@@ -321,7 +347,7 @@ Each *study* node represents a clinical study. Clinical studies study the effect
 
     > Statistics: 8,074 (98.3%) ""
 
-28. **intervention_model_description** 
+31. **intervention_model_description** 
 
     Definition: Provide details about the Interventional Study Model.
 
@@ -329,37 +355,37 @@ Each *study* node represents a clinical study. Clinical studies study the effect
 
     > Statistics: 8,080 (98.4%) ""
 
-29. **subject_masked**: t/""
+32. **subject_masked**: t/""
 
     Definition: True if participants are prevented from having knowledge of the interventions assigned to individual participants.
 
     > Statistics: 4,844 (59.0%) t and 3,366 (41.0%) ""
 
-30. **caregiver_masked**: t/""
+33. **caregiver_masked**: t/""
 
     Definition: True if caregivers are prevented from having knowledge of the interventions assigned to individual participants. 
 
     > Statistics: 2,614 (31.8%) t and 5,596 (68.2%) ""
 
-31. **investigator_masked**: t/""
+34. **investigator_masked**: t/""
 
     Definition: True if investigators are prevented from having knowledge of the interventions assigned to individual participants.
 
     > Statistics: 4,718 (57.5%) t and 3,492 (42.5%) ""
 
-32. **outcomes_assessor_masked**: t/""
+35. **outcomes_assessor_masked**: t/""
 
     Definition: True if outcomes assessors are prevented from having knowledge of the interventions assigned to individual participants.
 
     > Statistics: 2,613 (31.8%) t and 5,597 (68.2%) ""
 
-33. **sampling_method**: Probability Sample/Non-Probability Sample
+36. **sampling_method**: Probability Sample/Non-Probability Sample
 
     Definition: Indicate the method used for the sampling approach and explain in the Detailed Description.
 
     > Statistics: 8,078 (98.4%) ""
 
-34. **gender**: All/Female/Male
+37. **gender**: All/Female/Male
 
     Definition: This attribute shows the acceptable gender for the clinical study.
 
@@ -371,19 +397,19 @@ Each *study* node represents a clinical study. Clinical studies study the effect
     >
     > 300   (3.7%) Male
 
-35. **minimum_age**
+38. **minimum_age**
 
     Definition: This attribute shows the minimum acceptable age of participants for the clinical study.
 
     Example: 18 Years
 
-36. **maximum_age**
+39. **maximum_age**
 
     Definition: This attribute shows the maximum acceptable age of participants for the clinical study
 
     Example:  65 Years
 
-37. **healthy_volunteers**: No/"Accepts Healthy Volunteers"
+40. **healthy_volunteers**: No/"Accepts Healthy Volunteers"
 
     Definition: Indication that participants who do not have a disease or condition, or  related conditions or symptoms, under study in the clinical study are  permitted to participate in the clinical study.
 
@@ -394,8 +420,8 @@ Each *study* node represents a clinical study. Clinical studies study the effect
     > 732  (8.9%) "Accepts Healthy Volunteers"
     >
     > 16 ""
-    
-38. **population** 
+
+41. **population** 
 
     Definition: A description of the population from which the groups or cohorts will be selected (for example, primary care clinic, community sample, residents of a certain town).
 
@@ -403,13 +429,13 @@ Each *study* node represents a clinical study. Clinical studies study the effect
 
     >  Statistics: 8,078 (98.4%) ""
 
-39. **criteria**
+42. **criteria**
 
     Definition: A limited list of criteria for selection of participants in the clinical study, provided in terms of inclusion and exclusion criteria and suitable for assisting potential participants in identifying clinical  studies of interest. 
 
     Example: "~ Inclusion Criteria:  A subject must be 12 years of age or older, ..." (inclusion and exclusion criterion)
 
-40. **gender_description** 
+43. **gender_description** 
 
     Definition: If eligibility is based on gender, provide descriptive information about Gender criteria.
 
@@ -417,19 +443,19 @@ Each *study* node represents a clinical study. Clinical studies study the effect
 
     > Statistics: 8,198 (99.9%) ""
 
-41. **gender_based**: t/"" (True of "")
+44. **gender_based**: t/"" (True of "")
 
     Definition: If applicable, indicate whether participant eligibility is based on gender.
 
     > Statistics: 29 t and 8,181 (99.6%) ""
 
-42. **description** 
+45. **description** 
 
     Definition: a description of the clinical study
 
     Example: "The primary objective of the study is to determine whether armodafinil treatment..."
 
-43. **id_type**: org_study_id/secondary_id/nct_alias
+46. **id_type**: org_study_id/secondary_id/nct_alias
 
     Definition: This attribute indicates if the corresponding id value is the organization's Unique Protocol Identification Number or a number assigned by other publicly available clinical trial registries.  
 
@@ -441,17 +467,17 @@ Each *study* node represents a clinical study. Clinical studies study the effect
     >
     > 202   (2.5%) studies have nct_alias 
 
-44. **id_value** 
+47. **id_value** 
 
     Example: "0000-072;2007_650"
 
-45. **pmid** 
+48. **pmid** 
 
     Definition: PubMed Unique Identifier
 
     Example: "15292498;11025867;16670414;1003364"
 
-46. **reference_type**: reference/results_reference
+49. **reference_type**: reference/results_reference
 
     Definition: This attribute indicates if the reference is a bibliographic reference or a reference provided reports on results from this clinical study.
 
@@ -467,35 +493,21 @@ Each *study* node represents a clinical study. Clinical studies study the effect
 
 
 
-## 2. Drug
+## 2. DrugTerm
 
-Each *drug* node represents a drug name extracted from the intervention or group title/description of clinical studies. CTKG includes 4,617 *drug* nodes. Each *drug* node has an id "DrugID:XXX" and 1 attribute.
+Each *drug-term* node represents a normalized drug name extracted from the intervention or group title/description of clinical studies. CTKG includes 2,548 *drug-term* nodes. Each *drug-term* node has an id "DrugID:XXX" and 1 attribute.
 
 **Attributes**:
 
 1. **name** 
 
-   Definition: the drug name extracted from the intervention or group title/description of clinical studies.
+   Definition: the normalized drug term name extracted from the intervention or group title/description of clinical studies.
    
    Example: "bicalutamide"
 
 
 
-## 3. Term
-
-Each *term* node represents a normalized or standard drug name. CTKG includes 2,751 *term* nodes. Each *term* node has an id "TermID:XXX" and 1 attribute.
-
-**Attributes**:
-
-1. **name**
-
-   Definition: the normalized or standard drug name.
-   
-   Example: "Bicalutamide"
-
-
-
-## 4. Condition
+## 3. Condition
 
 Each *condition* node represents a condition/disease studied in clinical studies. CTKG includes 1,394 *condition* nodes. Each *condition* node has an id "ConditionID:XXX" and 1 attribute.
 
@@ -509,7 +521,7 @@ Each *condition* node represents a condition/disease studied in clinical studies
    
    
 
-## 5. OutcomeGroup
+## 4. OutcomeGroup
 
 Each *OutcomeGroup* node represents an arm or a comparison group for describing the outcomes of a study. The groups are based on the pre-specified protocol and/or statistical analysis plan. CTKG includes 32,499 *OutcomeGroup* nodes. Each *OutcomeGroup* node has an id "OutcomeGroupID:XXX" and 3 attributes.
 
@@ -535,7 +547,7 @@ Each *OutcomeGroup* node represents an arm or a comparison group for describing 
 
 
 
-## 6. Outcome
+## 5. Outcome
 
 Each *Outcome* node represents an variable that is monitored during a study to document the impact that a given intervention or exposure has on the health of a given population[^1]. CTKG includes 88,386 *Outcome* nodes. Each *Outcome* node has an id "Outcome:XXX" and 4 attributes.
 
@@ -551,9 +563,9 @@ Each *Outcome* node represents an variable that is monitored during a study to d
    >
    > 15,534  (17.6%)  Primary
    >
-   >  2,830    (3.2%)   Other Pre-specified Outcomes
+   >     2,830    (3.2%)   Other Pre-specified Outcomes
    >
-   >   289    (0.3%)   Post-Hoc
+   > ​     289    (0.3%)   Post-Hoc
 
 2. **title**
 
@@ -575,9 +587,9 @@ Each *Outcome* node represents an variable that is monitored during a study to d
 
    
 
-## 7. StandardOutcome
+## 6. StandardOutcome
 
-Each *StandardOutcome* node represents a standard variable that can be commonly used in clinical studies. In CTKG, these *StandardOutcome* nodes are extracted from the abbreviations in the outcome titles and descriptions. Those abbreviations unrelated with the outcomes have been manually filtered. Similar phrases (e.g., "visual analog pain score" and "visual analogue pain scales") identified from the abbreviations (e.g., "VAS") have been manually merged. The CTKG includes 492 *StandardOutcome* nodes. Each *StandardOutcome* node has an id "StandardOutcomeID:XXX" and 1 attribute.
+Each *StandardOutcome* node represents a standard variable that can be commonly used in clinical studies. In CTKG, these *StandardOutcome* nodes are extracted from the abbreviations in the outcome titles and descriptions. Those abbreviations unrelated with the outcomes have been manually filtered. Similar phrases (e.g., "visual analog pain score" and "visual analogue pain scales") identified from the abbreviations (e.g., "VAS") have been manually merged. Some popular standard outcomes are manually added (e.g., "Chemosis", ).The CTKG includes 492 *StandardOutcome* nodes. Each *StandardOutcome* node has an id "StandardOutcomeID:XXX" and 1 attribute.
 
 **Attributes:**
 
@@ -589,7 +601,7 @@ Each *StandardOutcome* node represents a standard variable that can be commonly 
 
 
 
-## 8. ClusterOutcome
+## 7. ClusterOutcome
 
 Each *ClusterOutcome* node represents a cluster that is identified from the titles of *Outcome* nodes using the repeated bisection clustering algorithm in CLUTO. For each title, a set of words including noun, adv, verb and adj is extracted to compute the TF-IDF vector. These calculated TF-IDF vectors are further clustered into 200 clusters. The CTKG includes 200 *ClusterOutcome* nodes. Each *ClusterOutcome* node has an id "ClusterOutcomeID:XXX" and 5 attributes.
 
@@ -627,7 +639,7 @@ Each *ClusterOutcome* node represents a cluster that is identified from the titl
 
     
 
-## 9. OutcomeMeasure
+## 8. OutcomeMeasure
 
 Each *OutcomeMeasure* node represents an outcome measurement of an variable (i.e., *Outcome* node) on an arm or a group (i.e., *OutcomeGroup* node). The CTKG includes 690,626 *OutcomeMeasure* nodes. Each *OutcomeMeasure* node has an id "OutcomeMeasureID:XXX" and 9 attributes.
 
@@ -669,23 +681,23 @@ Each *OutcomeMeasure* node represents an outcome measurement of an variable (i.e
    >
    > 249,245      (36.1%)    Mean
    >
-   > 76,099      (11.0%)    Least Squares Mean
+   >    76,099      (11.0%)    Least Squares Mean
    >
-   > 64,858         (9.4%)    Count of Participants
+   >    64,858         (9.4%)    Count of Participants
    >
-   > 31,243         (4.5%)    Median
+   >    31,243         (4.5%)    Median
    >
-   > 14,703         (2.1%)    Geometric Mean
+   >    14,703         (2.1%)    Geometric Mean
    >
-   >    665        (0.1%)    Geometric Least Squares Mean
+   > ​      665        (0.1%)    Geometric Least Squares Mean
    >
-   >    261                       Count of Units
+   > ​      261                       Count of Units
    >
-   > ​    45                       ""
+   > ​        45                       ""
    >
-   > ​    39                        Log mean
+   > ​        39                        Log mean
    >
-   > ​    22                        Other including "age normed" (6 nodes), "age & education normed" (6 nodes), "g/dL" (5 nodes), "ng/mL" (3 nodes), "age" (2 nodes).
+   > ​        22                        Other including "age normed" (6), "age & education normed" (6), "g/dL" (5), "ng/mL" (3), "age" (2).
 
 4. **param_value**
 
@@ -701,21 +713,21 @@ Each *OutcomeMeasure* node represents an outcome measurement of an variable (i.e
    >
    > 207,039    (30.0%)      Standard Deviation
    >
-   > 98,956    (14.3%)        Standard Error
+   >   98,956    (14.3%)        Standard Error
    >
-   > 54,922      (8.0%)        95% Confidence Interval
+   >   54,922      (8.0%)        95% Confidence Interval
    >
-   > 11,984      (1.7%)        Full Range
+   >   11,984      (1.7%)        Full Range
    >
-   >  8,837      (1.3%)        Inter-Quartile Range
+   > ​    8,837      (1.3%)        Inter-Quartile Range
    >
-   >  8,620      (1.2%)        Geometric Coefficient of Variation
+   > ​    8,620      (1.2%)        Geometric Coefficient of Variation
    >
-   >  1,844      (0.3%)        90% Confidence Interval
+   > ​    1,844      (0.3%)        90% Confidence Interval
    >
-   > ​    633      (0.1%)        80% Confidence Interval
+   > ​       633      (0.1%)        80% Confidence Interval
    >
-   > ​    120                         97.5% Confidence Interval
+   > ​       120                         97.5% Confidence Interval
    >
    > 
    >
@@ -747,9 +759,9 @@ Each *OutcomeMeasure* node represents an outcome measurement of an variable (i.e
 
 
 
-## 10. OutcomeAnalysis
+## 9. OutcomeAnalysis
 
-Each *OutcomeAnalysis* node represents the result of scientifically appropriate tests of statistical significance of an outcome variable. The CTKG includes 107,314 *OutcomeAnalysis* nodes. Each *OutcomeAnalysis* node has an id "OutcomeAnalysisID:XXX" and 16 attributes.
+Each *OutcomeAnalysis* node represents the result of scientifically appropriate tests of statistical significance of an outcome variable. The CTKG includes 107,295 *OutcomeAnalysis* nodes. Each *OutcomeAnalysis* node has an id "OutcomeAnalysisID:XXX" and 15 attributes.
 
 **Attributes:**
 
@@ -759,27 +771,21 @@ Each *OutcomeAnalysis* node represents the result of scientifically appropriate 
 
    > Statistics:
    >
-   > 73,743        (68.7%)          Superiority or Other
+   > 73,733        (68.7%)          Superiority or Other
    >
    > 16,127        (15.0%)          Superiority
    >
-   > 8,969           (8.4%)           Other
+   >   8,965           (8.4%)           Other
    >
-   > 4,686           (4.4%)           Superiority or Other (legacy)
+   >   4,686           (4.4%)           Superiority or Other (legacy)
    >
-   > 2,534           (2.4%)           Non-Inferiority or Equivalence
+   >   2,534           (2.4%)           Non-Inferiority or Equivalence
    >
-   >   780           (0.7%)         Non-Inferiority
+   > ​     780           (0.7%)         Non-Inferiority
    >
-   >   415           (0.4%)         Equivalence
+   > ​     409           (0.4%)         Equivalence
    >
-   > ​     60           (0.1%)         Non-Inferiority or Equivalence (legacy)
-
-2. **non_inferiority_type_description**
-
-   Definition: If the non_inferiority_type is "Non-inferiority" or "Equivalence,", additional details is expected to be provided to describe the selected non_inferiority_type, including details of the power calculation (if not previously provided), definition of non-inferiority or equivalence margin, and other key parameters.
-
-   > Statistics:  101,147      (94.3%)          ""
+   > ​       60           (0.1%)         Non-Inferiority or Equivalence (legacy)
 
 3. **param_type**
 
@@ -793,15 +799,15 @@ Each *OutcomeAnalysis* node represents the result of scientifically appropriate 
    >
    > 18,792         (17.5%)        Mean Difference (Final Values)
    >
-   > 7,580           (7.1%)        LS Mean Difference
+   >   7,580           (7.1%)        LS Mean Difference
    >
-   > 5,812           (5.4%)        Odds Ratio (OR)
+   >   5,812           (5.4%)        Odds Ratio (OR)
    >
-   > 5,429           (5.1%)        Mean Difference (Net)
+   >   5,429           (5.1%)        Mean Difference (Net)
    >
-   > 5,054           (4.7%)        Hazard Ratio (HR)
+   >   5,054           (4.7%)        Hazard Ratio (HR)
    >
-   > 
+   >   
    >
    > 31,361         other types
 
@@ -821,7 +827,7 @@ Each *OutcomeAnalysis* node represents the result of scientifically appropriate 
    >
    > 20,547          (19.1%)       Standard Error of the Mean
    >
-   > 1,276               (1.2%)      Standard Deviation
+   >   1,276               (1.2%)      Standard Deviation
 
 6. **dispersion_value**
 
@@ -839,11 +845,11 @@ Each *OutcomeAnalysis* node represents the result of scientifically appropriate 
    >
    > 30,444          (28.4%)       <
    >
-   > 1,027            (1.0%)        =
+   >   1,027            (1.0%)        =
    >
-   >   980            (0.9%)        >
+   > ​     980            (0.9%)        >
    >
-   > ​    64            "<=" (58); "p<" (3); ">=" (2); "NS" (1)
+   > ​       64            "<=" (58); "p<" (3); ">=" (2); "NS" (1)
 
 8. **p_value**
 
@@ -851,23 +857,25 @@ Each *OutcomeAnalysis* node represents the result of scientifically appropriate 
 
    Statistics:  15,837          (14.8%)       "" 
 
-9. **p_value_description**
+8. **p_value_description**
 
-   Example: 
+   Definition: The description of p_value.
 
-10. **confidence_interval_sides**
+   Example: "One-sided p-value for testing. H0: difference in %=0 versus H1: difference in %>0."
 
-    Definition: Select 1-sided or 2-sided.
+9. **confidence_interval_sides**
 
-    > Statistics:
-    >
-    > 62,041          (57.8%)          2-Sided
-    >
-    > 44,984          (41.9%)          ""
-    >
-    >    289            (0.3%)          1-Sided
+   Definition: Select 1-sided or 2-sided.
 
-11. **confidence_interval_percent**
+   > Statistics:
+   >
+   > 62,041          (57.8%)          2-Sided
+   >
+   > 44,984          (41.9%)          ""
+   >
+   > ​      289            (0.3%)          1-Sided
+
+10. **confidence_interval_percent**
 
     > Statistics:
     >
@@ -877,37 +885,37 @@ Each *OutcomeAnalysis* node represents the result of scientifically appropriate 
     >
     > 4,748              (4.4%)         90.0
     >
-    >   726              (0.7%)         80.0
+    > ​     726              (0.7%)         80.0
     >
     > 
     >
     > 1,017 other numbers
 
-12. **confidence_interval_lower_limit**
+11. **confidence_interval_lower_limit**
 
     Definition: Required if confidence interval is "2-sided" or if confidence interval is "1-sided" and no Upper Limit is entered.
 
-13. **confidence_interval_upper_limit**
+12. **confidence_interval_upper_limit**
 
     Definition: Required if confidence interval is "2-sided" or if confidence interval is "1-sided" and no Lower Limit is entered.
 
-14. **estimate_description**
+13. **estimate_description**
 
     Definition: Any other relevant estimation information, including the direction of the comparison (for example, describe which arm or comparison group represents the numerator and denominator for relative risk).
 
     Example: "Difference is first named treatment (experimental) minus second named treatment (control)."
 
-15. **group_description**
+14. **group_description**
 
     Example: "Changes in BOLD fMRI signal from the Placebo vs. the Naltrexone session."
 
-16. **other_description**
+15. **other_description**
 
     Example: "The primary analysis was based on concentration-QTc modeling of the relationship ..."
 
     
 
-## 11. Method
+## 10. Method
 
 Each *Method* node represents a statistical method that is used in the statistical analyses of outcomes. The CTKG includes 907 *Method* nodes. Each *Method* node has an id "MethodID:XXX" and 1 attribute.
 
@@ -921,7 +929,7 @@ Each *Method* node represents a statistical method that is used in the statistic
 
 
 
-## 12. BaselineGroup
+## 11. BaselineGroup
 
 Each *BaselineGroup* node represents an arm or a comparison group for describing the demographic or the data collected from the participants in the group. The groups are based on the pre-specified protocol and/or statistical analysis plan. CTKG includes 27,068 *BaselineGroup* nodes. Each *BaselineGroup* node has an id "BaselineGroupID:XXX" and 3 attributes.
 
@@ -953,10 +961,17 @@ Each *BaselineGroup* node represents an arm or a comparison group for describing
 
    
 
-## 13. BaselineRecord
+## 12. BaselineRecord
 
-Each *BaselineRecord* node represents a data record of a specific baseline measure (e.g., age, gender, country) collected from the participants in the *BaselineGroup*. CTKG includes 315,533 *BaselineRecord* nodes. Each *BaselineRecord* node has an id "BaselineRecordID:XXX" and 10 attributes.
+Each *BaselineGroup* node represents an arm or a comparison group for describing the demographic or the data collected from the participants in the group. The groups are based on the pre-specified protocol and/or statistical analysis plan. CTKG includes 27,068 *BaselineGroup* nodes. Each *BaselineGroup* node has an id "BaselineGroupID:XXX" and 3 attributes.
 
+Each *BaselineRecord* node 20,599 event groups with 3 attributes
+
+315,533 baseline records with 12 attributes.
+
+**id**: The format is "BaselineRecordID:XXX“ in which "XXX" is the ID from AACT database.
+
+**label**: BaselineRecord
 
 **Attributes:**
 
@@ -982,11 +997,11 @@ Each *BaselineRecord* node represents a data record of a specific baseline measu
    >
    > 256,681          (81.3%)          participants
    >
-   > 26,116            (8.3%)           years
+   >   26,116            (8.3%)           years
    >
-   >  5,463            (1.7%)           units on a scale
+   > ​    5,463            (1.7%)           units on a scale
    >
-   >  2,075            (0.7%)           mg/dl
+   > ​    2,075            (0.7%)           mg/dl
    >
    > 25,198     other
 
@@ -996,21 +1011,23 @@ Each *BaselineRecord* node represents a data record of a specific baseline measu
    >
    > 163,729          (51.9%)           count of participants
    >
-   > 96,329          (30.5%)           number
+   >   96,329          (30.5%)           number
    >
-   > 50,326          (15.9%)           mean
+   >   50,326          (15.9%)           mean
    >
-   >  4,940            (1.6%)           median
+   > ​    4,940            (1.6%)           median
    >
-   >    98                                  count of units
+   > ​          98                                  count of units
    >
-   >    64                                  geometric mean
+   > ​          64                                  geometric mean
    >
-   >    41                                  least squares mean
+   > ​          41                                  least squares mean
    >
-   > ​    6                                   log mean
+   > ​            6                                  log mean
 
 5. **param_value**
+
+   Definition: The value(s) for each baseline record, for each arm/group and the entire study population (total).
 
 6. **dispersion_type**
 
@@ -1018,11 +1035,11 @@ Each *BaselineRecord* node represents a data record of a specific baseline measu
    >
    > 260,156          (82.4%)           ""
    >
-   > 49,188          (15.6%)           Standard deviation
+   >   49,188          (15.6%)           Standard deviation
    >
-   >  3,751            (1.2%)           Full range
+   > ​    3,751            (1.2%)           Full range
    >
-   >  2,438            (0.8%)           Inter-quartile range
+   > ​    2,438            (0.8%)           Inter-quartile range
 
 7. **dispersion_value**
 
@@ -1040,9 +1057,9 @@ Each *BaselineRecord* node represents a data record of a specific baseline measu
 
 
 
-## 14. EventGroup
+## 13. EventGroup
 
-Each *EventGroup* node represents an arm or a comparison group for describing the adverse events data collected from the participants in the group. The groups are based on the pre-specified protocol and/or statistical analysis plan. CTKG includes 22,725 EventGroup* nodes. Each *EventGroup* node has an id "EventGroupID:XXX" and 9 attributes.
+Each *EventGroup* node represents an arm or a comparison group for describing the adverse events data collected from the participants in the group. The groups are based on the pre-specified protocol and/or statistical analysis plan. CTKG includes 22,725 *EventGroup* nodes. Each *EventGroup* node has an id "EventGroupID:XXX" and 8 attributes.
 
 **Attributes:**
 
@@ -1102,11 +1119,11 @@ Each *EventGroup* node represents an arm or a comparison group for describing th
 
 
 
-## 15. AdverseEvent
+## 14. AdverseEvent
 
 The definition of adverse event is "any untoward or unfavorable medical occurrence in a participant, including any abnormal sign (for example, abnormal physical exam or laboratory finding), symptom, or disease, temporally associated with the participant’s participation in the research, whether or not considered related to the participant’s participation in the research."
 
-Each *AdverseEvent* node represents an adverse event. The CTKG includes 21,288 *AdverseEvent* nodes. Each *AdverseEvent* node has an id "AdverseEventID:XXX" and 5 attributes. 
+Each *AdverseEvent* node represents an adverse event. The CTKG includes 18,546 *AdverseEvent* nodes. Each *AdverseEvent* node has an id "AdverseEventID:XXX" and 5 attributes. 
 
 Note that instead of directly using the terms in the dataset, we tried to normalize them so that these terms can match with the **Medical Dictionary for Regulatory Activities (MedDRA) Terminology**. Please see https://www.meddra.org/ for details. 
 
@@ -1116,55 +1133,23 @@ Note that instead of directly using the terms in the dataset, we tried to normal
 >
 > from https://www.meddra.org/how-to-use/basics/hierarchy
 
-Before normalization, the original database contains 42,435 unique adverse event terms. For those terms which are present in the MedDRA dictionary and with the level "LLT", we represented them using their corresponding preferred terms (PTs). After normalization, we got 11,137 MedDRA terms and 10,151 unmapped terms.
+Before normalization, the original database contains 42,473 unique adverse event terms. For those terms which are present in the MedDRA dictionary and with the level "LLT", we represented them using their corresponding preferred terms (PTs). After normalization, we got 11,153 MedDRA terms and 7,393 unmapped terms.
 
 **Attributes:**
 
-1. **term_name**
+1. **term**
 
    Definition: The name of the adverse event. The names of some adverse events are included in the MedDRA dictionary.
 
    Example: "nodule, pulmonary"; "diarrhea-no colostom"
 
-2. **medDRA_code**
+Due to the licensing restrictions of MedDRA, we didn't specify which terms are MedDRA terms and only kept the name of adverse event as the attribute of the adverse event node .
 
-   Definition: The corresponding MedDRA code of the term, if any.
 
-   Example: "10003205", "0"
 
-   > Statistics:
-   >
-   > 10,151          (80.5%)           "" (terms cannot be normalized to match with the MedDRA terms)
-   >
-   > 11,137          (19.5%)           MedDRA code
+## 15. Organ
 
-3. **term_type**
-
-   Definition: The corresponding MedDRA level of the term, if any.
-
-   > Statistics:
-   >
-   > 10,670                               PT
-   >
-   > 10,151         (80.5%)         None
-   >
-   >   268            (1.1%)        HLT
-   >
-   >    22            (0.1%)        SOC
-
-4. **high_level_term**
-
-   Definition: The corresponding high level term of the adverse event term (from MedDRA dictionary).
-
-5. **high_group_level_term**
-
-   Definition: The corresponding high group level term of the adverse event term (from MedDRA dictionary).
-
-   
-
-## 16. Organ
-
-Each *Organ* represent a high-level category used to group adverse event terms by body or organ system. The CTKG includes 29 *Organ* nodes. Each *Organ* node has an id "OrganID:XXX" and 1 attribute. 
+Each *Organ* represent a high-level category used to group adverse event terms by body or organ system. The CTKG includes 27 *Organ* nodes. Each *Organ* node has an id "OrganID:XXX" and 1 attribute. 
 
 **Attributes:**
 
@@ -1176,7 +1161,7 @@ Each *Organ* represent a high-level category used to group adverse event terms b
 
 
 
-## 17. DropGroup
+## 16. DropGroup
 
 Each *DropGroup* node represents an arm or a comparison group for describing the progress of research participants through each stage of a study. The groups are based on the pre-specified protocol and/or statistical analysis plan. The CTKG includes 22,272 *DropGroup* nodes. Each *DropGroup* node has an id "DropGroupID:XXX" and 3 attributes.
 
@@ -1202,7 +1187,7 @@ Each *DropGroup* node represents an arm or a comparison group for describing the
 
 
 
-## 18. Period
+## 17. Period
 
 Each *Period* node represents a stage of a study or an interval of study activity, that can be used to report the number of participants at different stages of the studies. The CTKG includes 34,330 *Period* nodes. Each *Period* node has an id "PeriodID:XXX" and 10 attributes.
 
@@ -1214,11 +1199,11 @@ Each *Period* node represents a stage of a study or an interval of study activit
 >
 > 27,578 (80.3%),                      3     (STARTED/NOT COMPLETED/COMPLETED)
 >
-> 4,662 (13.6%),                      4
+>   4,662 (13.6%),                      4
 >
-> 1,168   (3.4%),                      5
+>   1,168   (3.4%),                      5
 >
->   553   (1.6%),                      6
+> ​     553   (1.6%),                      6
 
 
 
@@ -1240,13 +1225,13 @@ Each *Period* node represents a stage of a study or an interval of study activit
    >
    > 16,151 (47.0%)           65,468 (53.0%)           Overall Study
    >
-   >    427  (1.2%)                  755  (0.7%)           Period 2
+   > ​      427  (1.2%)                  755  (0.7%)           Period 2
    >
-   >    396  (1.1%)                  827  (0.6%)           Period 1
+   > ​      396  (1.1%)                  827  (0.6%)           Period 1
    >
-   >    260  (0.8%)                1,868  (1.5%)          Treatment Period
+   > ​      260  (0.8%)                1,868  (1.5%)          Treatment Period
    >
-   >    217  (0.6%)                   616  (0.5%)          Treatment Period 1
+   > ​      217  (0.6%)                   616  (0.5%)          Treatment Period 1
 
 2. **num_started**
 
@@ -1282,9 +1267,9 @@ Each *Period* node represents a stage of a study or an interval of study activit
 
    Definition: Any specific events or time points in the study when the numbers of participants (and units, if applicable) are reported. 
 
-   Note that we combined all the additional count of participants into one entry. The format of that entry is "name\~count\~name\~count....". 
+   Note that we combined all the additional count of participants into one entry. The format of that entry is "name~count~name~count....". 
 
-   Example: "Switched to Pembrolizumab\~4\~Treated\~15~"
+   Example: "Switched to Pembrolizumab~4~Treated~15~"
 
    Statistics:  27,665        (80.6%)          ""
 
@@ -1292,14 +1277,14 @@ Each *Period* node represents a stage of a study or an interval of study activit
 
    Definition: Additional information about the additional milestone or data.
 
-   Example: "\~\~" or "Row represents Ixekizumab data only.~Row represents Ixekizumab data only."
+   Example: "~~" or "Row represents Ixekizumab data only.~Row represents Ixekizumab data only."
 
-   Statistics:  33,430       (97.4%)      "" (no additional counts) or "\~\~\~" (have additional counts but no additional description)
-
-
+   Statistics:  33,430       (97.4%)      "" (no additional counts) or "~~~" (have additional counts but no additional description)
 
 
-## 19. DropRecord
+
+
+## 18. DropRecord
 
 Each *DropRecord* node documents the number of participants who didn't complete the period with a specific reason. The CTKG includes 123,627 *DropRecord* nodes. Each *DropRecord* node has an id "DropRecrodID:XXX" and 2 attributes.
 
@@ -1321,9 +1306,9 @@ Each *DropRecord* node documents the number of participants who didn't complete 
    >
    > 14,287 (11.55%)      Lost to Follow-up
    >
-   > 8,794   (7.11%)      Protocol Violation
+   >   8,794   (7.11%)      Protocol Violation
    >
-   > 7,213   (5.83%)      Lack of Efficacy
+   >   7,213   (5.83%)      Lack of Efficacy
 
 2. **count**
 
@@ -1333,86 +1318,79 @@ Each *DropRecord* node documents the number of participants who didn't complete 
 
 # Relations
 
-## 1. Study-StudiedDrug relation
+## 1. Study-UsedDrug relation
 
-This relation indicates which drugs are studied in which studies. For example, the triplet (NCT00000378,  study-studiedDrug, bicalutamide) indicates that the drug "bicalutamide" is studied in the study with id "NCT00000378". In CTKG, for a certain clinical study, the studied drugs are the drugs extracted from the title/description of study groups of this study. There are 23,308 edges of this relation type between study nodes and drug nodes. Each edge of this relation type has an id "Study::StudiedDrug::XXX", and we don't have any attributes on this relation.
+This relation indicates which drugs are used in which studies. For example, the triplet (NCT00000378,  study-usedDrug, bicalutamide) indicates that the drug "bicalutamide" has been used in the study with id "NCT00000378". There are 6,113 edges of this relation type between study nodes and drug-term nodes. Each edge of this relation type has an id "Study::UsedDrug::XXX", and we don't have any attributes on this relation.
 
 
 
-## 2. Study-UsedDrug relation
+## 2. Study-StudiedDrug relation
 
-This relation indicates which drugs are used but not studied in which studies. For example, the triplet (NCT00000620,  *study-usedDrug*, yondelis) indicates that the drug "yondelis" has been used in the study with id "NCT00000378". However, this drug is not the studied drug in this study. For a study, the used drugs are defined as drugs that are in the interventions of the study but not in the title/description of the study groups in the study. There are 6,120 edges of this relation type between study nodes and drug nodes. Each edge of this relation type has an id "Study::UsedDrug::XXX", and we don't have any attributes on this relation.
+This relation indicates which drugs are studied in which studied. For example, the triplet (NCT00000378,  study-studiedDrug, bicalutamide) indicates that the drug "bicalutamide" is studied in the study with id "NCT00000378". In CTKG, for a certain clinical study, the studied drugs are the drugs extracted from the title/description of study groups of this study. There are 23,188 edges of this relation type between study nodes and drug-term nodes. Each edge of this relation type has an id "Study::StudiedDrug::XXX", and we don't have any attributes on this relation.
 
 
 
 ## 3. Study-Condition relation
 
-This relation indicates which conditions are studied in which studies. For example, the triplet (NCT00000378,  *study-condition*, Fever) indicates that the study "NCT00000378" studies how to mitigate the condition "Fever". There are 17,259 edges of this relation type between study nodes and condition nodes. Each edge of this relation type has an id "Study::Condition::XXX", and we don't have any attributes on this relation.
+This relation indicates which conditions are studied in which studies. For example, the triplet (NCT00000378,  study-condition, Fever) indicates that the study "NCT00000378" studies how to mitigate the condition "Fever". There are 17,259 edges of this relation type between study nodes and condition nodes. Each edge of this relation type has an id "Study::Condition::XXX", and we don't have any attributes on this relation.
 
 
 
-## 4. Drug-Term relation
+## 4. Drug-EventGroup relation
 
-This relation indicates which drugs could be normalized to which standard terms. For example, the triplet (dmards, *drug-term*, Antirheumatic Agents) indicates the drug "dmards" could be normalized to the standard term "Antirheumatic Agents". There are 4,617 edges of this relation between drug nodes and term nodes. Each edge of this relation type has an id "Drug::Term:XXX", and we don't have any attributes on this relation.
-
-
-
-## 5. Drug-EventGroup relation
-
-This relation indicates which drugs are used in the specific *EventGroup* node. For example, the *Drug* node with ID "311" has the drug name "naltrexone". Then, the triplet (311,*drug-eventgroup*,10828809) indicates the drug "naltrexone" is used or studied in this *EventGroup*. There are 33,624 edges of this relation between 3,712 *Drug* nodes and 21,831 *EventGroup* nodes. Each edge of this relation type has an id "drug::eventgroup:XXX", and we don't have any attributes on this relation.
+This relation indicates which drugs could be used in the group of participants specified by the "event-group" node. For example, the triplet (naltrexone, drug-eventgroup, 10828809) indicates the drug "naltrexone" is used in the *EventGroup* "10828809". This indicates that the adverse events happened within the event group could be induced by the drug "naltrexone". There are 33,453 edges of this relation between drug-term nodes and event group nodes. Each edge of this relation type has an id "Drug::EventGroup:XXX", and we don't have any attributes on this relation.
 
 
 
+## 5. Study-OutcomeGroup relation
 
-## 6. Study-OutcomeGroup relation
-
-This relation indicates which *Study* the specific *OutcomeGroup* belongs to. For example, the triplet (NCT04322526,*Study-OutcomeGroup*,10828807) indicates that the *OutcomeGroup* node with ID "10828807" belongs to the *Study* with ID "NCT04322526". There are 32,499 edges of this relation between 8,210 *Study* nodes and 32,499 *OutcomeGroup* nodes. Each edge of this relation type has an id "study::outcomegroup:XXX", and we don't have any attributes on this relation.
-
-
-
-## 7. Study-Outcome relation
-
-This relation indicates which *Study* the specific *Outcome* belongs to. For example, the triplet (NCT04322526,*Study-Outcome*,3290500) indicates that the *Outcome* node with ID "3290500" belongs to the *Study* with ID "NCT04322526". There are 88,386 edges of this relation between 8,210 *Study* nodes and 88,386 *Outcome* nodes. Each edge of this relation type has an id "study::putcome:XXX", and we don't have any attributes on this relation.
+This relation indicates which *Study* the specific *OutcomeGroup* belongs to. For example, the triplet (NCT04322526,*Study-OutcomeGroup*,10828807) indicates that the *OutcomeGroup* node with ID "10828807" belongs to the *Study* with ID "NCT04322526". There are 32,499 edges of this relation between the *Study* nodes and the *OutcomeGroup* nodes. Each edge of this relation type has an id "study::outcomegroup:XXX", and we don't have any attributes on this relation.
 
 
 
-## 8. Outcome-ClusterOutcome relation
+## 6. Study-Outcome relation
+
+This relation indicates which *Study* the specific *Outcome* belongs to. For example, the triplet (NCT04322526,*Study-Outcome*,3290500) indicates that the *Outcome* node with ID "3290500" belongs to the *Study* with ID "NCT04322526". There are 88,386 edges of this relation between the *Study* nodes and the *Outcome* nodes. Each edge of this relation type has an id "study::putcome:XXX", and we don't have any attributes on this relation.
+
+
+
+## 7. Outcome-ClusterOutcome relation
 
 This relation indicates which *ClusterOutcome* the title of the specific *Outcome* node belongs to after clustering. For example, the triplet (3290500,*Outcome-ClusterOutcome*,125) indicates that according to the clustering results, the *Outcome* node with ID "3290500" belongs to the *ClusterOutcome* with ID "125". There are 88,244 edges of this relation between the *Outcome* nodes and the *ClusterOutcome* nodes. Each edge of this relation type has an id "outcome::clusteroutcome:XXX", and we don't have any attributes on this relation.
 
 
 
-## 9. Outcome-StandardOutcome relation
+## 8. Outcome-StandardOutcome relation
 
-This relation indicates which *StandardOutcome* nodes the title or the description of the specific *Outcome* includes. For example, the *StandardOutcome* node with ID "0" has name "blood oxygen level dependent". Then, the triplet (3290500,*Outcome-StandardOutcome*, 0) indicates that the title or the description of the *Outcome* node with ID "3290500" should contain the full name "blood oxygen level dependent" or the corresponding abbreviation "BOLD". There are 57,911 edges of this relation between the *Outcome* nodes and the *StandardOutcome* nodes. Each edge of this relation type has an id "outcome::standardoutcome:XXX", and we don't have any attributes on this relation.
-
-
-
-## 10. Outcome-OutcomeAnalysis relation
-
-This relation indicates which variable specified by the *Outcome* node the statistic analysis result *OutcomeAnalysis* node compares. For example, the triplet (3290500,*Outcome-OutcomeAnalysis*,1791998) indicates that the *OutcomeAnalysis* node with ID "1791998" should contain the outcome. There are 107,294 edges of this relation between 45,689 *Outcome* nodes and 107,294 *OutcomeAnalysis* nodes. Each edge of this relation type has an id "outcome::outcomeanalysis:XXX", and we don't have any attributes on this relation.
+This relation indicates which *StandardOutcome* nodes the title or the description of the specific *Outcome* includes. For example, the *StandardOutcome* node with ID "0" has name "blood oxygen level dependent". Then, the triplet (3290500,*Outcome-StandardOutcome*, 0) indicates that the title or the description of the *Outcome* node with ID "3290500" should contain the full name "blood oxygen level dependent" or the corresponding abbreviation "BOLD". There are 58,819 edges of this relation between the *Outcome* nodes and the *StandardOutcome* nodes. Each edge of this relation type has an id "outcome::standardoutcome:XXX", and we don't have any attributes on this relation.
 
 
 
-## 11. OutcomeAnalysis-Method relation
+## 9. Outcome-OutcomeAnalysis relation
 
-This relation indicates which statistical method the *OutcomeAnalysis* node uses to test the outcome. For example, the *method* node with id "4" has the name "t-test, 2 sided". Then, the triplet (1791998,*OutcomeAnalysis-Method*,4) indicates that the *OutcomeAnalysis* node with ID "1791998" uses "t-test, 2 sided" to test the specific outcome. There are 91,475 edges of this relation between 91,475 *OutcomeAnalysis* nodes and 933 *Method* nodes. Each edge of this relation type has an id "outcomeanalysis::method:XXX", and we don't have any attributes on this relation.
+This relation indicates which variable specified by the *Outcome* node the statistic analysis result *OutcomeAnalysis* node compares. For example, the triplet (3290500,*Outcome-OutcomeAnalysis*,1791998) indicates that the *OutcomeAnalysis* node with ID "1791998" analyzed the efficacy of intervention by comparing the outcome. There are 107,294 edges of this relation between 45,689 *Outcome* nodes and 107,294 *OutcomeAnalysis* nodes. Each edge of this relation type has an id "outcome::outcomeanalysis:XXX", and we don't have any attributes on this relation.
+
+
+
+## 10. OutcomeAnalysis-Method relation
+
+This relation indicates which statistical method the *OutcomeAnalysis* node uses to test the outcome. For example, the *method* node with id "4" has the name "t-test, 2 sided". Then, the triplet (1791998,*OutcomeAnalysis-Method*,4) indicates that the *OutcomeAnalysis* node with ID "1791998" uses "t-test, 2 sided" to test the specific outcome. There are 91,463 edges of this relation between 91,463 *OutcomeAnalysis* nodes and 907 *Method* nodes. Each edge of this relation type has an id "outcomeanalysis::method:XXX", and we don't have any attributes on this relation.
 
 > Most frequently used statistical methods:
 >
-> 20,521 (19.1%) ancova
+> 20,519 (19.1%) ancova
 >
-> 11,261 (10.5%) mixed models analysis
+> 11,260 (10.5%) mixed models analysis
 >
-> 7,664   (7.1%) anova
+>   7,657   (7.1%) anova
 >
-> 6,212  (5.8%) cochran-mantel-haenszel
+>   6,212  (5.8%) cochran-mantel-haenszel
 >
-> 5,400  (5.0%) t-test, 2 sided
+>   5,399  (5.0%) t-test, 2 sided
 >
-> 3,849  (3.6%) regression, logistic
+>   3,913  (3.6%) regression, logistic
 >
-> 3,751  (3.5%) wilcoxon (mann-whitney)
+>   3,751  (3.5%) wilcoxon (mann-whitney)
 >
 > 
 >
@@ -1420,35 +1398,35 @@ This relation indicates which statistical method the *OutcomeAnalysis* node uses
 
 
 
-## 12. OutcomeAnalysis-OutcomeGroup relation
+## 11. OutcomeAnalysis-OutcomeGroup relation
 
 This relation indicates which arm or group specified by the *OutcomeGroup* node is involved in the *OutcomeAnalysis* node.  For example, the triplet (1791998,*OutcomeAnalysis-OutcomeGroup*,10828807) indicates that the *OutcomeGroup* node with ID "10828807" is involved into the statistical analysis specified by the *OutcomeAnalysis* node with ID "1791998". There are 209,314 edges of this relation between 107,294 *OutcomeAnalysis* nodes and 23,923 *OutcomeGroup* nodes. Each edge of this relation type has an id "OutcomeAnalysis::OutcomeGroup", and we don't have any attributes on this relation.
 
 
 
-## 13. Outcome-OutcomeMeasure relation
+## 12. Outcome-OutcomeMeasure relation
 
 This relation indicates which *variable* (i.e., *Outcome* node) the *OutcomeMeasure* node measures on an arm or a group. For example, the *Outcome* node with id "3290500" has the title "Naltrexone-induced Changes in BOLD Responses in the rACC Cortex During the Processing of Contextual Cues". Then, the triplet (3290500,*Outcome-OutcomeMeasure*,25354504) indicates that the *OutcomeMeasure* node with ID "25354504" measures the "changes in BOLD Responses" on a specific *OutcomeGroup*. There are 690,626 edges of this relation between  85,905 *Outcome* nodes and 690,626 *OutcomeMeasure* nodes. Each edge of this relation type has an id "outcome::outcomemeasure:XXX", and we don't have any attributes on this relation.
 
 
 
-## 14. OutcomeMeasure-OutcomeGroup relation
+## 13. OutcomeMeasure-OutcomeGroup relation
 
-This relation indicates which *OutcomeGroup* the *OutcomeMeasure* node measures on. For example, the triplet (25354504,*OutcomeMeasure-OutcomeGroup*,10828807) indicates that the *OutcomeMeasure* node with ID "25354504" measures the outcome variable on a group specified by the *OutcomeGroup* node with ID "10828807". There are 690,541 edges between 690,541 nodes of *OutcomeMeasure* and 32,241 nodes of *OutcomeGroup*. Each edge of this relation type has an id "outcomemeasure::outcomegroup:XXX", and we don't have any attributes on this relation.
+This relation indicates which *OutcomeGroup* the *OutcomeMeasure* node measures on. For example, the triplet (25354504,*OutcomeMeasure-OutcomeGroup*,10828807) indicates that the *OutcomeMeasure* node with ID "25354504" measures the outcome variable on a group specified by the *OutcomeGroup* node with ID "10828807". There are 690,541 edges between 690,541 nodes of *OutcomeMeasure* and 32,240 nodes of *OutcomeGroup*. Each edge of this relation type has an id "outcomemeasure::outcomegroup:XXX", and we don't have any attributes on this relation.
 
 
 
-## 15. Study-BaselineGroup relation
+## 14. Study-BaselineGroup relation
 
 This relation indicates which *Study* the specific *BaselineGroup* belongs to. For example, the triplet (NCT04322526,*Study-BaselineGroup*,10828802) indicates that the *BaselineGroup* node with ID "10828802" belongs to the *Study* with ID "NCT04322526".  There are 27,068 edges between 8209 nodes of *Study* and 27,068 nodes of *BaselineGroup*. Each edge of this relation type has an id "study::baselinegroup:XXX", and we don't have any attributes on this relation.
 
 
 
-## 16. BaselineGroup-BaselineRecord relation
+## 15. BaselineGroup-BaselineRecord relation
 
-This relation indicates which *BaselineGroup* the measurement value in the *BaselineRecord* node belongs to. For example, the triplet (10828802,*BaselineGroup-BaselineRecord*,12255269) indicates that the *BaselineRecord* node with ID "12255269" is for the *BaselineGroup* with ID "10828802".  There are 315,533 edges between 27,068 nodes of *BaselineGroup* and 315,533 nodes of *BaselineRecord*. Each edge of this relation type has an id "baselinegroup::baselinerecord:XXX" and 2 attributes.
+This relation indicates which *BaselineGroup* the measurement value in the *BaselineRecord* node belongs to. For example, the triplet (10828802,*BaselineGroup-BaselineRecord*,12255269) indicates that the *BaselineRecord* node with ID "12255269" is for the *BaselineGroup* with ID "10828802".  There are 315,533 edges between 27,068 nodes of *BaselineGroup* and 315,533 nodes of *BaselineRecord*. Each edge of this relation type has an id "baselinegroup::baselinerecord:XXX".
 
-**Attributes:**
+Each relation is associated with 2 attributes:
 
 1. **title**
 
@@ -1468,19 +1446,19 @@ This relation indicates which *BaselineGroup* the measurement value in the *Base
    >
    > 10,872 (40.2%)     35,578 (11.3%);       Region of Enrollment
    >
-   > 6,548 (24.2%) 	33,543 (10.6%);	   Race/Ethnicity, Customized
+   >   6,548 (24.2%) 	33,543 (10.6%);	   Race/Ethnicity, Customized
    >
-   > 5,436 (20.1%)     38,142 (12.1%);       Race (NIH/OMB)
+   >   5,436 (20.1%)     38,142 (12.1%);       Race (NIH/OMB)
    >
-   > 4,483 (16.6%)     13,469   (4.3%)        Ethnicity (NIH/OMB)
+   >   4,483 (16.6%)     13,469   (4.3%)        Ethnicity (NIH/OMB)
    >
-   > 3,929 (14.5%)     11,867   (3.8%)        Age, Customized
+   >   3,929 (14.5%)     11,867   (3.8%)        Age, Customized
    >
-   >  1,563 (5.8%)       1,625    (0.5%)        Weight
+   > ​    1,563 (5.8%)       1,625    (0.5%)        Weight
    >
-   >  1,165 (4.3%)       1,248    (0.4%)       Body Mass Index (BMI)
+   > ​    1,165 (4.3%)       1,248    (0.4%)       Body Mass Index (BMI)
    >
-   >  1,074 (4.0%)       1,082    (0.3%)       Height
+   > ​    1,074 (4.0%)       1,082    (0.3%)       Height
    >
    > These most frequent titles can cover 73% baseline records.
    >
@@ -1492,17 +1470,17 @@ This relation indicates which *BaselineGroup* the measurement value in the *Base
 
    
 
-## 17. Study-EventGroup relation 
+## 16. Study-EventGroup relation 
 
 This relation indicates which *Study* the *EventGroup* node belongs to. For example, the triplet (NCT04322526,*Study-EventGroup*,10828809) indicates that the *EventGroup* node with ID "10828809" belongs to the *Study* with ID "NCT04322526". There are 22,725 edges between 8,172 nodes of *Study* and 22,725 nodes of *EventGroup*. Each edge of this relation type has an id "study::eventgroup:XXX", and we don't have any attributes on this relation.
 
 
 
-## 18. EventGroup-AdverseEvent relation
+## 17. EventGroup-AdverseEvent relation
 
-This relation indicates which *AdverseEvent* appears in the participants in the *EventGroup* . For example, the *AdverseEvent* node with id "12620" has the name "dizziness/drowsiness". Then, the triplet (10828809,*EventGroup-AdverseEvent*,12620) indicates that participants in the *EventGroup* node with ID "10828809" can have "dizziness/drowsiness" adverse event.  There are 966,450 edges between 20,571 nodes of *EventGroup* and 12,640 nodes of *AdverseEvent*. Each edge of this relation type has an id "eventgroup::adverseevent:XXX" and 6 attributes.
+This relation indicates which *AdverseEvent* appears in the participants in the *EventGroup* . For example, the *AdverseEvent* node with id "12620" has the name "dizziness/drowsiness". Then, the triplet (10828809,*EventGroup-AdverseEvent*,12620) indicates that participants in the *EventGroup* node with ID "12255269" can have "dizziness/drowsiness" adverse event.  There are 966,450 edges between 20,571 nodes of *EventGroup* and 18,546 nodes of *AdverseEvent*. Each edge of this relation type has an id "eventgroup::adverseevent:XXX".
 
-**Attributes:**
+Each relation is associated with 6 attributes:
 
 1. **type**
 
@@ -1528,7 +1506,7 @@ This relation indicates which *AdverseEvent* appears in the participants in the 
    >
    > 232,503          (24.1%)           Non-systematic Assessment
    >
-   > 28,025            (2.9%)            ""
+   >   28,025            (2.9%)            ""
 
 4. **num_affected**
 
@@ -1544,25 +1522,25 @@ This relation indicates which *AdverseEvent* appears in the participants in the 
 
 
 
-## 19. AdverseEvent-Organ relation
+## 18. AdverseEvent-Organ relation
 
-This relation indicates which organ system the adverse event belongs to. For example, the *Organ* node with ID "0" has the name "Infections and infestations". Then, the triplet (0, *AdverseEvent-Organ*, 0) indicates that the adverse event specified by the *AdverseEvent* node with ID "0" can be grouped by body or organ system to the category "Infections and infestations". There are 21,286 edges between 21,286 adverse events and 29 organs, and we don't have any attributes on this relation.
+This relation indicates which organ system the adverse event belongs to. For example, the *Organ* node with ID "0" has the name "Infections and infestations". Then, the triplet (0, *AdverseEvent-Organ*, 0) indicates that the adverse event specified by the *AdverseEvent* node with ID "0" can be grouped by body or organ system to the category "Infections and infestations". There are 18,546 edges between 18,546 adverse events and 27 organs, and we don't have any attributes on this relation.
 
 
 
-## 20. Study-DropGroup relation
+## 19. Study-DropGroup relation
 
 This relation indicates which *Study* the *DropGroup* node belongs to. For example, the triplet (NCT04322526,*Study-DropGroup*,10828805) indicates that the *DropGroup* node with ID "10828805" belongs to the *Study* with ID "NCT04322526". There are 22,272 edges between 8,210 nodes of *Study* and 22,272 nodes of *DropGroup*. Each edge of this relation type has an id "study::dropgroup:XXX", and we don't have any attributes on this relation.
 
 
 
-## 21. DropGroup-Period relation
+## 20. DropGroup-Period relation
 
-This relation indicates that the *DropGroup* node has a discrete stage specified by the *period* node. For example, the *period* node with ID "0" has period "Second Intervention (1day)". Then, the triplet (10828805,*DropGroup-Period*,0) indicates that the *DropGroup* node with ID "10828805" has the stage "Second Intervention (1day)". There are 34,330 edges between 22,272 nodes of *DropGroup* and 34,330  nodes of *Period*. Each edge of this relation type has an id "dropgroup::period:XXX", and we don't have any attributes on this relation.
+This relation indicates that the *DropGroup* node has a discrete stage specified by the *period* node. For example, the *period* node with ID "0" has period "Second Intervention (1day)". Then, the triplet (10828805,*DropGroup-Period*,0) indicates that the *DropGroup* node with ID "10828805" has the stage "Second Intervention (1day)". There are 34,330 edges between 22,272 nodes of *DropGroup* and 34,330  nodes of *DropGroup*. Each edge of this relation type has an id "dropgroup::period:XXX", and we don't have any attributes on this relation.
 
 
 
-## 22. Period-DropRecord relation
+## 21. Period-DropRecord relation
 
 This relation indicates that in each period specified by the *Period* node, the CTKG has at least one *DropRecord* node which documents the number of participants who cannot complete the period with the specific reason. For example, the *period* node with ID "1" has period "Washout (1 Week)". Then, the triplet (1,*Period-DropRecord*,3181066) indicates that in this period, several participants in the *DropGroup* connected with the *Period*, didn't complete the period with a specific reason. There are 123,627 edges between 25,956 nodes of *Period* and 123,627 nodes of *DropRecord*. Each edge of this relation type has an id "period::droprecord:XXX", and we don't have any attributes on this relation.
 
