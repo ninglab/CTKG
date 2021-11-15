@@ -24,6 +24,9 @@ The directory <code>scripts</code> contains all the jupyter notebooks for the em
 * <code>Train_embeddings.ipynb</code> is a notebook to generate the embeddings for nodes and relations in CTKG.
 * <code>Subtype_entity_similarity_analysis.ipynb</code> is a notebook to retrieve similar nodes of a certain node type.
 
+Before running the scripts, you need to unzip rawdata/ctkg.zip and rawdata/attributes.zip, and install DGL (https://www.dgl.ai/). 
+If you are not able to learning embeddings via the command in the notebook, please run the command in a terminal with DGL 0.4.3.  
+
 # Reference
 
 [^1]: Tasneem A, Aberle L, Ananth H, Chakraborty S, Chiswell K, McCourt BJ, et al. (2012) The Database for Aggregate Analysis of ClinicalTrials.gov (AACT) and Subsequent Regrouping by Clinical Specialty. PLoS ONE 7(3): e33677. https://doi.org/10.1371/journal.pone.0033677
