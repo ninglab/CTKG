@@ -25,7 +25,7 @@ The directory <code>scripts</code> contains all the jupyter notebooks for the em
 * <code>Subtype_entity_similarity_analysis.ipynb</code> is a notebook to retrieve similar nodes of a certain node type.
 
 Before running the scripts, you need to unzip rawdata/ctkg.zip and rawdata/attributes.zip, and install DGL (https://www.dgl.ai/) and PyTorch. 
-If you are not able to learning embeddings via the command in the notebook, please run the command in a terminal with DGL 0.4.3.  
+If you are not able to learn embeddings via the command in the notebook, please run the command in a terminal with DGL 0.4.3.  
 
 # Reference
 
