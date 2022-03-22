@@ -1,8 +1,8 @@
 # A Knowledge Graph of Clinical Trials (CTKG)
 
-link: <https://www.nature.com/articles/s41598-022-08454-z>
-
 Clinical Trials Knowledge Graph (CTKG) is a knowledge graph constructed over the clinical trial data from The Access to Aggregate Content of ClinicalTrials.gov (AACT) database[^1]. CTKG includes nodes representing medical entities in clinical trials (e.g., studies, drugs, conditions), and edges representing the relations among these entities (e.g., drugs used in studies). It includes 1,496,684 nodes belonging to 18 node-types; and 3,667,750 triplets belonging to 21 relation-types. It also provides three notebooks about how to explore and analysis the CTKG using the knowledge graph embeddings.
+
+This work has been published in Scientific Reports (https://www.nature.com/articles/s41598-022-08454-z).
 
 
 
@@ -29,6 +29,26 @@ The directory <code>scripts</code> contains all the jupyter notebooks for the em
 
 Before running the scripts, you need to unzip rawdata/ctkg.zip and rawdata/attributes.zip, and install DGL (https://www.dgl.ai/) and PyTorch. 
 If you are not able to learn embeddings via the command in the notebook, please run the command in a terminal with DGL 0.4.3.  
+
+
+
+### Citation
+
+```
+@Article{ctkg,
+  author    = {Ziqi Chen and Bo Peng and Vassilis N. Ioannidis and Mufei Li and George Karypis and Xia Ning},
+  journal   = {Scientific Reports},
+  title     = {A knowledge graph of clinical trials ({\textdollar}{\textdollar}{\textbackslash}mathop $\lbrace${\textbackslash}mathtt $\lbrace${CTKG}$\rbrace$$\rbrace${\textbackslash}limits{\textdollar}{\textdollar})},
+  year      = {2022},
+  month     = {mar},
+  number    = {1},
+  volume    = {12},
+  doi       = {10.1038/s41598-022-08454-z},
+  publisher = {Springer Science and Business Media {LLC}},
+}
+```
+
+
 
 # Reference
 
