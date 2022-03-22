@@ -38,7 +38,7 @@ If you are not able to learn embeddings via the command in the notebook, please 
 @Article{ctkg,
   author    = {Ziqi Chen and Bo Peng and Vassilis N. Ioannidis and Mufei Li and George Karypis and Xia Ning},
   journal   = {Scientific Reports},
-  title     = {A knowledge graph of clinical trials ({\textdollar}{\textdollar}{\textbackslash}mathop $\lbrace${\textbackslash}mathtt $\lbrace${CTKG}$\rbrace$$\rbrace${\textbackslash}limits{\textdollar}{\textdollar})},
+  title     = {A knowledge graph of clinical trials (CTKG)},
   year      = {2022},
   month     = {mar},
   number    = {1},
