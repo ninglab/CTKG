@@ -1,5 +1,7 @@
 # A Knowledge Graph of Clinical Trials (CTKG)
 
+link: <https://www.nature.com/articles/s41598-022-08454-z>
+
 Clinical Trials Knowledge Graph (CTKG) is a knowledge graph constructed over the clinical trial data from The Access to Aggregate Content of ClinicalTrials.gov (AACT) database[^1]. CTKG includes nodes representing medical entities in clinical trials (e.g., studies, drugs, conditions), and edges representing the relations among these entities (e.g., drugs used in studies). It includes 1,496,684 nodes belonging to 18 node-types; and 3,667,750 triplets belonging to 21 relation-types. It also provides three notebooks about how to explore and analysis the CTKG using the knowledge graph embeddings.
 
 
